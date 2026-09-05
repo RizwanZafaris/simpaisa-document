@@ -1,0 +1,605 @@
+{
+  "version": "v26",
+  "source_filename": "simpaisa-pages-review-v26.html",
+  "source_sha256": "1c84fa9b60e826c775b8a4b29b42944b2836ff0146f460d9ca3d62b5293500c4",
+  "export_method": "Hydrated v26 in Chrome, resolved all images/fonts/icons, extracted assets and retained exact page markup/style, then replaced viewer controls with local JavaScript.",
+  "page_order": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "content_status": "Existing user draft. The export preserves supplied figures and prior source notes; it is not a fresh factual verification.",
+  "print_fallback": "The office-strip SVG remains the screen/source asset. Print media selects a transparent 2124 x 488 PNG captured from the current SVG to avoid Chrome PDF pattern flattening.",
+  "source_links": [
+    {
+      "text": "SBP",
+      "href": "https://www.sbp.org.pk/press/2026/Pr-25-Jun-2026.pdf"
+    },
+    {
+      "text": "SAMA",
+      "href": "https://sama.gov.sa/en-US/MediaCenter/News/Pages/news-1139.aspx"
+    },
+    {
+      "text": "SBP release of 25 June 2026",
+      "href": "https://www.sbp.org.pk/press/2026/Pr-25-Jun-2026.pdf"
+    },
+    {
+      "text": "SadaPay official logo source",
+      "href": "https://sadapay.pk/"
+    },
+    {
+      "text": "NayaPay official logo source",
+      "href": "https://nayapay.com/"
+    },
+    {
+      "text": "Easypaisa logo supplied by the user",
+      "href": "https://commons.wikimedia.org/wiki/File:Easypaisa_Digital_Bank_logo.png"
+    },
+    {
+      "text": "MFS statement",
+      "href": "https://www.bb.org.bd/fnansys/paymentsys/mfstrend_latest.pdf"
+    },
+    {
+      "text": "March 2025 card data",
+      "href": "https://www.bb.org.bd/pub/monthly/creditcard/march%2C%202025.pdf"
+    },
+    {
+      "text": "Payment Systems Report",
+      "href": "https://www.bb.org.bd/pub/annual/psdreport/paymentreport_dec2025.pdf"
+    },
+    {
+      "text": "NRB report",
+      "href": "https://www.nrb.org.np/psd/payment-systems-oversight-report-2081-82-2024-2025/"
+    },
+    {
+      "text": "CBI Q3 release",
+      "href": "https://cbi.iq/news/view/3087"
+    },
+    {
+      "text": "confirmed 3 September 2025 interoperability launch",
+      "href": "https://cbi.iq/news/view/2972"
+    },
+    {
+      "text": "Provider listing",
+      "href": "https://apps.apple.com/in/app/asiapay/id6444766446"
+    },
+    {
+      "text": "CBE indicators",
+      "href": "https://www.cbe.org.eg/-/media/project/cbe/page-content/rich-text/financial-inclusion/financial-inclusion-and-payment-systems--services-indicators.pdf"
+    },
+    {
+      "text": "CBE PAFIX speech",
+      "href": "https://www.cbe.org.eg/ar/news-publications/news/2025/11/17/12/40/hassan-abdalla-pafix-2025"
+    },
+    {
+      "text": "official company asset",
+      "href": "https://www.fawry.com/wp-content/uploads/2023/05/fawry-Logo.png"
+    },
+    {
+      "text": "SAMA release",
+      "href": "https://sama.gov.sa/en-US/MediaCenter/News/Pages/news-1139.aspx"
+    },
+    {
+      "text": "Mastercard article",
+      "href": "https://www.mastercard.com/news/eemea/en/newsroom/press-releases/en/2025-1/december/mastercard-gateway-attained-sama-certificate-for-the-new-e-commerce-payments-interface/"
+    },
+    {
+      "text": "www.simpaisa.com",
+      "href": "https://www.simpaisa.com/"
+    },
+    {
+      "text": "Natural Earth country geometry",
+      "href": "https://www.naturalearthdata.com/downloads/"
+    },
+    {
+      "text": "GeoNames city coordinates (CC BY 4.0)",
+      "href": "https://download.geonames.org/export/dump/"
+    },
+    {
+      "text": "D3 geographic projections",
+      "href": "https://d3js.org/d3-geo/projection"
+    },
+    {
+      "text": "NIBSS",
+      "href": "https://nibss-plc.com.ng/case-study-regulation-is-becoming-nigerias-fintech-advantage/"
+    },
+    {
+      "text": "Mastercard",
+      "href": "https://newsroom.mastercard.com/news/eemea/en/newsroom/press-releases/en/2024/april/mono-collaborates-with-mastercard-to-power-innovative-payment-solutions-for-digital-commerce-in-africa/"
+    },
+    {
+      "text": "SBP release of 25 June 2026",
+      "href": "https://www.sbp.org.pk/press/2026/Pr-25-Jun-2026.pdf"
+    },
+    {
+      "text": "MFS statement",
+      "href": "https://www.bb.org.bd/fnansys/paymentsys/mfstrend_latest.pdf"
+    },
+    {
+      "text": "March 2025 card data",
+      "href": "https://www.bb.org.bd/pub/monthly/creditcard/march%2C%202025.pdf"
+    },
+    {
+      "text": "Payment Systems Report",
+      "href": "https://www.bb.org.bd/pub/annual/psdreport/paymentreport_dec2025.pdf"
+    },
+    {
+      "text": "NRB report",
+      "href": "https://www.nrb.org.np/psd/payment-systems-oversight-report-2081-82-2024-2025/"
+    },
+    {
+      "text": "CBI Q3 release",
+      "href": "https://cbi.iq/news/view/3087"
+    },
+    {
+      "text": "confirmed 3 September 2025 interoperability launch",
+      "href": "https://cbi.iq/news/view/2972"
+    },
+    {
+      "text": "CBE indicators",
+      "href": "https://www.cbe.org.eg/-/media/project/cbe/page-content/rich-text/financial-inclusion/financial-inclusion-and-payment-systems--services-indicators.pdf"
+    },
+    {
+      "text": "CBE PAFIX speech",
+      "href": "https://www.cbe.org.eg/ar/news-publications/news/2025/11/17/12/40/hassan-abdalla-pafix-2025"
+    },
+    {
+      "text": "SAMA release",
+      "href": "https://sama.gov.sa/en-US/MediaCenter/News/Pages/news-1139.aspx"
+    },
+    {
+      "text": "Mastercard article",
+      "href": "https://www.mastercard.com/news/eemea/en/newsroom/press-releases/en/2025-1/december/mastercard-gateway-attained-sama-certificate-for-the-new-e-commerce-payments-interface/"
+    },
+    {
+      "text": "NIBSS",
+      "href": "https://nibss-plc.com.ng/case-study-regulation-is-becoming-nigerias-fintech-advantage/"
+    },
+    {
+      "text": "Mastercard",
+      "href": "https://newsroom.mastercard.com/news/eemea/en/newsroom/press-releases/en/2024/april/mono-collaborates-with-mastercard-to-power-innovative-payment-solutions-for-digital-commerce-in-africa/"
+    }
+  ],
+  "map_sources": [
+    {
+      "title": "Natural Earth 1:50m country silhouettes",
+      "url": "https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/"
+    },
+    {
+      "title": "Natural Earth 1:50m GeoJSON source",
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_50m_admin_0_countries.geojson"
+    },
+    {
+      "title": "GeoNames city coordinates",
+      "url": "https://download.geonames.org/export/dump/cities15000.zip"
+    },
+    {
+      "title": "GeoNames schema and CC BY 4.0 license",
+      "url": "https://download.geonames.org/export/dump/readme.txt"
+    },
+    {
+      "title": "D3 geographic projections",
+      "url": "https://d3js.org/d3-geo/projection"
+    }
+  ],
+  "asset_manifest": {
+    "assets/simpaisa-cover-with-seven-evenly-spaced-softly-t-6fdd129a1e.jpg": {
+      "sha256": "6fdd129a1e50d698b7651cb3505c7d574aa48966890d58b891e04073ef2e74f9",
+      "bytes": 80105,
+      "mime": "image/jpeg",
+      "label": "Simpaisa cover with seven evenly spaced, softly toned country flags above regional landmarks."
+    },
+    "assets/image-89e851c0d5.svg": {
+      "sha256": "89e851c0d541d8166b297e13bed97e0cb500bdb4ae48fd83a86b606a078352a8",
+      "bytes": 725,
+      "mime": "image/svg+xml",
+      "label": "image"
+    },
+    "assets/image-1aabb4a772.svg": {
+      "sha256": "1aabb4a772651fb9a673660233d5bc6f3d78dfc71df09d567769bc97b9eb554f",
+      "bytes": 187,
+      "mime": "image/svg+xml",
+      "label": "image"
+    },
+    "assets/image-b84c02e2fa.svg": {
+      "sha256": "b84c02e2fa659d0be6fc6b5963d5e9fbd25c3a6ab4d469aa61f1e3cdbd3f4637",
+      "bytes": 1005,
+      "mime": "image/svg+xml",
+      "label": "image"
+    },
+    "assets/image-073b07113d.svg": {
+      "sha256": "073b07113d582dfea58fbd7e7e63cd9626bfa4afc87b3446a2a798981e26a412",
+      "bytes": 1420,
+      "mime": "image/svg+xml",
+      "label": "image"
+    },
+    "assets/image-3f85d1d2bd.svg": {
+      "sha256": "3f85d1d2bdb03692ad68f84efff36be2f5b1b5b7438b7b7be50def3837bf532f",
+      "bytes": 8726,
+      "mime": "image/svg+xml",
+      "label": "image"
+    },
+    "assets/image-5738c8cfca.svg": {
+      "sha256": "5738c8cfca5fea63587cbcf69237996c8ce6283f8016853150686f37311b620e",
+      "bytes": 9968,
+      "mime": "image/svg+xml",
+      "label": "image"
+    },
+    "assets/image-b7a2a45a64.svg": {
+      "sha256": "b7a2a45a6499095efce41592428ff558ec5bd83d2751858dfe5fa4589334b66f",
+      "bytes": 257,
+      "mime": "image/svg+xml",
+      "label": "image"
+    },
+    "assets/pakistan-landmarks-above-rough-dry-earth-and-roc-6056e7f675.webp": {
+      "sha256": "6056e7f675cbb28f0dadad7caddc09cba1068d38f915345268642e02fb623309",
+      "bytes": 24148,
+      "mime": "image/webp",
+      "label": "Pakistan landmarks above rough dry earth and rocks, without reflections or water"
+    },
+    "assets/simpaisa-0ddcd8e522.svg": {
+      "sha256": "0ddcd8e522e821f1c9feafe95b95fd8c83af7624f77f72380d61408675c00b1a",
+      "bytes": 4415,
+      "mime": "image/svg+xml",
+      "label": "Simpaisa"
+    },
+    "assets/jazzcash-68607aa588.webp": {
+      "sha256": "68607aa5887fc46b12a9ea572367e5ce0c116bb48f504a38d472a6a2814d5eb9",
+      "bytes": 27460,
+      "mime": "image/webp",
+      "label": "JazzCash"
+    },
+    "assets/easypaisa-digital-bank-e17c5135a9.webp": {
+      "sha256": "e17c5135a9f2568db58106e2cea85d8c543ac5a04f9f32a6b4ae682076ffeecf",
+      "bytes": 10156,
+      "mime": "image/webp",
+      "label": "easypaisa digital bank"
+    },
+    "assets/konnect-adf8d29afd.webp": {
+      "sha256": "adf8d29afd6e2ebe223a61e301670502d3fc321b7ff8d84ba07048b042302cbf",
+      "bytes": 11380,
+      "mime": "image/webp",
+      "label": "Konnect"
+    },
+    "assets/1link-56fd098426.webp": {
+      "sha256": "56fd09842697c37218025d3c7d89ce9f5b3dcb83fd184743942771a6d2824191",
+      "bytes": 1468,
+      "mime": "image/webp",
+      "label": "1LINK"
+    },
+    "assets/visa-599516c5b0.webp": {
+      "sha256": "599516c5b0774af5161cbf48066a362326b0fa91e6b58b02064ba4117623ff2d",
+      "bytes": 1992,
+      "mime": "image/webp",
+      "label": "Visa"
+    },
+    "assets/alfa-30cde5c70f.webp": {
+      "sha256": "30cde5c70f04203cbb9db22f1422aea04ce9be8c46aaad6a23a4533bd0cbbc81",
+      "bytes": 13550,
+      "mime": "image/webp",
+      "label": "Alfa"
+    },
+    "assets/zindigi-cd4abe7852.webp": {
+      "sha256": "cd4abe785223f3a6fb73c808efd3f73af10ec764f6798f78516a41bdf2eb619a",
+      "bytes": 2538,
+      "mime": "image/webp",
+      "label": "Zindigi"
+    },
+    "assets/paypak-8f06ab0d43.webp": {
+      "sha256": "8f06ab0d4377ea2041831f894f091982a87b5a86833691554f346047607475d1",
+      "bytes": 11700,
+      "mime": "image/webp",
+      "label": "PayPak"
+    },
+    "assets/raast-c926d0d410.webp": {
+      "sha256": "c926d0d410e726b540ebc87c1a3c8e6fa22e73faf6e6a5894205502f15ea3305",
+      "bytes": 7636,
+      "mime": "image/webp",
+      "label": "Raast"
+    },
+    "assets/mastercard-99a060d812.webp": {
+      "sha256": "99a060d812c440b29a3221620778f9e95e5fce339a1c5d8b612527d70beec699",
+      "bytes": 3794,
+      "mime": "image/webp",
+      "label": "Mastercard"
+    },
+    "assets/bangladesh-landmarks-in-blue-above-dry-stone-gro-2d6fb3663b.webp": {
+      "sha256": "2d6fb3663b53325d2b6c674d39878970672b9ad36e5aafb166370935d3a7b07d",
+      "bytes": 35756,
+      "mime": "image/webp",
+      "label": "Bangladesh landmarks in blue above dry stone ground"
+    },
+    "assets/bkash-5c70c9c430.svg": {
+      "sha256": "5c70c9c430a8b555e8b3397a6e581fb9ef0ecf68be99c1f262b0d7adee66f7f3",
+      "bytes": 9747,
+      "mime": "image/svg+xml",
+      "label": "bKash"
+    },
+    "assets/nagad-067cfafbb5.svg": {
+      "sha256": "067cfafbb51f200b944a2f511378549e7fa607d680bdbf35d04e2ce6bfae5813",
+      "bytes": 14566,
+      "mime": "image/svg+xml",
+      "label": "Nagad"
+    },
+    "assets/rocket-5041a28c79.webp": {
+      "sha256": "5041a28c790ad7fbadafb27a42bb988c72a5597b05e7466122710708e0c87d83",
+      "bytes": 17674,
+      "mime": "image/webp",
+      "label": "Rocket"
+    },
+    "assets/upay-72ffcaa692.webp": {
+      "sha256": "72ffcaa692381e038d56a15abd829f34fd38beae95b9538cd60b7a83884921bb",
+      "bytes": 2256,
+      "mime": "image/webp",
+      "label": "Upay"
+    },
+    "assets/bangla-qr-bec45eeb73.svg": {
+      "sha256": "bec45eeb733110cabdabbe70778612c4f01923998a80b96278b85b8cb9062a70",
+      "bytes": 15187,
+      "mime": "image/svg+xml",
+      "label": "Bangla QR"
+    },
+    "assets/american-express-028f643755.svg": {
+      "sha256": "028f643755987211bf2f3add6c62ae1870a888cf2f4fe3040a4fac7dce2543ab",
+      "bytes": 2402,
+      "mime": "image/svg+xml",
+      "label": "American Express"
+    },
+    "assets/npsb-8213a8c476.svg": {
+      "sha256": "8213a8c476fb623a9da7183d465862c8a687fb313f97b0d3f31ff403644e0a6e",
+      "bytes": 9808,
+      "mime": "image/svg+xml",
+      "label": "NPSB"
+    },
+    "assets/nepal-landmarks-in-blue-above-dry-stone-ground-998c5b6d96.webp": {
+      "sha256": "998c5b6d96fc3809403891557d8e1e55047542c24a8afbd15ae22068cf0c084d",
+      "bytes": 42754,
+      "mime": "image/webp",
+      "label": "Nepal landmarks in blue above dry stone ground"
+    },
+    "assets/esewa-c69ae2ad27.webp": {
+      "sha256": "c69ae2ad272ca72e6f7120f47460ca2bed7e6ba78ef80af5ad4ab9e6dc612d94",
+      "bytes": 6838,
+      "mime": "image/webp",
+      "label": "eSewa"
+    },
+    "assets/khalti-923a141a65.webp": {
+      "sha256": "923a141a65401f52c001b8abf939802220f9587fb631861695cfb4f65266335c",
+      "bytes": 13980,
+      "mime": "image/webp",
+      "label": "Khalti"
+    },
+    "assets/ime-pay-00672f8d9e.webp": {
+      "sha256": "00672f8d9ea01be0048e416dfd7568d894937fed9db4d623954cd9b7cc19d4df",
+      "bytes": 2128,
+      "mime": "image/webp",
+      "label": "IME Pay"
+    },
+    "assets/connectips-25f8d1ad91.webp": {
+      "sha256": "25f8d1ad91ffbfa59b5ed25a8c4dcf0741c66031ea177d6340be68fe8aae2075",
+      "bytes": 5670,
+      "mime": "image/webp",
+      "label": "connectIPS"
+    },
+    "assets/nepalpay-qr-556a3a66fc.webp": {
+      "sha256": "556a3a66fc6556eb963e02d4df11ab2fd07c71b58b291c5426a99abbb3e6ae80",
+      "bytes": 7928,
+      "mime": "image/webp",
+      "label": "NEPALPAY QR"
+    },
+    "assets/nepalpay-card-85620cf635.webp": {
+      "sha256": "85620cf635fb48b2da10137f7a9bc5fac91df7e25606a2e00c82c302decc725a",
+      "bytes": 5026,
+      "mime": "image/webp",
+      "label": "NEPALPAY Card"
+    },
+    "assets/iraq-landmarks-in-blue-above-dry-ground-48a7498217.webp": {
+      "sha256": "48a7498217aee765ee4e1c2bd9da760cf53f69b910626b0b67e2f07220ab3e72",
+      "bytes": 19634,
+      "mime": "image/webp",
+      "label": "Iraq landmarks in blue above dry ground"
+    },
+    "assets/zaincash-0e755282f8.webp": {
+      "sha256": "0e755282f8679d571fcb63b5b41c0b309b99cb9af674f4167568c1d6aa906d28",
+      "bytes": 3102,
+      "mime": "image/webp",
+      "label": "ZainCash"
+    },
+    "assets/asiahawala-5490524504.webp": {
+      "sha256": "5490524504c113e3e3efab3877750903c8e1f8e1819576109bd3ff0029d6d5e5",
+      "bytes": 1864,
+      "mime": "image/webp",
+      "label": "AsiaHawala"
+    },
+    "assets/fastpay-8e082fa030.webp": {
+      "sha256": "8e082fa03055c827b93340979b0152ef400d684df200051a846e03ea2c2e99c2",
+      "bytes": 6466,
+      "mime": "image/webp",
+      "label": "FastPay"
+    },
+    "assets/nasspay-0b348ee2a6.svg": {
+      "sha256": "0b348ee2a6623a1d064c170b5fde02d16f8f281d418c84f32c49747e0798bb78",
+      "bytes": 9799,
+      "mime": "image/svg+xml",
+      "label": "NassPay"
+    },
+    "assets/egypt-landmarks-in-blue-above-dry-ground-a004d93b58.webp": {
+      "sha256": "a004d93b5843ee40e00b8cbe52ac0a9a2d78291c707cc8d751412af9728ea6e8",
+      "bytes": 24278,
+      "mime": "image/webp",
+      "label": "Egypt landmarks in blue above dry ground"
+    },
+    "assets/vodafone-cash-aca880f558.svg": {
+      "sha256": "aca880f55868605283689f4ca07bee33ce0d2c7048faacf797fad99a593c4df4",
+      "bytes": 6280,
+      "mime": "image/svg+xml",
+      "label": "Vodafone Cash"
+    },
+    "assets/e-cash-3f1cb87e4b.svg": {
+      "sha256": "3f1cb87e4bc5e447628c2e4d8bb3cbf559db57ecc83f8193d70c83a1b31ccd16",
+      "bytes": 3614,
+      "mime": "image/svg+xml",
+      "label": "e& Cash"
+    },
+    "assets/orange-cash-17754af2c0.webp": {
+      "sha256": "17754af2c0bf7ec3e9aaceb0fea8102c2a47cc5e0d42a5410fd5d226904970c6",
+      "bytes": 600,
+      "mime": "image/webp",
+      "label": "Orange Cash"
+    },
+    "assets/we-pay-1e8ab19db0.svg": {
+      "sha256": "1e8ab19db0c9a206be87947da4d4641360238dc8ea718f5a444e642574d51402",
+      "bytes": 10078,
+      "mime": "image/svg+xml",
+      "label": "WE Pay"
+    },
+    "assets/instapay-ipn-f9ca180f50.svg": {
+      "sha256": "f9ca180f508907e7abf619722c4cc8acb36953e12d1b8606c063ef0dd0cf8798",
+      "bytes": 4749,
+      "mime": "image/svg+xml",
+      "label": "InstaPay / IPN"
+    },
+    "assets/fawry-16b2a0cb0c.png": {
+      "sha256": "16b2a0cb0cb98b29842a5406c486c3413c4697e261b3c74f1a80b384fbb25160",
+      "bytes": 1135,
+      "mime": "image/png",
+      "label": "Fawry"
+    },
+    "assets/meeza-cbfd89ae0c.webp": {
+      "sha256": "cbfd89ae0c0d02c9d7c6c60a4b92c032ca16b5b2a0297140716c02585ebb2a30",
+      "bytes": 5742,
+      "mime": "image/webp",
+      "label": "Meeza"
+    },
+    "assets/saudi-arabia-landmarks-in-blue-above-dry-ground-329c0e9eb2.webp": {
+      "sha256": "329c0e9eb2c5c89a17d2f035c46e948963ab4fb0a7acb35b408a677f53ec811e",
+      "bytes": 16256,
+      "mime": "image/webp",
+      "label": "Saudi Arabia landmarks in blue above dry ground"
+    },
+    "assets/urpay-5c313af356.webp": {
+      "sha256": "5c313af356e9e66e19495f331207e6e685f255871a02af0724d544d0f2197798",
+      "bytes": 17682,
+      "mime": "image/webp",
+      "label": "urpay"
+    },
+    "assets/stc-bank-cb35b05da1.svg": {
+      "sha256": "cb35b05da118df58314c9857a54eddad9705bc1217a4c55feb4f83ef051089f2",
+      "bytes": 3958,
+      "mime": "image/svg+xml",
+      "label": "stc bank"
+    },
+    "assets/mobily-pay-ed78f8bade.svg": {
+      "sha256": "ed78f8bade3c1d8927997e1a89e5b0156c1abd29eade714b954a452515884335",
+      "bytes": 2065,
+      "mime": "image/svg+xml",
+      "label": "Mobily Pay"
+    },
+    "assets/alinma-pay-22435d1fdf.webp": {
+      "sha256": "22435d1fdf99ffc829428f33de3898188912527c51d7dbc6c6204113f958f69f",
+      "bytes": 4444,
+      "mime": "image/webp",
+      "label": "alinma pay"
+    },
+    "assets/sarie-423eb233fd.webp": {
+      "sha256": "423eb233fd9d2a1dce18c9d2e59f8451c44fd616ae8b90a6e132a5d1408f28cb",
+      "bytes": 5150,
+      "mime": "image/webp",
+      "label": "sarie"
+    },
+    "assets/mada-aef3323c68.svg": {
+      "sha256": "aef3323c68e5e2dce186f79bd565669ab80c850b2ad48a127a4b21c486cd7311",
+      "bytes": 3447,
+      "mime": "image/svg+xml",
+      "label": "mada"
+    },
+    "assets/nigeria-landmarks-in-blue-above-dry-ground-ec989f8ac0.webp": {
+      "sha256": "ec989f8ac08dc29b4872575d0d7fe1a1918aebacb43ab685cdcefcb3dcdc0347",
+      "bytes": 20676,
+      "mime": "image/webp",
+      "label": "Nigeria landmarks in blue above dry ground"
+    },
+    "assets/opay-e5504767be.svg": {
+      "sha256": "e5504767be2b862a5e19207e54b0403e041dfeac4791416c2a30ab2687bac5c1",
+      "bytes": 1958,
+      "mime": "image/svg+xml",
+      "label": "OPay"
+    },
+    "assets/palmpay-4ba0dc4c1d.webp": {
+      "sha256": "4ba0dc4c1d569bb6eb508c69810614525ca5d71b749e46a5214daee3a473ca1d",
+      "bytes": 2524,
+      "mime": "image/webp",
+      "label": "PalmPay"
+    },
+    "assets/paga-640f9147c3.webp": {
+      "sha256": "640f9147c38d91efe998d525178dee3d6ff3d6118216a4e4af364da69780c4cb",
+      "bytes": 2278,
+      "mime": "image/webp",
+      "label": "Paga"
+    },
+    "assets/nibss-nip-eb3a131f94.webp": {
+      "sha256": "eb3a131f94f914e1a2f82e11c0a9100e4fe5827aec2fd6b0c1c86f59c6b772c1",
+      "bytes": 544,
+      "mime": "image/webp",
+      "label": "NIBSS NIP"
+    },
+    "assets/verve-94665b57a4.svg": {
+      "sha256": "94665b57a433b24bc20e5f8d69922d9d5519d4f4786bb8d085af3bfd88522154",
+      "bytes": 1359,
+      "mime": "image/svg+xml",
+      "label": "Verve"
+    },
+    "assets/afrigo-e38ca4acb5.webp": {
+      "sha256": "e38ca4acb54ac01fcf0750ad9fd4c3b0f2d3990796473457992e3abb0c407e66",
+      "bytes": 5992,
+      "mime": "image/webp",
+      "label": "AfriGO"
+    },
+    "assets/our-office-locations-riyadh-saudi-arabia-dubai-u-a67c61c9aa.svg": {
+      "sha256": "a67c61c9aa1976cd281e0748f0f0b87191618344bf566719bbed4191942b1738",
+      "bytes": 26589,
+      "mime": "image/svg+xml",
+      "label": "Our office locations: Riyadh, Saudi Arabia; Dubai, UAE; Karachi, Pakistan; Dhaka, Bangladesh; Kathmandu, Nepal. Each dotted country map has a pin at its office city."
+    },
+    "assets/office-locations-print-4x-52214d4291.png": {
+      "sha256": "52214d42913a8ef4c053c5d55ad53963cbefeba57d480063ae18fc0493c460ec",
+      "bytes": 167351,
+      "mime": "image/png",
+      "label": "office-locations-print-4x"
+    },
+    "assets/control-mark-867ae4d8d4.svg": {
+      "sha256": "867ae4d8d4fa54dbe5e85f120450705c6afd2d8db8d6896497aac056909446a1",
+      "bytes": 505,
+      "mime": "image/svg+xml",
+      "label": "control-mark"
+    },
+    "assets/inter-regular-b4c50554d0.woff2": {
+      "sha256": "b4c50554d0199ef5b59afbd313209c3e1ca9ce2442fb06200972e0896a036fde",
+      "bytes": 22116,
+      "mime": "font/woff2",
+      "label": "inter-regular"
+    },
+    "assets/inter-semibold-47a5b5b4a7.woff2": {
+      "sha256": "47a5b5b4a73b31e3656d0585428f25b1668879decf0a76478fa18054c89702f9",
+      "bytes": 22772,
+      "mime": "font/woff2",
+      "label": "inter-semibold"
+    },
+    "assets/poppins-semibold-441936ad96.woff2": {
+      "sha256": "441936ad9698c5907b4f3cfc4e7678b4a9ab6edf28d2b5bc38f8f37a9650872c",
+      "bytes": 5408,
+      "mime": "font/woff2",
+      "label": "poppins-semibold"
+    }
+  }
+}

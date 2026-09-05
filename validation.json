@@ -1,0 +1,325 @@
+{
+  "version": "v26",
+  "offline": true,
+  "pageCount": 13,
+  "errors": [],
+  "networkRequests": [],
+  "controls": {
+    "selector": true,
+    "previous": true,
+    "next": true,
+    "guides": true,
+    "hash": true
+  },
+  "closingPage": {
+    "pages": 1,
+    "visiblePage": "13"
+  },
+  "printFallback": {
+    "currentSource": "office-locations-print-4x-52214d4291.png",
+    "naturalWidth": 2124,
+    "naturalHeight": 488
+  },
+  "narrowViewport": {
+    "scrollWidth": 360,
+    "width": 360
+  },
+  "sourceRetention": {
+    "noteCount": 9,
+    "links": 37,
+    "pageOrder": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "icons": 57,
+    "fontsLoaded": [
+      true,
+      true,
+      true
+    ],
+    "noteTextChecks": [
+      {
+        "page": 6,
+        "exact_text_preserved": true
+      },
+      {
+        "page": 7,
+        "exact_text_preserved": true
+      },
+      {
+        "page": 8,
+        "exact_text_preserved": true
+      },
+      {
+        "page": 9,
+        "exact_text_preserved": true
+      },
+      {
+        "page": 10,
+        "exact_text_preserved": true
+      },
+      {
+        "page": 11,
+        "exact_text_preserved": true
+      },
+      {
+        "page": 13,
+        "exact_text_preserved": true
+      },
+      {
+        "page": 12,
+        "exact_text_preserved": true
+      },
+      {
+        "page": 5,
+        "exact_text_preserved": true
+      }
+    ]
+  },
+  "pages": [
+    {
+      "page": 1,
+      "visiblePages": [
+        1
+      ],
+      "size": [
+        595,
+        842
+      ],
+      "brokenImages": []
+    },
+    {
+      "page": 2,
+      "visiblePages": [
+        2
+      ],
+      "size": [
+        595,
+        842
+      ],
+      "brokenImages": []
+    },
+    {
+      "page": 3,
+      "visiblePages": [
+        3
+      ],
+      "size": [
+        595,
+        842
+      ],
+      "brokenImages": []
+    },
+    {
+      "page": 4,
+      "visiblePages": [
+        4
+      ],
+      "size": [
+        595,
+        842
+      ],
+      "brokenImages": []
+    },
+    {
+      "page": 5,
+      "visiblePages": [
+        5
+      ],
+      "size": [
+        595,
+        842
+      ],
+      "brokenImages": []
+    },
+    {
+      "page": 6,
+      "visiblePages": [
+        6
+      ],
+      "size": [
+        595,
+        842
+      ],
+      "brokenImages": []
+    },
+    {
+      "page": 7,
+      "visiblePages": [
+        7
+      ],
+      "size": [
+        595,
+        842
+      ],
+      "brokenImages": []
+    },
+    {
+      "page": 8,
+      "visiblePages": [
+        8
+      ],
+      "size": [
+        595,
+        842
+      ],
+      "brokenImages": []
+    },
+    {
+      "page": 9,
+      "visiblePages": [
+        9
+      ],
+      "size": [
+        595,
+        842
+      ],
+      "brokenImages": []
+    },
+    {
+      "page": 10,
+      "visiblePages": [
+        10
+      ],
+      "size": [
+        595,
+        842
+      ],
+      "brokenImages": []
+    },
+    {
+      "page": 11,
+      "visiblePages": [
+        11
+      ],
+      "size": [
+        595,
+        842
+      ],
+      "brokenImages": []
+    },
+    {
+      "page": 12,
+      "visiblePages": [
+        12
+      ],
+      "size": [
+        595,
+        842
+      ],
+      "brokenImages": []
+    },
+    {
+      "page": 13,
+      "visiblePages": [
+        13
+      ],
+      "size": [
+        595,
+        842
+      ],
+      "brokenImages": []
+    }
+  ],
+  "renderComparison": {
+    "reference": "Current v26 hydrated browser review; paper coordinates aligned to the pixel grid for comparison.",
+    "result": "No visible layout or content differences; small rasterization and gradient differences remain.",
+    "pages": [
+      {
+        "page": 1,
+        "width": 595,
+        "height": 842,
+        "mean_rgb_difference_0_255": 0.000473
+      },
+      {
+        "page": 2,
+        "width": 595,
+        "height": 842,
+        "mean_rgb_difference_0_255": 0.013931
+      },
+      {
+        "page": 3,
+        "width": 595,
+        "height": 842,
+        "mean_rgb_difference_0_255": 0.01357
+      },
+      {
+        "page": 4,
+        "width": 595,
+        "height": 842,
+        "mean_rgb_difference_0_255": 0.012799
+      },
+      {
+        "page": 5,
+        "width": 595,
+        "height": 842,
+        "mean_rgb_difference_0_255": 0.000395
+      },
+      {
+        "page": 6,
+        "width": 595,
+        "height": 842,
+        "mean_rgb_difference_0_255": 0.007838
+      },
+      {
+        "page": 7,
+        "width": 595,
+        "height": 842,
+        "mean_rgb_difference_0_255": 0.006386
+      },
+      {
+        "page": 8,
+        "width": 595,
+        "height": 842,
+        "mean_rgb_difference_0_255": 0.006163
+      },
+      {
+        "page": 9,
+        "width": 595,
+        "height": 842,
+        "mean_rgb_difference_0_255": 0.006025
+      },
+      {
+        "page": 10,
+        "width": 595,
+        "height": 842,
+        "mean_rgb_difference_0_255": 0.006063
+      },
+      {
+        "page": 11,
+        "width": 595,
+        "height": 842,
+        "mean_rgb_difference_0_255": 0.005974
+      },
+      {
+        "page": 12,
+        "width": 595,
+        "height": 842,
+        "mean_rgb_difference_0_255": 0.006127
+      },
+      {
+        "page": 13,
+        "width": 595,
+        "height": 842,
+        "mean_rgb_difference_0_255": 0.049444
+      }
+    ],
+    "max_mean_rgb_difference_0_255": 0.049444
+  },
+  "portablePaths": {
+    "absolute_local_paths": false,
+    "runtime_host_apis": false,
+    "iframes": false
+  }
+}

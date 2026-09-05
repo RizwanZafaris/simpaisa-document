@@ -1,0 +1,1603 @@
+:root {
+  color-scheme: light dark;
+  background-color: var(
+    --background,
+    var(--color-background-primary, light-dark(rgb(255 255 255), rgb(24 24 24)))
+  ) !important;
+
+  /* Viewer theme variables. */
+  --background: var(
+    --color-background-primary,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --card: color-mix(in oklab, var(--foreground) 5%, var(--background));
+  --card-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --popover: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255), rgb(45 45 45))
+  );
+  --popover-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --primary: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --primary-foreground: var(
+    --color-text-inverse,
+    light-dark(rgb(255 255 255), rgb(13 13 13))
+  );
+  --secondary: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255 / 96%), rgb(54 54 54 / 96%))
+  );
+  --secondary-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --muted: color-mix(in srgb, var(--foreground) 10%, transparent);
+  --muted-foreground: var(
+    --color-text-secondary,
+    light-dark(rgb(26 28 31 / 49.4%), rgb(255 255 255 / 49.8%))
+  );
+  --accent: var(
+    --color-background-info,
+    light-dark(rgb(229 242 255), rgb(13 39 63))
+  );
+  --accent-foreground: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --destructive: var(
+    --color-text-warning,
+    light-dark(rgb(226 85 7), rgb(255 133 73))
+  );
+  --border: var(
+    --color-border-secondary,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+  --input: var(
+    --color-border-primary,
+    light-dark(
+      rgb(26 28 31 / 11.8%),
+      color-mix(in oklab, rgb(0 0 0) 10%, transparent)
+    )
+  );
+  --ring: var(
+    --color-ring-primary,
+    light-dark(rgb(51 156 255), rgb(131 195 255 / 76%))
+  );
+  --font-size-base: var(--font-text-md-size, 14px);
+  --blue: light-dark(rgb(51 156 255), rgb(51 156 255));
+  --orange: light-dark(rgb(226 85 7), rgb(251 106 34));
+  --green: light-dark(rgb(0 162 64), rgb(64 201 119));
+  --red: light-dark(rgb(224 46 42), rgb(255 103 100));
+  --purple: light-dark(rgb(146 79 247), rgb(173 123 249));
+  --yellow: light-dark(rgb(255 195 0), rgb(255 210 64));
+  --viz-series-1: var(--primary);
+  --viz-series-2: light-dark(rgb(243 136 59), rgb(245 154 86));
+  --viz-series-3: light-dark(rgb(93 201 119), rgb(116 213 139));
+  --viz-series-4: light-dark(rgb(235 119 177), rgb(240 143 192));
+  --viz-series-5: light-dark(rgb(155 121 236), rgb(170 145 239));
+  --viz-series-6: light-dark(rgb(58 185 177), rgb(90 203 194));
+
+  /* Internal implementation variables; not part of the agent contract. */
+  --font-sans: -apple-system, system-ui, "Segoe UI", sans-serif;
+  --font-mono:
+    ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono",
+    monospace;
+  --font-size-normal: max(11px, var(--font-size-base));
+  --font-size-tooltip: calc(var(--font-size-base) - 1px);
+  --font-size-small: max(11px, calc(var(--font-size-base) - 2px));
+  --font-size-h1: calc(var(--font-size-normal) * 1.7142857143);
+  --font-size-h2: calc(var(--font-size-normal) * 1.4285714286);
+  --font-size-h3: calc(var(--font-size-normal) * 1.2857142857);
+  --font-weight-normal: 430;
+  --font-weight-medium: 500;
+  --icon-size: 16px;
+  --line-height-normal: calc(var(--font-size-normal) * 1.5);
+  --line-height-tooltip: calc(var(--font-size-tooltip) * 1.4285714286);
+  --line-height-small: calc(var(--font-size-small) + 4px);
+  --corner-shape: round;
+  --radius: var(--border-radius-lg, 10px);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-2xl: calc(var(--radius) * 1.6);
+  --radius-full: 9999px;
+  --shadow-sm: 0 1px 2px -1px rgb(0 0 0 / 8%);
+  --checkmark-image: url("assets/control-mark-867ae4d8d4.svg");
+
+  /* Legacy aliases; not part of the current agent contract. */
+  --viz-bg: transparent;
+  --viz-panel: var(--card);
+  --viz-border: var(--border);
+  --viz-text: var(--foreground);
+  --viz-muted: var(--muted-foreground);
+  --viz-accent: var(--primary);
+  --viz-accent-text: var(--primary-foreground);
+  --viz-accent-bg: var(--accent);
+  --viz-font-size: var(--font-size-base);
+  --viz-warning: var(--destructive);
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html > body {
+  /* Preserve MCP aliases for older inline renderers without creating :root cycles. */
+  --color-background-primary: var(
+    --background,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --color-text-primary: var(
+    --foreground,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --color-border-secondary: var(
+    --border,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+
+  margin: 0;
+  padding: var(--visualize-paint-gutter, 0px);
+  color: var(--foreground);
+  background: transparent !important;
+  font-family: var(--font-sans) !important;
+  font-size: var(--font-size-normal);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+}
+
+a {
+  color: color-mix(in srgb, var(--viz-accent) 80%, var(--viz-text) 20%);
+  cursor: pointer;
+  font-weight: var(--font-weight-medium, 500);
+  text-decoration: none;
+  text-underline-offset: 2px;
+}
+
+a:is(:hover, :focus-visible) {
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+  text-decoration-thickness: 0.5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-block: 0;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.3;
+}
+
+b,
+strong,
+th {
+  font-weight: var(--font-weight-medium);
+}
+
+code:not(pre code) {
+  display: inline;
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  corner-shape: var(--corner-shape);
+  background: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  overflow-wrap: anywhere;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  word-break: break-word;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--foreground);
+  font: inherit;
+  text-align: start;
+}
+
+.table :is(th, td) {
+  padding-block: 10px;
+  padding-inline: 0 24px;
+  overflow-wrap: anywhere;
+  border-bottom: 1px solid var(--border);
+  text-align: start;
+  vertical-align: top;
+}
+
+.table-responsive > .table :is(th, td) {
+  overflow-wrap: break-word;
+}
+
+.table :is(th, td):last-child {
+  padding-inline-end: 0;
+}
+
+.table :is(caption, thead th) {
+  font-weight: 600;
+}
+
+.table thead th {
+  padding-block: 8px;
+  border-bottom-color: color-mix(in srgb, var(--foreground) 16%, transparent);
+}
+
+.table tbody tr:last-child :is(th, td) {
+  border-bottom: 0;
+}
+
+.table.table-sm :is(th, td) {
+  padding-block: 6px;
+}
+
+.table.table-sm :is(th, td):not(:last-child) {
+  padding-inline-end: 16px;
+}
+
+.table :is(.text-end, [align="right"]) {
+  text-align: end;
+  font-variant-numeric: tabular-nums;
+}
+
+.table :is(.text-center, [align="center"]) {
+  text-align: center;
+}
+
+.table .text-nowrap {
+  white-space: nowrap;
+}
+
+#widget {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  padding: 0;
+  background: transparent !important;
+}
+
+.card {
+  min-width: 0;
+  padding: 12px;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  border-radius: var(--radius-2xl);
+  corner-shape: var(--corner-shape);
+  color: var(--card-foreground);
+  background: var(--card);
+}
+
+#widget > :not(.card, .progress) {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.tooltip {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  width: max-content;
+  max-width: min(
+    20rem,
+    var(--tooltip-available-width, calc(100vw - 10px)),
+    calc(100vw - 10px)
+  );
+  max-height: min(
+    var(--tooltip-available-height, calc(100vh - 10px)),
+    calc(100vh - 10px)
+  );
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  color: var(--popover-foreground);
+  background: var(--popover);
+  box-shadow: none;
+  font-size: var(--font-size-tooltip);
+  line-height: var(--line-height-tooltip);
+  overflow-wrap: break-word;
+  white-space: normal;
+  pointer-events: none;
+  user-select: none;
+}
+
+.viz-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(max(180px, 24%), 1fr));
+  gap: 10px;
+}
+
+.viz-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.viz-stat-value {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+.viz-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+hr {
+  width: 100%;
+  height: 1px;
+  margin-block: 6px;
+  border: 0;
+  background: var(--border);
+}
+
+.nav {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 4px;
+}
+
+.progress {
+  display: flex;
+  height: 8px;
+  margin-block: calc((var(--line-height-normal, 1.5em) - 8px) / 2);
+  overflow: hidden;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--muted);
+}
+
+.progress-bar:only-child {
+  border-radius: var(--radius-full);
+}
+
+.progress-bar {
+  height: 100%;
+  flex-shrink: 0;
+  border: 0;
+  background: var(--viz-series-1);
+}
+
+.viz-badge {
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  color: var(--accent-foreground);
+  background: var(--accent);
+  font-weight: var(--font-weight-medium);
+}
+
+small,
+.text-small,
+.viz-badge {
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+}
+
+.text-muted {
+  color: var(--muted-foreground);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.viz-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.viz-controls > .form-label {
+  display: grid;
+  min-width: min(100%, 260px);
+  flex: 1 1 280px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 2px 12px;
+  margin-bottom: 0;
+}
+
+.viz-controls > .form-label > :is(.form-control, .form-range, .form-select) {
+  grid-column: 1 / -1;
+}
+
+.btn,
+.nav-link,
+.form-check-input,
+.form-control,
+.form-range,
+.form-select {
+  font: inherit;
+}
+
+.btn,
+.nav-link {
+  appearance: button;
+  display: inline-flex;
+  inline-size: fit-content;
+  max-inline-size: 100%;
+  min-height: 28px;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin: 0;
+  padding: 0 8px;
+  -webkit-app-region: no-drag;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: var(--cursor-interaction, pointer);
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+.btn:is(.btn-block, .viz-tile) {
+  inline-size: 100%;
+}
+
+.btn.viz-tile {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+a.btn {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:not(:disabled):hover,
+.nav-link:not(:disabled):not([aria-disabled="true"]):hover {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.btn-primary {
+  border-color: transparent;
+  color: var(--primary-foreground);
+  background: var(--foreground);
+  background-clip: padding-box;
+}
+
+.btn-primary .text-muted {
+  color: color-mix(in srgb, var(--primary-foreground) 50%, transparent);
+}
+
+.btn-primary:not(:disabled):hover {
+  background: color-mix(in srgb, var(--foreground) 80%, transparent);
+  background-clip: padding-box;
+}
+
+.btn-ghost {
+  border-color: transparent;
+  color: var(--muted-foreground);
+  background: transparent;
+}
+
+.btn-ghost:not(:disabled):hover {
+  color: var(--foreground);
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.nav-pills .nav-link {
+  min-width: 0;
+  border-color: transparent;
+  color: var(--muted-foreground);
+  background: transparent;
+}
+
+.nav-justified .nav-link {
+  flex: 1 1 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+.nav-pills .nav-link.active {
+  color: var(--foreground);
+  background: var(--muted);
+}
+
+.btn:disabled,
+.nav-link:disabled,
+.nav-link[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+[data-lucide] {
+  stroke-width: 1.6;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--foreground);
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  padding: 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  color: var(--foreground);
+  background: var(--secondary);
+}
+
+.form-control::placeholder {
+  color: var(--muted-foreground);
+}
+
+.form-control[type="file"] {
+  padding: 0;
+  overflow: hidden;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control[type="file"]::file-selector-button {
+  min-height: 26px;
+  margin-right: 8px;
+  padding: 0 8px;
+  border: 0;
+  border-right: 1px solid var(--input);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: inherit;
+  font: inherit;
+}
+
+.form-control[type="file"]:not(:disabled):hover::file-selector-button {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-control-color[type="color"] {
+  width: 40px;
+  height: 28px;
+  padding: 3px;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control-color[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+.form-control-color[type="color"]::-webkit-color-swatch {
+  border: 0;
+  border-radius: calc(var(--radius-lg) - 4px);
+  corner-shape: var(--corner-shape);
+}
+
+textarea.form-control {
+  height: auto;
+  min-height: 72px;
+  padding: 8px 10px;
+  resize: vertical;
+}
+
+.form-control:focus-visible {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-control:disabled,
+.form-select:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.form-select {
+  appearance: none;
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  margin: 0;
+  padding: 0 32px 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  color: var(--foreground);
+  background-color: var(--secondary);
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--muted-foreground) 50%),
+    linear-gradient(135deg, var(--muted-foreground) 50%, transparent 50%);
+  background-position:
+    calc(100% - 14px) 50%,
+    calc(100% - 10px) 50%;
+  background-repeat: no-repeat;
+  background-size: 4px 4px;
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-select:not(:disabled):hover {
+  background-color: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-select:focus-visible {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-check {
+  display: flex;
+  min-height: 20px;
+  align-items: center;
+  gap: 6px;
+}
+
+.form-check-input {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  flex: 0 0 auto;
+  margin: 0;
+  border: 1px solid var(--input);
+  color: var(--primary-foreground);
+  background-color: transparent;
+  cursor: var(--cursor-interaction, default);
+  transition:
+    background-color 150ms,
+    border-color 150ms,
+    box-shadow 150ms;
+}
+
+.form-check:not(.form-switch) .form-check-input[type="checkbox"] {
+  border-color: var(--input);
+  border-radius: var(--radius-sm);
+  corner-shape: var(--corner-shape);
+  background-color: var(--secondary);
+  box-shadow: var(--shadow-sm);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input:not(:disabled):not(:checked):hover {
+  background-color: var(--card);
+}
+
+.form-check:not(.form-switch) .form-check-input[type="checkbox"]:checked {
+  border-color: var(--primary);
+  background-color: var(--primary);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input[type="checkbox"]:checked::before {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-foreground);
+  content: "";
+  mask: var(--checkmark-image) center / 12px 12px no-repeat;
+}
+
+.form-check-input[type="radio"] {
+  width: 14px;
+  height: 14px;
+  border-radius: var(--radius-full);
+}
+
+.form-check-input[type="radio"]:checked {
+  border: 2px solid var(--primary);
+  background:
+    radial-gradient(circle, var(--primary-foreground) 0 2.5px, transparent 3px),
+    var(--primary);
+}
+
+.form-check:not(.form-switch) .form-check-input:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+}
+
+.form-switch .form-check-input:disabled,
+.form-switch .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.form-check-label {
+  color: var(--foreground);
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-switch .form-check-input {
+  position: relative;
+  width: 32px;
+  height: 20px;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--muted);
+  box-shadow: none;
+  transition: background-color 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+  border: 1px solid light-dark(var(--primary-foreground), var(--foreground));
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+  box-shadow: var(--shadow-sm);
+  content: "";
+  transform: translate(2px, -50%);
+  transition: transform 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input:checked {
+  background: var(--primary);
+}
+
+.form-switch .form-check-input:checked::before {
+  transform: translate(14px, -50%);
+}
+
+.form-switch .form-check-input:focus-visible {
+  box-shadow: 0 0 0 2px var(--ring);
+}
+
+.form-range {
+  appearance: none;
+  display: block;
+  width: 100%;
+  height: 28px;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: 0;
+  accent-color: var(--primary);
+  background: linear-gradient(
+      color-mix(in srgb, var(--foreground) 7%, transparent),
+      color-mix(in srgb, var(--foreground) 7%, transparent)
+    )
+    center / 100% 2px no-repeat;
+}
+
+.form-range::-webkit-slider-runnable-track {
+  height: 28px;
+  background: transparent;
+}
+
+.form-range::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  margin-top: 4px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+}
+
+.form-range:focus-visible::-webkit-slider-thumb {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-range::-moz-range-track {
+  height: 28px;
+  background: transparent;
+}
+
+.form-range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+}
+
+.form-range:focus-visible::-moz-range-thumb {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-range:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.btn:not(.btn-primary, .viz-tile):is(
+  [aria-pressed="true"],
+  [aria-selected="true"],
+  .is-selected
+) {
+  border-color: var(--primary);
+  color: var(--primary-foreground);
+  background: var(--primary);
+}
+
+.btn.viz-tile:is([aria-pressed="true"], [aria-selected="true"], .is-selected) {
+  border-color: var(--primary);
+  box-shadow: inset 0 0 0 1px var(--primary);
+}
+
+.btn:focus-visible,
+.nav-link:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+@media (pointer: coarse) {
+  .btn,
+  .nav-link,
+  .form-control,
+  .form-select {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  /* Keep small-screen WebKit from zooming when a text field receives focus. */
+  .form-control,
+  .form-select {
+    font-size: max(16px, var(--font-size-normal));
+  }
+
+  .form-control[type="file"]::file-selector-button {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .form-control-color[type="color"] {
+    width: 44px;
+    height: 44px;
+  }
+
+  .form-control:is(
+    [type="date"],
+    [type="datetime-local"],
+    [type="month"],
+    [type="time"],
+    [type="week"]
+  ) {
+    min-width: 0;
+    max-width: 100%;
+    padding-block: 8px;
+  }
+
+  .form-check {
+    min-height: 44px;
+    padding-inline: 15px;
+  }
+
+  .form-check-input {
+    position: relative;
+  }
+
+  .form-check-input::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 44px;
+    height: 44px;
+    content: "";
+    transform: translate(-50%, -50%);
+  }
+
+  .form-check-label {
+    display: inline-flex;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+  }
+
+  .form-range {
+    height: 44px;
+    touch-action: pan-y;
+  }
+
+  .form-range::-webkit-slider-runnable-track {
+    height: 44px;
+  }
+
+  .form-range::-moz-range-track {
+    height: 44px;
+  }
+
+  .form-range::-webkit-slider-thumb {
+    margin-top: 12px;
+  }
+}
+
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#widget > svg {
+  width: 100%;
+}
+
+/* Model-authored chart rules can otherwise stretch icons after these styles load. */
+svg.lucide {
+  display: block;
+  width: var(--icon-size) !important;
+  height: var(--icon-size) !important;
+  flex: none;
+  margin: 0 !important;
+  stroke-width: 1.6;
+}
+
+.text-warning,
+.text-destructive {
+  color: var(--destructive);
+}
+
+html>body{padding:0}
+
+
+    @font-face{font-family:SimpaisaInter;src:url("assets/inter-regular-b4c50554d0.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:SimpaisaInter;src:url("assets/inter-semibold-47a5b5b4a7.woff2") format("woff2");font-weight:600;font-style:normal;font-display:swap;}
+@font-face{font-family:SimpaisaPoppins;src:url("assets/poppins-semibold-441936ad96.woff2") format("woff2");font-weight:600;font-style:normal;font-display:swap;}
+    #simpaisa-review-v26 .review-controls { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 12px; }
+    #simpaisa-review-v26 .page-preview { position: relative; width: 100%; }
+    #simpaisa-review-v26 .page-preview > svg { display: block; width: 100%; height: auto; }
+    #simpaisa-review-v26 [hidden] { display: none; }
+    #simpaisa-review-v26 .book-page { position: absolute; top: 0; left: 0; width: 595px; height: 842px; transform-origin: top left; background: #E9E9E9; color: #33383F; font-family: SimpaisaInter, sans-serif; font-size: 9px; line-height: 1.5; font-weight: 400; font-variant-numeric: tabular-nums; }
+    #simpaisa-review-v26 .book-page * { box-sizing: border-box; }
+    #simpaisa-review-v26 .book-page h1, #simpaisa-review-v26 .book-page h2, #simpaisa-review-v26 .book-page h3, #simpaisa-review-v26 .book-page p { margin: 0; padding: 0; }
+    #simpaisa-review-v26 .book-title { position: absolute; left: 40px; top: 40px; width: 515px; font-family: SimpaisaPoppins, sans-serif; font-size: 19px; line-height: 24px; font-weight: 600; color: #001866; letter-spacing: -0.2px; }
+    #simpaisa-review-v26 .book-lede { position: absolute; left: 40px; top: 74px; width: 515px; font-size: 9.6px; line-height: 14.4px; }
+    #simpaisa-review-v26 .group-heading { position: absolute; left: 40px; width: 515px; height: 16px; display: grid; grid-template-columns: 92px 1fr; align-items: baseline; gap: 8px; white-space: nowrap; }
+    #simpaisa-review-v26 .group-heading h2 { font-family: SimpaisaPoppins, sans-serif; font-weight: 600; font-size: 11px; line-height: 16px; color: #001866; }
+    #simpaisa-review-v26 .group-heading span { font-size: 8.7px; line-height: 16px; color: #5C5C5C; }
+    #simpaisa-review-v26 .group-acceptance { top: 112px; }
+    #simpaisa-review-v26 .group-disbursements { top: 284px; }
+    #simpaisa-review-v26 .group-remittance { top: 436px; }
+    #simpaisa-review-v26 .case-row { position: absolute; left: 40px; width: 515px; display: grid; gap: 8px; align-items: stretch; }
+    #simpaisa-review-v26 .acceptance-row { top: 136px; height: 132px; grid-template-columns: repeat(4, 1fr); }
+    #simpaisa-review-v26 .disbursement-row { top: 308px; height: 112px; grid-template-columns: repeat(3, 1fr); }
+    #simpaisa-review-v26 .remittance-row { top: 460px; height: 100px; grid-template-columns: repeat(2, 1fr); }
+    #simpaisa-review-v26 .case-card { position: relative; background: #FFFFFF; border-radius: 7px; padding: 12px; min-width: 0; }
+    #simpaisa-review-v26 .disbursement-row .case-card { background: #F7FAFF; }
+    #simpaisa-review-v26 .remittance-row .case-card { background: #E4EBFA; }
+    #simpaisa-review-v26 .icon-slot { position: absolute; top: 12px; left: 12px; width: 22px; height: 22px; border-radius: 50%; background: #E8EFFF; color: #0156FB; display: flex; align-items: center; justify-content: center; }
+    #simpaisa-review-v26 .remittance-row .icon-slot { background: #CFDCF8; color: #001866; }
+    #simpaisa-review-v26 .icon-slot svg { display: block; flex: 0 0 14px; width: 14px !important; height: 14px !important; min-width: 14px !important; max-width: 14px !important; min-height: 14px !important; max-height: 14px !important; stroke-width: 1.8; }
+    #simpaisa-review-v26 .case-card h3 { position: absolute; top: 17px; left: 42px; right: 12px; font-family: SimpaisaPoppins, sans-serif; font-weight: 600; font-size: 9.4px; line-height: 12px; color: #001866; }
+    #simpaisa-review-v26 .disbursement-row h3 { top: 11px; }
+    #simpaisa-review-v26 .case-body { position: absolute; top: 44px; left: 12px; right: 12px; font-size: 7.8px; line-height: 11.2px; color: #3E4B63; }
+    #simpaisa-review-v26 .case-card .methods { position: absolute; left: 12px; right: 12px; bottom: 12px; font-size: 6.6px; line-height: 8.5px; color: #536584; border-top: 0.5px solid #CED8E9; padding-top: 4px; }
+    #simpaisa-review-v26 .acceptance-row .methods { height: 22.5px; }
+    #simpaisa-review-v26 .methods strong { font-weight: 600; color: #3C5278; }
+    #simpaisa-review-v26 .clientele { position: absolute; left: 40px; top: 576px; width: 515px; height: 196px; padding: 12px; border-radius: 8px; color: #FFFFFF; background: linear-gradient(135deg, #0A1B78 0%, #0F2FB8 50%, #1A46E2 100%); }
+    #simpaisa-review-v26 .eyebrow { font-weight: 600; font-size: 6.8px; line-height: 8px; letter-spacing: 0.95px; color: #B9CBF8; }
+    #simpaisa-review-v26 .clientele h2 { position: absolute; top: 24px; left: 12px; right: 12px; font-family: SimpaisaPoppins, sans-serif; font-size: 11px; line-height: 15px; font-weight: 600; white-space: nowrap; }
+    #simpaisa-review-v26 .client-names { position: absolute; top: 44px; left: 12px; right: 12px; font-size: 7.8px; line-height: 12px; color: #E0E8FC; display: grid; gap: 2px; }
+    #simpaisa-review-v26 .client-group { display: grid; grid-template-columns: 112px 1fr; column-gap: 8px; min-height: 12px; align-items: baseline; }
+    #simpaisa-review-v26 .client-group strong { font-weight: 600; color: #FFFFFF; white-space: nowrap; }
+    #simpaisa-review-v26 .client-group span { white-space: nowrap; }
+    #simpaisa-review-v26 .client-stats { position: absolute; left: 12px; right: 12px; top: 104px; height: 40px; display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; }
+    #simpaisa-review-v26 .client-stat { border-radius: 6px; background: rgba(255,255,255,.09); border: .5px solid rgba(255,255,255,.18); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; }
+    #simpaisa-review-v26 .stat-value { font-family: SimpaisaPoppins, sans-serif; font-size: 16px; line-height: 21px; font-weight: 600; }
+    #simpaisa-review-v26 .stat-label { font-size: 6.8px; line-height: 9px; color: #D0DDFB; }
+    #simpaisa-review-v26 .sector-chips { position: absolute; top: 152px; left: 12px; right: 12px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px 6px; align-content: start; }
+    #simpaisa-review-v26 .sector-chip { display: flex; align-items: center; justify-content: space-between; gap: 6px; min-width: 0; height: 14px; padding: 0 6px; border-radius: 3px; background: rgba(255,255,255,.10); font-size: 6.8px; line-height: 10px; white-space: nowrap; }
+    #simpaisa-review-v26 .sector-chip b { color: #FFFFFF; font-weight: 600; min-width: 12px; text-align: right; }
+    #simpaisa-review-v26 .book-footer { position: absolute; left: 40px; top: 794px; width: 515px; border-top: .5px solid #D2D2D2; padding-top: 8px; display: flex; justify-content: space-between; color: #5C5C5C; font-size: 7.5px; line-height: 10px; }
+    #simpaisa-review-v26 .alignment-overlay { display: none; position: absolute; pointer-events: none; z-index: 4; left: 40px; top: 40px; width: 515px; height: 748px; border-left: .65px solid #C88023; border-right: .65px solid #C88023; background: repeating-linear-gradient(to bottom, rgba(35,126,169,.22) 0, rgba(35,126,169,.22) .25px, transparent .25px, transparent 4px); }
+    #simpaisa-review-v26 .alignment-overlay::after { content: ''; position: absolute; top: 0; bottom: 0; left: 50%; border-left: .5px dashed #C88023; }
+    #simpaisa-review-v26 .review-guides { display: none; pointer-events: none; }
+    #simpaisa-review-v26.show-guides .alignment-overlay, #simpaisa-review-v26.show-guides .review-guides { display: block; }
+    #simpaisa-review-v26.show-guides .case-card { outline: .35px solid #2AAB92; }
+    #simpaisa-review-v26 .platform-heading { position: absolute; left: 40px; width: 515px; font-family: SimpaisaPoppins, sans-serif; font-size: 11px; font-weight: 600; line-height: 16px; color: #001866; }
+    #simpaisa-review-v26 .engineered-heading { top: 116px; }
+    #simpaisa-review-v26 .platform-intro { position: absolute; top: 140px; left: 40px; width: 515px; font-size: 9px; line-height: 13.5px; }
+    #simpaisa-review-v26 .settlement-flows { position: absolute; top: 196px; left: 40px; width: 515px; height: 136px; padding: 12px; border-radius: 8px; background: #FFFFFF; display: grid; grid-template-rows: 48px 48px; gap: 16px; }
+    #simpaisa-review-v26 .settlement-flows::after { content: ''; position: absolute; left: 12px; right: 12px; top: 68px; border-top: .5px solid #DCE4F1; }
+    #simpaisa-review-v26 .flow-lane { min-width: 0; }
+    #simpaisa-review-v26 .flow-lane h3 { font-family: SimpaisaPoppins, sans-serif; font-size: 9.4px; font-weight: 600; line-height: 14px; color: #001866; }
+    #simpaisa-review-v26 .flow-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 8px; }
+    #simpaisa-review-v26 .flow-step { position: relative; padding-left: 30px; min-height: 26px; display: flex; align-items: center; }
+    #simpaisa-review-v26 .flow-step .icon-slot { top: 2px; left: 0; }
+    #simpaisa-review-v26 .flow-step strong { display: block; font-family: SimpaisaPoppins, sans-serif; font-size: 8.2px; font-weight: 600; line-height: 11px; color: #001866; }
+    #simpaisa-review-v26 .flow-step span { display: block; margin-top: 3px; font-size: 7.3px; line-height: 10px; color: #536584; }
+    #simpaisa-review-v26 .flow-arrow { position: absolute; top: 7px; right: -13px; width: 10px; height: 12px; color: #7196E4; }
+    #simpaisa-review-v26 .flow-arrow svg { display: block; width: 10px !important; height: 12px !important; min-width: 10px !important; max-width: 10px !important; min-height: 12px !important; max-height: 12px !important; stroke-width: 1.6; }
+    #simpaisa-review-v26 .merchant-benefits-heading { top: 352px; }
+    #simpaisa-review-v26 .merchant-benefits { position: absolute; left: 40px; top: 376px; width: 515px; height: 60px; display: grid; grid-template-columns: repeat(5,1fr); gap: 8px; }
+    #simpaisa-review-v26 .benefit { min-width: 0; padding: 12px; border-radius: 7px; background: #E0E9FC; display: flex; align-items: center; justify-content: center; text-align: center; font-family: SimpaisaPoppins, sans-serif; font-size: 8.5px; font-weight: 600; line-height: 12px; color: #001866; }
+    #simpaisa-review-v26 .platform-pillars { position: absolute; top: 456px; left: 40px; width: 515px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+    #simpaisa-review-v26 .pillar h2 { font-family: SimpaisaPoppins, sans-serif; font-size: 11px; font-weight: 600; line-height: 16px; color: #001866; white-space: nowrap; }
+    #simpaisa-review-v26 .pillar-items { margin-top: 8px; height: 104px; padding: 12px; border-radius: 7px; background: #FFFFFF; display: grid; grid-template-rows: repeat(4,1fr); row-gap: 4px; }
+    #simpaisa-review-v26 .pillar-item { display: flex; align-items: center; gap: 8px; font-size: 8.5px; line-height: 14px; color: #3E4B63; }
+    #simpaisa-review-v26 .small-icon { flex: 0 0 16px; width: 16px; height: 16px; color: #0156FB; display: flex; align-items: center; justify-content: center; }
+    #simpaisa-review-v26 .small-icon svg { display: block; width: 14px !important; height: 14px !important; min-width: 14px !important; max-width: 14px !important; min-height: 14px !important; max-height: 14px !important; stroke-width: 1.8; }
+    #simpaisa-review-v26 .compliance-heading { top: 604px; }
+    #simpaisa-review-v26 .compliance-panel { position: absolute; top: 628px; left: 40px; width: 515px; height: 146px; padding: 12px; border-radius: 8px; background: linear-gradient(135deg, #0A1B78 0%, #0F2FB8 50%, #1A46E2 100%); color: #FFFFFF; display: grid; grid-template-rows: repeat(5, 1fr); row-gap: 6px; }
+    #simpaisa-review-v26 .compliance-row { display: grid; grid-template-columns: 16px 116px 1fr; column-gap: 8px; align-items: center; }
+    #simpaisa-review-v26 .compliance-row .small-icon { color: #B9CBF8; }
+    #simpaisa-review-v26 .compliance-row strong { font-size: 8.2px; line-height: 12px; font-weight: 600; }
+    #simpaisa-review-v26 .compliance-row p { font-size: 8.2px; line-height: 12px; color: #E0E8FC; }
+    #simpaisa-review-v26.show-guides .settlement-flows, #simpaisa-review-v26.show-guides .benefit, #simpaisa-review-v26.show-guides .pillar-items, #simpaisa-review-v26.show-guides .compliance-panel { outline: .35px solid #2AAB92; }
+    /* Page 2: 595 × 842pt; shared page frame, fonts, and footer are inherited. */
+#simpaisa-review-v26 .overview-page .overview-prose { position: absolute; left: 40px; top: 74px; width: 515px; font-size: 9px; line-height: 13.95px; display: grid; row-gap: 12px; }
+#simpaisa-review-v26 .overview-page .overview-prose p { width: 515px; }
+#simpaisa-review-v26 .overview-page .overview-section { position: absolute; left: 40px; width: 515px; font-family: SimpaisaPoppins, sans-serif; font-weight: 600; font-size: 11px; line-height: 16px; color: #001866; }
+#simpaisa-review-v26 .overview-page .overview-enables-heading { top: 254px; }
+#simpaisa-review-v26 .overview-page .overview-enables { position: absolute; left: 40px; top: 278px; width: 515px; height: 120px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+#simpaisa-review-v26 .overview-page .overview-enable-card { padding: 12px; min-width: 0; background: #0156FB; color: #FFFFFF; border-radius: 5px; }
+#simpaisa-review-v26 .overview-page .overview-enable-card h3 { font-family: SimpaisaPoppins, sans-serif; font-weight: 600; font-size: 10px; line-height: 16px; color: #FFFFFF; }
+#simpaisa-review-v26 .overview-page .overview-enable-card p { margin-top: 4px; font-size: 8.2px; line-height: 11.89px; color: #FFFFFF; }
+#simpaisa-review-v26 .overview-page .overview-footprint-heading { top: 414px; }
+#simpaisa-review-v26 .overview-page .overview-footprint { position: absolute; left: 40px; top: 438px; width: 515px; height: 164px; border: 0; border-collapse: separate; border-spacing: 0; table-layout: fixed; border-radius: 5px; overflow: hidden; color: #1D1D1D; }
+#simpaisa-review-v26 .overview-page .overview-footprint col { width: 110px; }
+#simpaisa-review-v26 .overview-page .overview-footprint .country-column { width: 185px; }
+#simpaisa-review-v26 .overview-page .overview-footprint th, #simpaisa-review-v26 .overview-page .overview-footprint td { padding: 0; border: 0; text-align: center; vertical-align: middle; }
+#simpaisa-review-v26 .overview-page .overview-footprint thead tr { height: 24px; }
+#simpaisa-review-v26 .overview-page .overview-footprint thead th { height: 24px; background: #1D1D1D; color: #FFFFFF; font-size: 7.2px; font-weight: 600; line-height: 10px; text-transform: uppercase; }
+#simpaisa-review-v26 .overview-page .overview-footprint tbody tr { height: 20px; background: #FFFFFF; }
+#simpaisa-review-v26 .overview-page .overview-footprint tbody tr:nth-child(even) { background: #F5F5F5; }
+#simpaisa-review-v26 .overview-page .overview-footprint tbody th, #simpaisa-review-v26 .overview-page .overview-footprint tbody td { height: 20px; border-bottom: 0; box-shadow: inset 0 -.5px #ECECEC; }
+#simpaisa-review-v26 .overview-page .overview-footprint tbody tr:last-child th, #simpaisa-review-v26 .overview-page .overview-footprint tbody tr:last-child td { border-bottom: 0; box-shadow: none; }
+#simpaisa-review-v26 .overview-page .country-entry { width: 70.8530598958px; margin: 0 auto; display: grid; grid-template-columns: 13.3333333333px minmax(0, 1fr); gap: 6px; align-items: center; text-align: left; font-size: 8.4px; line-height: 12px; font-weight: 600; white-space: nowrap; }
+#simpaisa-review-v26 .overview-page .country-flag { display: block; width: 13.3333333333px; height: 10px; object-fit: contain; object-position: left center; }
+#simpaisa-review-v26 .overview-page .footprint-mark { display: flex; width: 100%; height: 19.5px; align-items: center; justify-content: center; }
+#simpaisa-review-v26 .overview-page .footprint-mark svg { width: 10px !important; height: 10px !important; min-width: 10px !important; max-width: 10px !important; min-height: 10px !important; max-height: 10px !important; display: block; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+#simpaisa-review-v26 .overview-page .footprint-mark.available { color: #0156FB; }
+#simpaisa-review-v26 .overview-page .footprint-mark.unavailable { color: #C6C6C6; }
+#simpaisa-review-v26 .overview-page .overview-showcase { position: absolute; left: 40px; top: 618px; width: 515px; height: 156px; padding: 12px; color: #FFFFFF; border-radius: 8px; background: linear-gradient(135deg, #0A1B78 0%, #0F2FB8 50%, #1A46E2 100%); }
+#simpaisa-review-v26 .overview-page .overview-eyebrow { font-size: 6.8px; line-height: 8px; letter-spacing: .95px; font-weight: 600; color: #B9CBF8; }
+#simpaisa-review-v26 .overview-page .overview-showcase h2 { margin-top: 8px; font-family: SimpaisaPoppins, sans-serif; font-size: 13px; line-height: 16px; text-wrap: balance; font-weight: 600; color: #FFFFFF; }
+#simpaisa-review-v26 .overview-page .overview-showcase-intro { margin-top: 4px; font-size: 8.6px; line-height: 12px; color: #D6E0FA; }
+#simpaisa-review-v26 .overview-page .overview-stats { position: absolute; left: 12px; right: 12px; bottom: 12px; height: 48px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+#simpaisa-review-v26 .overview-page .overview-stat { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; min-width: 0; border-radius: 6px; border: .5px solid rgba(255,255,255,.18); background: rgba(255,255,255,.09); }
+#simpaisa-review-v26 .overview-page .overview-stat-value { font-family: SimpaisaPoppins, sans-serif; font-size: 16px; line-height: 21px; font-weight: 600; }
+#simpaisa-review-v26 .overview-page .overview-stat-label { font-size: 6.6px; line-height: 9px; color: #D0DDFB; white-space: nowrap; }
+
+    #simpaisa-review-v26 .gap-page .evidence-charts { position: absolute; left: 40px; top: 124px; width: 515px; height: 132px; display: grid; grid-template-columns: repeat(2,1fr); gap: 8px; }
+#simpaisa-review-v26 .gap-page .evidence-chart { position: relative; padding: 12px; border-radius: 7px; background: #FFFFFF; }
+#simpaisa-review-v26 .gap-page .evidence-chart h2 { font-family: SimpaisaPoppins,sans-serif; font-size: 9.4px; line-height: 14px; font-weight: 600; color: #001866; white-space: nowrap; }
+#simpaisa-review-v26 .gap-page .chart-subtitle { position: absolute; top: 32px; left: 12px; right: 12px; display: flex; justify-content: space-between; align-items: baseline; font-size: 7.7px; line-height: 11px; color: #536584; }
+#simpaisa-review-v26 .gap-page .chart-subtitle strong { color: #0156FB; font-weight: 600; }
+#simpaisa-review-v26 .gap-page .evidence-plot { position: absolute; top: 48px; left: 12px; width: 229.5px; height: 66px; }
+#simpaisa-review-v26 .gap-page .evidence-plot text { font-family: SimpaisaInter,sans-serif; font-size: 7.4px; font-weight: 400; fill: #536584; }
+#simpaisa-review-v26 .gap-page .evidence-plot .bar-value { font-weight: 600; fill: #001866; }
+#simpaisa-review-v26 .gap-page .chart-foot { position: absolute; top: 115px; left: 12px; right: 12px; font-size: 6.6px; line-height: 9px; color: #536584; }
+#simpaisa-review-v26 .gap-page .chart-foot a { color: #0156FB; text-decoration: none; }
+#simpaisa-review-v26 .gap-page .gap-table-heading { position: absolute; left: 40px; top: 272px; width: 515px; font-family: SimpaisaPoppins,sans-serif; font-size: 11px; font-weight: 600; line-height: 16px; color: #001866; }
+#simpaisa-review-v26 .gap-page .gap-market-table { position: absolute; left: 40px; top: 296px; width: 515px; table-layout: fixed; border-collapse: separate; border-spacing: 0; border: 0; border-radius: 5px; overflow: hidden; }
+#simpaisa-review-v26 .gap-page .gap-market-table th, #simpaisa-review-v26 .gap-page .gap-market-table td { border: 0; padding: 8px 12px; vertical-align: top; text-align: left; font-size: 7.7px; line-height: 10.5px; color: #33383F; }
+#simpaisa-review-v26 .gap-page .gap-market-table thead th { background: #1D1D1D; color: #FFFFFF; font-size: 6.8px; line-height: 9px; font-weight: 600; text-transform: uppercase; padding: 8px 12px; }
+#simpaisa-review-v26 .gap-page .gap-market-table tbody tr { background: #FFFFFF; }
+#simpaisa-review-v26 .gap-page .gap-market-table tbody tr:nth-child(even) { background: #F5F5F5; }
+#simpaisa-review-v26 .gap-page .gap-market-table tbody th { font-weight: 600; color: #001866; text-align: center; vertical-align: middle; padding: 8px 6px; background: #EDF2FA; }
+#simpaisa-review-v26 .gap-page .gap-market-table thead th:first-child { text-align: center; }
+#simpaisa-review-v26 .gap-page .gap-country { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; }
+#simpaisa-review-v26 .gap-page .gap-country .country-flag { display: flex; width: 20px; height: 10px; align-items: center; justify-content: center; }
+#simpaisa-review-v26 .gap-page .gap-country .country-flag img { display: block; width: auto !important; height: 10px !important; max-width: 20px !important; object-fit: contain; }
+#simpaisa-review-v26 .gap-page .gap-country .country-name { font-size: 7.5px; line-height: 10px; white-space: nowrap; }
+#simpaisa-review-v26 .gap-page .gap-market-table .usd-equivalent { font-size: 6.6px; line-height: inherit; font-weight: 400; color: #66758C; white-space: nowrap; }
+#simpaisa-review-v26 .gap-page .gap-market-table strong { font-weight: 600; color: #001866; }
+#simpaisa-review-v26 .gap-page .gap-market-table tbody td, #simpaisa-review-v26 .gap-page .gap-market-table tbody th { box-shadow: inset 0 -.5px #E1E4E9; }
+#simpaisa-review-v26 .gap-page .gap-scope { position: absolute; left: 40px; top: 692px; width: 515px; height: 76px; padding: 12px; border-radius: 7px; background: #E0E9FC; }
+#simpaisa-review-v26 .gap-page .gap-scope h2 { font-family: SimpaisaPoppins,sans-serif; font-size: 10px; font-weight: 600; line-height: 14px; color: #001866; }
+#simpaisa-review-v26 .gap-page .gap-scope p { margin-top: 6px; font-size: 8.2px; line-height: 11.5px; color: #3E4B63; }
+#simpaisa-review-v26.show-guides .evidence-chart, #simpaisa-review-v26.show-guides .gap-scope { outline: .35px solid #2AAB92; }
+
+    /* Country sections follow the supplied reference, on the shared A4 page grid. */
+#simpaisa-review-v26 .coverage-countries { position:absolute; top:82px; left:40px; width:515px; display:grid; grid-template-rows:repeat(7,98px); }
+#simpaisa-review-v26 .coverage-country-section { position:relative; min-width:0; }
+#simpaisa-review-v26 .coverage-country-section > h2 { height:21px; border-bottom:.5px solid #9DA3AE; color:#001866; font-family:SimpaisaPoppins,sans-serif; font-size:14px; font-weight:600; line-height:20px; text-align:center; }
+#simpaisa-review-v26 .coverage-groups { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-top:5px; }
+#simpaisa-review-v26 .coverage-group { min-width:0; }
+#simpaisa-review-v26 .coverage-group h3 { width:142px; height:15px; margin:0 auto; border-radius:3px; background:#D9DADD; color:#001866; font-family:SimpaisaPoppins,sans-serif; font-size:7.6px; font-weight:600; line-height:15px; text-align:center; }
+#simpaisa-review-v26 .coverage-marks { width:142px; height:43px; display:flex; flex-wrap:wrap; justify-content:center; align-content:center; align-items:center; column-gap:10px; row-gap:5px; margin:5px auto 0; }
+#simpaisa-review-v26 .coverage-page .provider-logo { display:flex; width:64px; height:19px; min-width:0; align-items:center; justify-content:center; text-align:center; font-size:7.5px; line-height:10px; font-weight:600; color:#344665; }
+#simpaisa-review-v26 .coverage-page .provider-mark { display:flex; width:60px; height:19px; align-items:center; justify-content:center; overflow:hidden; }
+#simpaisa-review-v26 .coverage-page .provider-logo img { display:block; width:auto; height:auto; max-width:60px; max-height:19px; object-fit:contain; mix-blend-mode:multiply; }
+#simpaisa-review-v26 .coverage-page .compact-marks { column-gap:4px; }
+#simpaisa-review-v26 .coverage-page .compact-marks .provider-logo { width:44px; }
+#simpaisa-review-v26 .coverage-page .compact-marks .provider-mark { width:42px; }
+#simpaisa-review-v26 .coverage-page .compact-marks .provider-logo img { max-width:42px; }
+#simpaisa-review-v26 .coverage-page .tall-marks .provider-logo,
+#simpaisa-review-v26 .coverage-page .tall-marks .provider-mark { height:28px; }
+#simpaisa-review-v26 .coverage-page .tall-marks .provider-logo img { max-height:28px; }
+#simpaisa-review-v26 .coverage-page .single-mark .provider-logo,
+#simpaisa-review-v26 .coverage-page .single-mark .provider-mark { width:84px; height:26px; }
+#simpaisa-review-v26 .coverage-page .single-mark .provider-logo img { max-width:84px; max-height:26px; }
+#simpaisa-review-v26 .coverage-page [data-brand="Orange Cash"] .provider-mark { height:24px; }
+#simpaisa-review-v26 .coverage-page [data-brand="Orange Cash"] img { max-height:24px; }
+#simpaisa-review-v26 .coverage-method { display:flex; width:138px; height:19px; align-items:center; justify-content:center; font-size:7px; line-height:10px; color:#536584; }
+#simpaisa-review-v26.show-guides .coverage-group { outline:.35px solid #2AAB92; }
+
+    #simpaisa-review-v26 .cover-preview-image { display: block; position: absolute; width: 595px; height: 842px; max-width: none; }
+    #simpaisa-review-v26 .review-source-notes { margin-top: 12px; }
+    #simpaisa-review-v26 .review-source-notes li { margin-bottom: 8px; }
+  
+#simpaisa-review-v26 .country-content { position: absolute; left: 40px; right: 40px; top: 36px; display: flex; flex-direction: column; gap: 12px; }
+#simpaisa-review-v26 .country-header { display: flex; justify-content: space-between; align-items: center; }
+#simpaisa-review-v26 .country-name { display: flex; align-items: center; gap: 10px; }
+#simpaisa-review-v26 .country-name img { width: 32px; height: 22px; object-fit: contain; }
+#simpaisa-review-v26 .country-name h1 { font: 600 24px/30px SimpaisaPoppins, sans-serif; color: #001866; }
+#simpaisa-review-v26 .country-status { font: 400 8px/12px SimpaisaInter, sans-serif; color: #5C5C5C; }
+#simpaisa-review-v26 .country-summary { font-size: 9px; line-height: 13.5px; }
+#simpaisa-review-v26 .country-flows { color: #0156FB; font-size: 8px; line-height: 12px; font-weight: 600; }
+#simpaisa-review-v26 .country-section-title { font: 600 10px/15px SimpaisaPoppins, sans-serif; color: #001866; margin-bottom: 5px; }
+#simpaisa-review-v26 .country-methods { padding: 10px 12px; background: #FFFFFF; border-radius: 7px; }
+#simpaisa-review-v26 .country-methods p { font-size: 8px; line-height: 12px; }
+#simpaisa-review-v26 .country-evidence { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; }
+#simpaisa-review-v26 .evidence-item { padding: 9px 10px; border-radius: 7px; background: #E0E8FA; color: #344568; }
+#simpaisa-review-v26 .evidence-item strong { display: block; font: 600 13px/18px SimpaisaPoppins, sans-serif; color: #001866; margin-bottom: 5px; }
+#simpaisa-review-v26 .evidence-item p { font-size: 7.4px; line-height: 11px; }
+#simpaisa-review-v26 .country-services { display: grid; gap: 10px; grid-template-columns: repeat(var(--flows), minmax(0,1fr)); }
+#simpaisa-review-v26 .country-service { min-width: 0; }
+#simpaisa-review-v26 .country-service h2 { font: 600 9px/14px SimpaisaPoppins, sans-serif; color: #001866; margin-bottom: 6px; }
+#simpaisa-review-v26 .country-service h2 span { display: block; color: #0156FB; font: 600 7px/11px SimpaisaInter,sans-serif; }
+#simpaisa-review-v26 .country-service table { border-collapse: collapse; width: 100%; table-layout: fixed; font-size: 7.4px; line-height: 10.6px; }
+#simpaisa-review-v26 .country-service th { width: 55px; text-align: left; font-weight: 600; color: #4C5E7C; }
+#simpaisa-review-v26 .country-service th, #simpaisa-review-v26 .country-service td { vertical-align: top; padding: 5px 4px; border-bottom: .5px solid #CCD3DF; overflow-wrap: break-word; }
+#simpaisa-review-v26 .country-service tr:nth-child(odd) { background: #F7F9FD; }
+#simpaisa-review-v26 .country-service tr:nth-child(even) { background: #FFFFFF; }
+#simpaisa-review-v26 .country-page[data-flow-count="1"] .country-content { gap: 18px; }
+#simpaisa-review-v26 .country-page[data-flow-count="1"] .country-service th { width: 100px; }
+#simpaisa-review-v26 .country-page[data-flow-count="1"] .country-service table { font-size: 9px; line-height: 13px; }
+#simpaisa-review-v26 .country-page[data-flow-count="1"] .country-service th, #simpaisa-review-v26 .country-page[data-flow-count="1"] .country-service td { padding: 8px 10px; }
+#simpaisa-review-v26 .country-page[data-flow-count="2"] .country-service th { width: 56px; }
+#simpaisa-review-v26 .country-page[data-flow-count="2"] .country-service table { font-size: 8px; line-height: 12px; }
+#simpaisa-review-v26 .country-page[data-flow-count="2"] .country-service th, #simpaisa-review-v26 .country-page[data-flow-count="2"] .country-service td { padding: 6px; }
+
+#simpaisa-review-v26 .pk-content { position:absolute;left:40px;right:40px;top:32px;display:flex;flex-direction:column;gap:8px; }
+#simpaisa-review-v26 .pk-hero { position:relative;height:94px;background:#001866;border-radius:8px;overflow:hidden; }
+#simpaisa-review-v26 .pk-identity { position:absolute;left:14px;top:10px;z-index:1; }
+#simpaisa-review-v26 .pk-identity img { width:26px;height:17px;object-fit:contain;display:block;margin-bottom:3px; }
+#simpaisa-review-v26 .pk-identity h1 { color:#FFFFFF;font:600 24px/30px SimpaisaPoppins,sans-serif; }
+#simpaisa-review-v26 .pk-identity p { color:#D3DFFF;font-size:7.5px;line-height:11px;margin-top:4px; }
+#simpaisa-review-v26 .pk-landmarks { position:absolute;right:0;bottom:0;width:282px;height:94px;object-fit:contain; }
+#simpaisa-review-v26 .pk-status { position:absolute;right:12px;top:9px;color:#FFFFFF;font-size:6.5px;line-height:9px; }
+#simpaisa-review-v26 .pk-summary { font-size:8.6px;line-height:12.5px;color:#374354; }
+#simpaisa-review-v26 .pk-summary strong { color:#001866;font-weight:600; }
+#simpaisa-review-v26 .pk-content section > h2 { font:600 10px/14px SimpaisaPoppins,sans-serif;color:#001866;margin:0 0 5px; }
+#simpaisa-review-v26 .pk-methods { display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px 5px; }
+#simpaisa-review-v26 .pk-method { min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:start;text-align:center;background:#FFFFFF;border-radius:4px;padding:5px 2px 4px; }
+#simpaisa-review-v26 .pk-logo { width:62px;height:20px;display:flex;align-items:center;justify-content:center;overflow:hidden;margin-bottom:3px; }
+#simpaisa-review-v26 .pk-logo img { max-width:60px;max-height:19px;width:auto;height:auto;object-fit:contain; }
+#simpaisa-review-v26 .pk-method strong { color:#001866;font-size:8.4px;line-height:11px;font-weight:600; }
+#simpaisa-review-v26 .pk-method small { color:#51617B;font-size:6.3px;line-height:8px; }
+#simpaisa-review-v26 .pk-method .pk-descriptor { color:#51617B;font-size:7.1px;line-height:10px; }
+#simpaisa-review-v26 .pk-generic { height:20px;width:22px;display:flex;align-items:center;justify-content:center;color:#0156FB;margin-bottom:3px; }
+#simpaisa-review-v26 .pk-generic svg { height:17px;width:17px; }
+#simpaisa-review-v26 .pk-market { display:grid;grid-template-columns:1fr 1fr 1.03fr;gap:12px; }
+#simpaisa-review-v26 .pk-chart { margin:0;min-width:0; }
+#simpaisa-review-v26 .pk-chart figcaption,#simpaisa-review-v26 .pk-figures h3 { font:600 8px/11px SimpaisaPoppins,sans-serif;color:#001866; }
+#simpaisa-review-v26 .pk-chart-unit { font-size:7px;line-height:10px;color:#52617A;margin-top:2px; }
+#simpaisa-review-v26 .pk-bars { display:block;width:100%;height:65px;margin-top:3px;overflow:visible; }
+#simpaisa-review-v26 .pk-bars text { font:400 7.6px SimpaisaInter,sans-serif;fill:#52617A; }
+#simpaisa-review-v26 .pk-bars text.pk-bar-value { font-weight:600;fill:#001866; }
+#simpaisa-review-v26 .pk-chart-foot { font-size:6.5px;line-height:9px;color:#59657A;margin-top:5px; }
+#simpaisa-review-v26 .pk-figures table { width:100%;border-collapse:collapse;font-size:7px;line-height:10px;margin-top:3px; }
+#simpaisa-review-v26 .pk-figures th { width:68px;text-align:left;font-weight:400;color:#52617A; }
+#simpaisa-review-v26 .pk-figures td,#simpaisa-review-v26 .pk-figures th { padding:2px 0;border-bottom:.5px solid #CBD2DE;vertical-align:top; }
+#simpaisa-review-v26 .pk-figures strong { display:block;font-size:9px;line-height:12px;color:#001866;font-weight:600; }
+#simpaisa-review-v26 .pk-figures td span { display:block;font-size:6.5px;line-height:9px;color:#59657A; }
+#simpaisa-review-v26 .pk-comparison { width:100%;border-collapse:collapse;table-layout:fixed;font-size:8.3px;line-height:11.4px; }
+#simpaisa-review-v26 .pk-label-col { width:12%; } #simpaisa-review-v26 .pk-c2b-col { width:36%; } #simpaisa-review-v26 .pk-b2c-col { width:27%; } #simpaisa-review-v26 .pk-c2c-col { width:25%; }
+#simpaisa-review-v26 .pk-comparison thead { background:#001866;color:#FFFFFF; }
+#simpaisa-review-v26 .pk-comparison thead th { padding:6px;font-size:8.4px;line-height:12px;font-weight:600;text-align:left; }
+#simpaisa-review-v26 .pk-comparison thead th span { display:block;color:#C1D1FF;font-size:7px;line-height:10px; }
+#simpaisa-review-v26 .pk-comparison tbody th { font-size:7.8px;line-height:11.4px;font-weight:600;color:#405371;text-align:left; }
+#simpaisa-review-v26 .pk-comparison tbody th,#simpaisa-review-v26 .pk-comparison tbody td { vertical-align:top;padding:5px 6px;border-bottom:.5px solid #CFD5DF;overflow-wrap:normal; }
+#simpaisa-review-v26 .pk-comparison tbody tr:nth-child(odd) { background:#FFFFFF; }
+#simpaisa-review-v26 .pk-comparison tbody tr:nth-child(even) { background:#F5F8FD; }
+#simpaisa-review-v26 .pk-comparison td p + p { margin-top:4px; }
+#simpaisa-review-v26 .pk-comparison td strong { color:#001866;font-weight:600; }
+
+#simpaisa-review-v26 .pakistan-redesign { background:#FFFFFF; }
+#simpaisa-review-v26 .p15-hero { position:relative;width:595px;height:148px;overflow:hidden;background:linear-gradient(115deg,#061967,#133DCB); }
+#simpaisa-review-v26 .p15-scene { position:absolute;width:444px;height:148px;right:0;bottom:0;object-fit:contain;opacity:.85;mask-image:linear-gradient(90deg,transparent,#000 16%); }
+#simpaisa-review-v26 .p15-blend { position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,19,80,.96),rgba(4,19,80,.69) 58%,rgba(4,19,80,.15)),linear-gradient(0deg,rgba(0,20,85,.65),transparent 55%); }
+#simpaisa-review-v26 .p15-brandline { position:absolute;left:32px;right:32px;top:16px;display:flex;align-items:center;justify-content:space-between; }
+#simpaisa-review-v26 .p15-brand { width:78px;height:22px;object-fit:contain; }
+#simpaisa-review-v26 .p15-flag { width:32px;height:22px;object-fit:contain; }
+#simpaisa-review-v26 .p15-heading { position:absolute;left:32px;top:45px;color:white; }
+#simpaisa-review-v26 .p15-heading > span { color:#BDCDFF;font-size:6.5px;line-height:10px;letter-spacing:1.5px; }
+#simpaisa-review-v26 .p15-heading h1 { font:600 27px/32px SimpaisaPoppins,sans-serif;color:white; }
+#simpaisa-review-v26 .p15-heading p { color:#D4E0FF;font-size:8px;line-height:12px;margin-top:2px; }
+#simpaisa-review-v26 .p15-intro { position:absolute;left:32px;right:32px;bottom:13px;color:#E4EAFF;font-size:8.6px;line-height:12px; }
+#simpaisa-review-v26 .p15-intro strong { color:white;font-weight:600; }
+#simpaisa-review-v26 .p15-body { padding:8px 32px 0;display:flex;flex-direction:column;gap:6px; }
+#simpaisa-review-v26 .p15-body h2 { font:600 10px/14px SimpaisaPoppins,sans-serif;color:#001866;margin:0 0 5px; }
+#simpaisa-review-v26 .p15-methods { display:grid;grid-template-columns:repeat(7,minmax(0,1fr));row-gap:4px;column-gap:0; }
+#simpaisa-review-v26 .p15-method { display:grid;grid-template-rows:18px 11px 9px;align-items:center;justify-items:center;text-align:center;min-width:0;border-right:.5px solid #E2E7F0; }
+#simpaisa-review-v26 .p15-method:nth-child(7n) { border-right:0; }
+#simpaisa-review-v26 .p15-method .pk-logo { width:60px;height:20px;display:flex;align-items:center;justify-content:center;overflow:hidden; }
+#simpaisa-review-v26 .p15-method .pk-logo img { display:block;max-width:58px;max-height:18px;width:auto;height:auto;object-fit:contain; }
+#simpaisa-review-v26 .p15-method .pk-generic { width:58px;height:20px;display:flex;align-items:center;justify-content:center;color:#0156FB; }
+#simpaisa-review-v26 .p15-method .pk-generic svg { width:18px;height:18px; }
+#simpaisa-review-v26 .p15-method strong { color:#001866;font-size:8.4px;line-height:11px;font-weight:600; }
+#simpaisa-review-v26 .p15-method small { color:#455570;font-size:6.8px;line-height:9px; }
+#simpaisa-review-v26 .p15-method .p15-method-type { font-size:6.9px;line-height:11px;color:#455570;font-weight:400; }
+#simpaisa-review-v26 .p15-evidence { padding:8px 10px 6px;background:#F1F5FF;border-radius:6px; }
+#simpaisa-review-v26 .p15-evidence-grid { display:grid;grid-template-columns:1fr 1fr 1.02fr;gap:14px; }
+#simpaisa-review-v26 .p15-chart { margin:0;min-width:0; }
+#simpaisa-review-v26 .p15-chart figcaption,#simpaisa-review-v26 .p15-figures h3 { font:600 7.8px/11px SimpaisaPoppins,sans-serif;color:#001866; }
+#simpaisa-review-v26 .p15-chart-sub { display:flex;justify-content:space-between;align-items:center;height:14px;font-size:6.8px;line-height:10px;color:#52617B; }
+#simpaisa-review-v26 .p15-chart-sub strong { color:#0156FB;font-size:9px; }
+#simpaisa-review-v26 .p15-chart svg { display:block;width:100%;height:56px; }
+#simpaisa-review-v26 .p15-chart svg text { font:400 7.8px SimpaisaInter,sans-serif;fill:#455570; }
+#simpaisa-review-v26 .p15-chart svg text.p15-value { fill:#001866;font-weight:600; }
+#simpaisa-review-v26 .p15-figures table { width:100%;border-collapse:collapse;font-size:7.2px;line-height:9px;margin-top:3px; }
+#simpaisa-review-v26 .p15-figures th { width:56px;text-align:left;color:#52617B;font-weight:400; }
+#simpaisa-review-v26 .p15-figures th,#simpaisa-review-v26 .p15-figures td { padding:1px 0;border-bottom:.5px solid #D5DEEE; }
+#simpaisa-review-v26 .p15-figures strong { font-size:9.5px;line-height:12px;color:#001866;font-weight:600; }
+#simpaisa-review-v26 .p15-figures td span { display:block;font-size:6.8px;line-height:9px;color:#52617B; }
+#simpaisa-review-v26 .p15-evidence-notes { display:flex;justify-content:space-between;gap:8px;margin-top:5px;color:#52617B;font-size:6.4px;line-height:9px; }
+#simpaisa-review-v26 .p15-flow-table,#simpaisa-review-v26 .p15-performance-table { width:100%;table-layout:fixed;border-collapse:collapse;font-size:9px;line-height:12.5px; }
+#simpaisa-review-v26 .p15-flow-table thead { background:#001866;color:white; }
+#simpaisa-review-v26 .p15-flow-table th,#simpaisa-review-v26 .p15-flow-table td { padding:4px 6px;vertical-align:top;text-align:left;border-bottom:.5px solid #D7DEEA; }
+#simpaisa-review-v26 .p15-flow-table thead th { font-size:8.5px;line-height:12px;font-weight:600; }
+#simpaisa-review-v26 .p15-flow-table thead span { display:block;color:#BACDFF;font-size:7.2px;line-height:10px; }
+#simpaisa-review-v26 .p15-flow-table tbody th { font-size:8px;font-weight:600;color:#344968; }
+#simpaisa-review-v26 .p15-flow-table tr:nth-child(even) { background:#F7F9FD; }
+#simpaisa-review-v26 .p15-funding { margin-top:5px;padding-top:5px;border-top:.5px solid #D7DEEA; }
+#simpaisa-review-v26 .p15-funding strong { color:#001866;font-weight:600; }
+#simpaisa-review-v26 .p15-limit-grid { display:grid;grid-template-columns:1.4fr 1fr;gap:15px; }
+#simpaisa-review-v26 .p15-limits h3 { font:600 8.5px/12px SimpaisaPoppins,sans-serif;color:#001866;margin-bottom:3px; }
+#simpaisa-review-v26 .p15-mini-label { font-size:7.8px;line-height:11px;color:#52617B; }
+#simpaisa-review-v26 .p15-levels { display:grid;grid-template-columns:1.2fr 1fr .7fr;gap:6px;margin:4px 0 5px; }
+#simpaisa-review-v26 .p15-levels > div { background:#EDF3FF;padding:5px;border-radius:4px; }
+#simpaisa-review-v26 .p15-levels b { color:#0156FB;font-size:8px;line-height:11px; }
+#simpaisa-review-v26 .p15-levels p { color:#374B6B;font-size:8px;line-height:12px; }
+#simpaisa-review-v26 .p15-levels strong { color:#001866;font-size:9px;line-height:12px;font-weight:600; }
+#simpaisa-review-v26 .p15-raast-limit { font-size:8.6px;line-height:12px;color:#374B6B; }
+#simpaisa-review-v26 .p15-raast-limit strong { color:#001866;font-weight:600; }
+#simpaisa-review-v26 .p15-other-limits { display:flex;flex-direction:column;gap:8px;border-left:.5px solid #DDE4EF;padding-left:14px; }
+#simpaisa-review-v26 .p15-other-limits p { font-size:9px;line-height:12.5px;color:#374B6B; }
+#simpaisa-review-v26 .p15-other-limits strong { color:#001866;font-weight:600; }
+#simpaisa-review-v26 .p15-performance-table { font-size:8.6px;line-height:12px; }
+#simpaisa-review-v26 .p15-performance-table th,#simpaisa-review-v26 .p15-performance-table td { padding:4px 6px;text-align:left;vertical-align:top;border-bottom:.5px solid #D7DEEA; }
+#simpaisa-review-v26 .p15-performance-table thead th { background:#E8EFFF;color:#001866;font-size:8px;font-weight:600; }
+#simpaisa-review-v26 .p15-performance-table tbody th { font-weight:600;color:#344968;font-size:8px; }
+#simpaisa-review-v26 .p15-shared { display:flex;justify-content:space-between;align-items:center;gap:8px;background:#001866;color:#D8E4FF;padding:7px 8px;font-size:7.5px;line-height:11px; }
+#simpaisa-review-v26 .p15-shared strong { color:white;font-weight:600; }
+#simpaisa-review-v26 .pakistan-redesign .book-footer { left:32px;width:531px; }
+
+#simpaisa-review-v26 .p15-body { padding-top:6px;gap:5px; }
+#simpaisa-review-v26 .p16-methods { display:grid;grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:44px 44px;gap:5px 0; }
+#simpaisa-review-v26 .p16-method { display:grid;grid-template-rows:23px 12px 9px;align-items:center;justify-items:center;min-width:0;text-align:center;border-right:.5px solid #E0E7F3; }
+#simpaisa-review-v26 .p16-method[data-brand="Visa"],#simpaisa-review-v26 .p16-method[data-brand="Mastercard"] { border-right:0; }
+#simpaisa-review-v26 .p16-method[data-brand="Zindigi"] { grid-column:1 / 4;grid-row:2; }
+#simpaisa-review-v26 .p16-method[data-brand="Raast"] { grid-column:4;grid-row:2; }
+#simpaisa-review-v26 .p16-method[data-brand="Mastercard"] { grid-column:5;grid-row:2; }
+#simpaisa-review-v26 .p16-method .pk-logo { display:flex;align-items:center;justify-content:center;width:82px;height:23px;overflow:hidden; }
+#simpaisa-review-v26 .p16-method .pk-logo img { display:block;max-width:80px;max-height:22px;width:auto;height:auto;object-fit:contain; }
+#simpaisa-review-v26 .p16-method strong { color:#001866;font-size:10.2px;line-height:12px;font-weight:600; }
+#simpaisa-review-v26 .p16-method small { color:#3D506F;font-size:7.7px;line-height:9px; }
+#simpaisa-review-v26 .p16-method .p16-type { color:#3D506F;font-size:8px;line-height:12px;font-weight:400; }
+#simpaisa-review-v26 .p16-flow-row { display:grid;grid-template-columns:85px 1fr;gap:10px;padding:5px 7px;border-bottom:.5px solid #D7DFEE;background:#F1F5FF; }
+#simpaisa-review-v26 .p16-flow-row:nth-of-type(2) { background:#FFFFFF; }
+#simpaisa-review-v26 .p16-flow-row h3 { color:#001866;font:600 9.4px/14px SimpaisaPoppins,sans-serif; }
+#simpaisa-review-v26 .p16-flow-row h3 span { display:block;color:#0156FB;font:600 8px/12px SimpaisaInter,sans-serif;margin-top:2px; }
+#simpaisa-review-v26 .p16-flow-row p { color:#283B58;font-size:10.3px;line-height:13.5px; }
+#simpaisa-review-v26 .p16-flow-row p + p { margin-top:2px; }
+#simpaisa-review-v26 .p16-flow-row p strong { color:#001866;font-weight:600; }
+#simpaisa-review-v26 .p15-performance-table { font-size:9.3px;line-height:12px; }
+#simpaisa-review-v26 .p15-performance-table tbody th { font-size:8.5px; }
+#simpaisa-review-v26 .p15-shared { font-size:8.2px;line-height:11px; }
+
+#simpaisa-review-v26 .p15-body { padding-top:4px; }
+#simpaisa-review-v26 .p15-body h2 { margin-bottom:4px; }
+#simpaisa-review-v26 .p15-evidence { padding-top:6px;padding-bottom:4px; }
+#simpaisa-review-v26 .p15-scene { opacity:.95; }
+#simpaisa-review-v26 .p15-blend { background:linear-gradient(90deg,rgba(4,19,80,.96),rgba(4,19,80,.69) 58%,rgba(4,19,80,.15)),linear-gradient(0deg,rgba(0,20,85,.48),transparent 55%); }
+#simpaisa-review-v26 .p16-methods { grid-template-rows:48px 48px; }
+#simpaisa-review-v26 .p16-method { grid-template-rows:25px 13px 10px; }
+#simpaisa-review-v26 .p16-method .pk-logo { width:90px;height:25px; }
+#simpaisa-review-v26 .p16-method .pk-logo img { max-width:86px;max-height:24px; }
+#simpaisa-review-v26 .p16-method strong { font-size:11px;line-height:13px; }
+#simpaisa-review-v26 .p16-method small { font-size:8.3px;line-height:10px; }
+#simpaisa-review-v26 .p16-method .p16-type { font-size:8.5px;line-height:13px; }
+#simpaisa-review-v26 .p17-standards { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin-bottom:4px; }
+#simpaisa-review-v26 .p17-standards section { padding:6px 7px;background:#EDF3FF;border-radius:4px;display:flex;flex-direction:column;gap:3px; }
+#simpaisa-review-v26 .p17-standards h3 { font:600 10.3px/13px SimpaisaPoppins,sans-serif;color:#001866; }
+#simpaisa-review-v26 .p17-standards p { font-size:10.3px;line-height:14px;color:#344C70; }
+#simpaisa-review-v26 .p17-standards > section > strong { display:block;white-space:nowrap;color:#0156FB;font-size:12px;line-height:16px;font-weight:600; }
+#simpaisa-review-v26 .p17-standards strong span { color:#344C70;font-size:9px;font-weight:400; }
+
+#simpaisa-review-v26 .p16-method[data-brand="Alfa"] { grid-column:1;grid-row:2; }
+#simpaisa-review-v26 .p16-method[data-brand="Zindigi"] { grid-column:2;grid-row:2; }
+#simpaisa-review-v26 .p16-method[data-brand="PayPak"] { grid-column:3;grid-row:2; }
+
+#simpaisa-review-v26 .p19-status { margin-top:4px;padding-top:4px;border-top:.5px solid #CBD7ED; }
+#simpaisa-review-v26 .p19-status p { font-size:10.3px;line-height:13.5px;color:#344C70; }
+#simpaisa-review-v26 .p19-status p + p { margin-top:1px; }
+#simpaisa-review-v26 .p19-status-line { display:flex;align-items:baseline;justify-content:space-between;gap:10px; }
+#simpaisa-review-v26 .p19-status-line > strong { color:#0156FB;font-size:11px;line-height:13.5px;white-space:nowrap; }
+#simpaisa-review-v26 .p19-status p strong { font-weight:600; }
+#simpaisa-review-v26 .p15-limit-grid { display:block; }
+#simpaisa-review-v26 .p15-acceptance-limit > h3 { display:none; }
+#simpaisa-review-v26 .p15-mini-label { font-size:9px;line-height:12px; }
+#simpaisa-review-v26 .p15-levels { grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:5px 0 0; }
+#simpaisa-review-v26 .p15-levels > div { padding:5px 8px;display:grid;grid-template-columns:18px minmax(0,1fr);gap:4px;align-items:center; }
+#simpaisa-review-v26 .p15-levels b { font-size:9px;line-height:12px; }
+#simpaisa-review-v26 .p15-levels p { font-size:9px;line-height:13px; }
+#simpaisa-review-v26 .p15-levels strong { font-size:10.2px;line-height:13px; }
+#simpaisa-review-v26 .p19-integration { background:#001866;color:#FFFFFF;padding:5px 10px;font-size:9.5px;line-height:13px;display:flex;justify-content:space-between;align-items:center; }
+#simpaisa-review-v26 .p19-integration strong { font-weight:600; }
+
+#simpaisa-review-v26 .bangladesh-redesign { background:#FFFFFF; }
+#simpaisa-review-v26 .bangladesh-redesign .book-footer { left:32px;width:531px; }
+#simpaisa-review-v26 .bangladesh-redesign .p15-body { gap:4px; }
+#simpaisa-review-v26 .bangladesh-redesign .p16-flow-row { padding-top:4px;padding-bottom:4px; }
+#simpaisa-review-v26 .bangladesh-redesign .p19-status { margin-top:3px; }
+#simpaisa-review-v26 .p20-bd-methods .p16-method { grid-column:auto;grid-row:auto;border-right:.5px solid #E0E7F3; }
+#simpaisa-review-v26 .p20-bd-methods .p16-method:nth-child(5n) { border-right:0; }
+#simpaisa-review-v26 .p20-text-mark { color:#00765A;font:600 17px/22px SimpaisaPoppins,sans-serif; }
+#simpaisa-review-v26 .p20-chart-note { color:#52617B;font-size:7px;line-height:9px;margin-top:4px; }
+#simpaisa-review-v26 .p20-policy-note { color:#3D506F;font-size:7.4px;line-height:10px;margin-top:5px;padding-top:4px;border-top:.5px solid #D5DEEE; }
+#simpaisa-review-v26 .p20-limits table { border-collapse:collapse;table-layout:fixed;width:100%;font-size:9px;line-height:12px;color:#344C70; }
+#simpaisa-review-v26 .p20-limits th { text-align:left;vertical-align:top;width:95px;font-weight:600;color:#001866; }
+#simpaisa-review-v26 .p20-limits th,#simpaisa-review-v26 .p20-limits td { padding:2px 7px;border-bottom:.5px solid #D7DFEE; }
+#simpaisa-review-v26 .p20-limits tr:nth-child(odd) { background:#F1F5FF; }
+#simpaisa-review-v26 .p20-limits strong { color:#001866;font-weight:600; }
+
+#simpaisa-review-v26 .nepal-redesign .p15-body { gap:4px; }
+#simpaisa-review-v26 .nepal-redesign .np20-methods { grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:48px 48px;row-gap:3px; }
+#simpaisa-review-v26 .nepal-redesign .np20-methods .p16-method { grid-column:auto;grid-row:auto;border-right:.5px solid #E0E7F3; }
+#simpaisa-review-v26 .nepal-redesign .np20-methods .p16-method:nth-child(4n),#simpaisa-review-v26 .nepal-redesign .np20-methods [data-brand="Mastercard"] { border-right:0; }
+#simpaisa-review-v26 .nepal-redesign .np20-methods [data-brand="Mastercard"] { grid-column:4;grid-row:2; }
+#simpaisa-review-v26 .nepal-redesign .np20-methods .pk-logo { width:110px; }
+#simpaisa-review-v26 .nepal-redesign .np20-methods .pk-logo img { max-width:105px; }
+#simpaisa-review-v26 .nepal-redesign .np20-methods .np20-merged-logo { gap:4px; }
+#simpaisa-review-v26 .nepal-redesign .np20-methods .np20-merged-logo img { max-width:50px; }
+#simpaisa-review-v26 .nepal-redesign .p15-evidence { padding-top:5px;padding-bottom:3px; }
+#simpaisa-review-v26 .nepal-redesign .p15-figures th { width:61px; }
+#simpaisa-review-v26 .nepal-redesign .np20-conversion { font-size:6.8px;line-height:9px;color:#52617B;margin-top:3px; }
+#simpaisa-review-v26 .nepal-redesign .np20-metric-row { display:grid;grid-template-columns:62px 1fr;gap:5px;align-items:center;padding:4px 0;border-bottom:.5px solid #D5DEEE; }
+#simpaisa-review-v26 .nepal-redesign .np20-metric-row > strong { font-size:11px;line-height:14px; }
+#simpaisa-review-v26 .nepal-redesign .np20-metric-row span { display:block;font-size:7.7px;line-height:10px;color:#344C70; }
+#simpaisa-review-v26 .nepal-redesign .np20-metric-row small { display:block;font-size:6.7px;line-height:9px;color:#52617B; }
+#simpaisa-review-v26 .nepal-redesign .np20-limits > p { font-size:9.5px;line-height:13px;color:#344C70; }
+#simpaisa-review-v26 .nepal-redesign .np20-limits > p + p { margin-top:3px; }
+#simpaisa-review-v26 .nepal-redesign .np20-limits > p > strong { color:#001866;font-weight:600; }
+
+#simpaisa-review-v26 .nepal-redesign .p16-flow-row { padding-top:4px;padding-bottom:4px; }
+#simpaisa-review-v26 .nepal-redesign .p19-status { margin-top:3px; }
+#simpaisa-review-v26 .nepal-redesign .np20-merged-logo { gap:5px; }
+#simpaisa-review-v26 .nepal-redesign .np20-logo-part { display:flex;align-items:center;justify-content:center;width:50px;height:25px;overflow:hidden;flex:0 0 50px; }
+#simpaisa-review-v26 .nepal-redesign .np20-merged-logo img[alt="IME Pay"] { width:16px;height:16px;max-width:16px;max-height:16px; }
+#simpaisa-review-v26 .nepal-redesign .np20-methods [data-brand="NEPALPAY Card"] { grid-column:1 / 3;grid-row:2; }
+#simpaisa-review-v26 .nepal-redesign .np20-methods [data-brand="NEPALPAY QR"] { grid-column:3;grid-row:2; }
+
+#simpaisa-review-v26 .iraq-redesign .p15-body { gap:10px; }
+#simpaisa-review-v26 .iraq-redesign .p15-evidence { padding:9px 10px; }
+#simpaisa-review-v26 .iraq-redesign .p15-chart figcaption,#simpaisa-review-v26 .iraq-redesign .p15-figures h3 { font-size:9px;line-height:12px; }
+#simpaisa-review-v26 .iraq-redesign .p15-chart-sub { font-size:7.8px;line-height:11px;height:17px; }
+#simpaisa-review-v26 .iraq-redesign .p15-chart svg { height:73px; }
+#simpaisa-review-v26 .iraq-redesign .p15-chart svg text { font-size:8.7px; }
+#simpaisa-review-v26 .iraq-redesign .p15-figures table { font-size:8.4px;line-height:12px;margin-top:5px; }
+#simpaisa-review-v26 .iraq-redesign .p15-figures th { width:68px; }
+#simpaisa-review-v26 .iraq-redesign .p15-figures th,#simpaisa-review-v26 .iraq-redesign .p15-figures td { padding:4px 0; }
+#simpaisa-review-v26 .iraq-redesign .p15-figures strong { font-size:11px;line-height:14px; }
+#simpaisa-review-v26 .iraq-redesign .p15-figures td span { font-size:7.6px;line-height:11px; }
+#simpaisa-review-v26 .iraq-redesign .p22-evidence-note { font-size:8.4px;line-height:12px;margin-top:6px;color:#52617B; }
+#simpaisa-review-v26 .iraq-redesign .p22-structure p,#simpaisa-review-v26 .iraq-redesign .p22-limits p { font-size:10.3px;line-height:13.5px;color:#344C70; }
+#simpaisa-review-v26 .iraq-redesign .p22-limits p { padding:7px 9px;background:#F1F5FF;border-radius:4px; }
+
+#simpaisa-review-v26 .egypt-redesign { background:#FFFFFF; }
+#simpaisa-review-v26 .egypt-redesign .book-footer { left:32px;width:531px; }
+#simpaisa-review-v26 .egypt-redesign .eg22-evidence-note { color:#52617B;font-size:8.3px;line-height:11px;margin-top:5px; }
+#simpaisa-review-v26 .egypt-redesign .p15-figures th { width:62px;padding-right:5px; }
+#simpaisa-review-v26 .egypt-redesign .eg22-limits table { width:100%;border-collapse:collapse;table-layout:fixed; }
+#simpaisa-review-v26 .egypt-redesign .eg22-limits th { width:85px;font:600 9.4px/13.5px SimpaisaPoppins,sans-serif;color:#001866;text-align:left; }
+#simpaisa-review-v26 .egypt-redesign .eg22-limits td { font-size:10.3px;line-height:13.5px;color:#283B58; }
+#simpaisa-review-v26 .egypt-redesign .eg22-limits th,.egypt-redesign .eg22-limits td { padding:5px 7px;vertical-align:top;border-bottom:.5px solid #D7DFEE; }
+#simpaisa-review-v26 .egypt-redesign .eg22-limits strong { color:#001866;font-weight:600; }
+
+#simpaisa-review-v26 .saudi-redesign .p15-body { gap:10px; }
+#simpaisa-review-v26 .saudi-redesign .p15-evidence { padding:9px 10px; }
+#simpaisa-review-v26 .saudi-redesign .p15-chart figcaption,#simpaisa-review-v26 .saudi-redesign .p15-figures h3 { font-size:9px;line-height:12px; }
+#simpaisa-review-v26 .saudi-redesign .p15-chart-sub { font-size:7.8px;line-height:11px;height:17px; }
+#simpaisa-review-v26 .saudi-redesign .p15-chart svg { height:73px; }
+#simpaisa-review-v26 .saudi-redesign .p15-chart svg text { font-size:8.7px; }
+#simpaisa-review-v26 .saudi-redesign .p15-figures table { font-size:8.4px;line-height:12px;margin-top:5px; }
+#simpaisa-review-v26 .saudi-redesign .p15-figures th { width:49px; }
+#simpaisa-review-v26 .saudi-redesign .p15-figures th,#simpaisa-review-v26 .saudi-redesign .p15-figures td { padding:4px 0; }
+#simpaisa-review-v26 .saudi-redesign .p15-figures strong { font-size:11px;line-height:14px; }
+#simpaisa-review-v26 .saudi-redesign .p15-figures td span { font-size:7.6px;line-height:11px; }
+#simpaisa-review-v26 .saudi-redesign .p22-evidence-note { font-size:8.4px;line-height:12px;margin-top:6px;color:#52617B; }
+#simpaisa-review-v26 .saudi-redesign .p22-structure p,#simpaisa-review-v26 .saudi-redesign .p22-limits p { font-size:10.3px;line-height:13.5px;color:#344C70; }
+#simpaisa-review-v26 .saudi-redesign .p22-limits p { padding:7px 9px;background:#F1F5FF;border-radius:4px; }
+
+#simpaisa-review-v26 .nigeria-redesign { background:#FFFFFF; }
+#simpaisa-review-v26 .nigeria-redesign .book-footer { left:32px;width:531px; }
+#simpaisa-review-v26 .nigeria-redesign .ng22-evidence-note { color:#52617B;font-size:8.3px;line-height:11px;margin-top:5px; }
+#simpaisa-review-v26 .nigeria-redesign .ng22-bvn { color:#52617B;font-size:7.1px;line-height:9.5px;margin-top:3px; }
+#simpaisa-review-v26 .nigeria-redesign .ng22-bvn strong { color:#001866;font-weight:600; }
+#simpaisa-review-v26 .nigeria-redesign .ng22-nip-figures th { width:50px; }
+#simpaisa-review-v26 .nigeria-redesign .ng22-nip-figures strong { font-size:9px; }
+#simpaisa-review-v26 .nigeria-redesign .ng22-limits table { width:100%;border-collapse:collapse;table-layout:fixed; }
+#simpaisa-review-v26 .nigeria-redesign .ng22-limits th { width:85px;font:600 9.4px/13.5px SimpaisaPoppins,sans-serif;color:#001866;text-align:left; }
+#simpaisa-review-v26 .nigeria-redesign .ng22-limits td { font-size:10.3px;line-height:13.5px;color:#283B58; }
+#simpaisa-review-v26 .nigeria-redesign .ng22-limits th,.nigeria-redesign .ng22-limits td { padding:4px 7px;vertical-align:top;border-bottom:.5px solid #D7DFEE; }
+#simpaisa-review-v26 .nigeria-redesign .ng22-limits strong { color:#001866;font-weight:600; }
+#simpaisa-review-v26 .nigeria-redesign .ng22-acceptance-status .p19-status-line > strong { font-size:10.3px; }
+#simpaisa-review-v26 .nigeria-redesign .p15-body { gap:8px;padding-top:8px; }
+
+#simpaisa-review-v26 .p22-country { background:#FFFFFF; }
+#simpaisa-review-v26 .p22-country .book-footer { left:32px;width:531px; }
+#simpaisa-review-v26 .p22-country .p15-body { padding-top:8px;gap:6px; }
+#simpaisa-review-v26 .p22-country .p15-body h2 { margin-bottom:6px; }
+#simpaisa-review-v26 .p22-methods-section { padding-top:3px; }
+#simpaisa-review-v26 .p22-methods { display:flex;flex-wrap:wrap;justify-content:center;gap:10px 0; }
+#simpaisa-review-v26 .p22-method { flex:0 0 calc(100% / var(--method-cols,5));display:flex;align-items:center;justify-content:center;height:30px;min-width:0; }
+#simpaisa-review-v26 .p22-logo { width:90px;height:30px;display:flex;align-items:center;justify-content:center;overflow:hidden; }
+#simpaisa-review-v26 .p22-logo img { display:block;max-width:82px;max-height:24px;width:auto;height:auto;object-fit:contain; }
+#simpaisa-review-v26 .p22-logo-text { color:#001866;font:600 13px/18px SimpaisaPoppins,sans-serif;text-align:center; }
+#simpaisa-review-v26 .p22-method[data-brand="TakaPay"] .p22-logo-text { color:#00765A; }
+#simpaisa-review-v26 .p22-country .p19-integration { margin-top:0; }
+#simpaisa-review-v26 .p22-country .p15-evidence { padding:7px 10px 6px; }
+#simpaisa-review-v26 .p22-country .p16-flow-row { padding-top:4px;padding-bottom:4px; }
+#simpaisa-review-v26 .p22-country .p19-status { margin-top:4px;padding-top:4px; }
+#simpaisa-review-v26 .p22-country .p22-context { color:#344C70;font-size:9px;line-height:12px; }
+
+#simpaisa-review-v26 .nigeria-redesign .p15-body { gap:5px; }
+#simpaisa-review-v26 .nigeria-redesign .ng22-limits td { font-size:9.5px;line-height:13px; }
+#simpaisa-review-v26 .nigeria-redesign .ng22-limits th,#simpaisa-review-v26 .nigeria-redesign .ng22-limits td { padding-top:2.5px;padding-bottom:2.5px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#simpaisa-review-v26 .closing-page-v26 { background:linear-gradient(155deg,#08184F 0%,#073C9F 47%,#0C71DF 100%);color:#FFFFFF; }
+#simpaisa-review-v26 .closing-brand { position:absolute;left:50%;top:39px;transform:translateX(-50%);width:107px;height:32px;object-fit:contain; }
+#simpaisa-review-v26 .closing-title { position:absolute;left:32px;top:50%;transform:translateY(-50%);width:531px;height:104px;display:flex;flex-direction:column;justify-content:center;font:600 37px/48px SimpaisaPoppins,sans-serif;letter-spacing:-1px;color:#FFFFFF;text-align:center; }
+#simpaisa-review-v26 .closing-offices { position:absolute;left:32px;right:32px;top:632px;text-align:center; }
+#simpaisa-review-v26 .closing-offices h2 { font:500 12px/18px SimpaisaInter,sans-serif;letter-spacing:1.3px;color:#FFFFFF; }
+#simpaisa-review-v26 .closing-locations-image { display:block;width:531px;height:122px;margin-top:10px;object-fit:contain; }
+#simpaisa-review-v26 .closing-footer { position:absolute;left:32px;right:32px;top:803px;text-align:center;color:#FFFFFF; }
+#simpaisa-review-v26 .closing-footer a { color:#FFFFFF;font:500 15px/22px SimpaisaPoppins,sans-serif;text-decoration:none; }
+#simpaisa-review-v26 .closing-footer a:hover { text-decoration:underline; }
+#simpaisa-review-v26 .closing-footer span { position:absolute;right:0;top:8px;font:400 8px/10px SimpaisaInter,sans-serif;color:#E2ECFF; }
+
+/* Standalone viewer shell. The page design below retains its original 595 × 842 units. */
+html { color-scheme: light; }
+body { margin: 0; padding: 24px 16px; }
+#simpaisa-review-v26 { width: 100%; max-width: 736px; margin: 0 auto; }
+#simpaisa-review-v26 .review-controls { font-family: Arial, Helvetica, sans-serif; }
+#simpaisa-review-v26 .review-controls select { max-width: 100%; }
+#simpaisa-review-v26 .review-source-notes { margin-top: 16px; }
+#simpaisa-review-v26 .office-print-picture { display: contents; }
+@media (max-width: 520px) {
+  body { padding: 12px 8px; }
+  #simpaisa-review-v26 .review-controls { gap: 8px; }
+}
+@page { size: 595pt 842pt; margin: 0; }
+@media print {
+  html, body { margin: 0 !important; padding: 0 !important; background: #fff !important; }
+  #simpaisa-review-v26 { width: 595pt !important; max-width: none !important; margin: 0 !important; }
+  #simpaisa-review-v26 .review-controls,
+  #simpaisa-review-v26 .review-source-notes { display: none !important; }
+  #simpaisa-review-v26 .page-preview,
+  #simpaisa-review-v26 .page-preview[hidden] {
+    display: block !important; width: 595pt !important; height: 842pt !important;
+    break-after: page; overflow: hidden;
+  }
+  #simpaisa-review-v26 .page-preview:last-of-type { break-after: auto; }
+  #simpaisa-review-v26 .book-page {
+    transform: scale(1.3333333333) !important;
+    print-color-adjust: exact; -webkit-print-color-adjust: exact;
+  }
+  #simpaisa-review-v26.show-guides .alignment-overlay,
+  #simpaisa-review-v26.show-guides .review-guides { display: none !important; }
+  #simpaisa-review-v26.show-guides .book-page * { outline: none !important; }
+}
