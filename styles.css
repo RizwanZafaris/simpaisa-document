@@ -1601,3 +1601,7 @@ body { margin: 0; padding: 24px 16px; }
   #simpaisa-review-v26.show-guides .review-guides { display: none !important; }
   #simpaisa-review-v26.show-guides .book-page * { outline: none !important; }
 }
+
+/* Page 5: approved wallet growth and market evidence layout. */
+#simpaisa-review-v26 .gap-page-v30 { background:#E9E9E9; }
+#simpaisa-review-v26 .gap-page-v30 > svg { display:block; width:595px; height:842px; }

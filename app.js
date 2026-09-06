@@ -11,13 +11,25 @@
   const counter = root.querySelector('#simpaisa-v26-counter');
   const guides = root.querySelector('#simpaisa-v26-guides');
   let current = pageNumbers[0];
+  let appliedPageWidth = 0;
+  let pendingPageWidth = 0;
+  let resizeFrame = null;
 
-  function resizePages() {
-    const scale = root.getBoundingClientRect().width / 595;
-    for (const preview of pages) {
-      preview.querySelector('.book-page').style.transform = `scale(${scale})`;
-      preview.style.height = `${842 * scale}px`;
-    }
+  function schedulePageResize(width = Number.parseFloat(getComputedStyle(root).width)) {
+    if (!Number.isFinite(width) || width <= 0) return;
+    pendingPageWidth = width;
+    if (resizeFrame !== null || width === appliedPageWidth) return;
+    // Defer layout writes until observer delivery finishes, and ignore height-only changes.
+    resizeFrame = requestAnimationFrame(() => {
+      resizeFrame = null;
+      if (!root.isConnected || pendingPageWidth === appliedPageWidth) return;
+      const scale = pendingPageWidth / 595;
+      for (const preview of pages) {
+        preview.querySelector('.book-page').style.transform = `scale(${scale})`;
+        preview.style.height = `${842 * scale}px`;
+      }
+      appliedPageWidth = pendingPageWidth;
+    });
   }
 
   function showPage(value) {
@@ -31,7 +43,7 @@
     if (previous) previous.disabled = current === pageNumbers[0];
     if (next) next.disabled = current === pageNumbers[pageNumbers.length - 1];
     if (counter) counter.textContent = `${current} / 13`;
-    resizePages();
+    schedulePageResize();
   }
 
   function readHash() {
@@ -53,7 +65,11 @@
     if (event.key === 'ArrowLeft') navigate(pageNumbers[pageNumbers.indexOf(current) - 1]);
     if (event.key === 'ArrowRight') navigate(pageNumbers[pageNumbers.indexOf(current) + 1]);
   });
-  new ResizeObserver(resizePages).observe(root);
-  document.fonts.ready.then(resizePages);
+  new ResizeObserver(entries => {
+    for (const entry of entries) {
+      if (entry.target === root) schedulePageResize(entry.contentRect.width);
+    }
+  }).observe(root);
+  document.fonts.ready.then(() => schedulePageResize());
   readHash();
 })();

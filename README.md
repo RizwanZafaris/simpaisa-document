@@ -1,6 +1,6 @@
 # Simpaisa Network Playbook 2026
 
-Editable offline export of the current 13-page v26 review, including the centered closing page and five dotted office maps.
+Editable offline export of the 13-page v26 review, including the latest page 5 wallet-growth charts and aligned market table, the centered closing page and five dotted office maps.
 
 ## Open
 
@@ -30,11 +30,11 @@ The exported PDFs preserve the current layout and dotted office maps.
 - `assets/`: deduplicated logos, flags, landmark artwork, map SVGs and WOFF2 fonts. Names include content hashes.
 - `provenance.json`: source version/hash, retained source links and the asset manifest.
 
-Edit the relevant HTML and CSS directly; there is no generated runtime dependency. If the closing page is edited, update both HTML copies. Text and vector charts remain editable; raster artwork and logo imagery remain separate assets. The self-contained HTML is a convenience snapshot and should be regenerated after source edits.
+Edit the relevant HTML and CSS directly; there is no generated runtime dependency. If the closing page is edited, update both HTML copies. Text and vector charts remain editable; raster artwork and logo imagery remain separate assets. After source edits, regenerate the self-contained HTML with `python3 scripts/build-standalone.py` (Python standard library only).
 
 ## Content and provenance
 
-This export preserves the existing user draft and its review notes. Figures, regulatory limits and operational performance were **not freshly fact-checked for this export**. Existing qualifications, dates, uncertainty notes and linked citations remain available under the relevant page. Export validation checks presentation and functionality; it does not certify the business or regulatory claims.
+Page 5 contains the approved introduction, annual wallet-account growth in Pakistan and Bangladesh, and a market table covering wallets, A2A and domestic cards. Its source notes retain reporting periods, metric definitions and primary-source links. The other 12 pages preserve the existing user draft and were not fact-checked again for this update. Export validation checks presentation and functionality; it does not certify business or regulatory claims.
 
 The office maps show the supplied office cities using published city coordinates; they do not identify street addresses. Country silhouettes are independently scaled to fit the strip. They are derived from Natural Earth 1:50 million geometry, projected with D3 Mercator, with GeoNames city points:
 
@@ -52,4 +52,6 @@ Simpaisa and payment-provider names and logos remain the property and trademarks
 
 ## Validation
 
-See `validation.json` for the export's offline navigation, image loading, source-note retention and all-page render comparison results. Source links and the website link are optional outbound links; viewing and navigation do not use the network.
+See `validation.json` for the current source-preservation, page 5 layout, PDF and viewer checks. Historical browser validation is distinguished from the checks run for this update. Source links and the website link are optional outbound links; viewing and navigation do not use the network.
+
+Run `node --test tests/app-resize.test.cjs` for the offline viewer tests. They cover resize feedback, hidden or detached viewers, page navigation and alignment guides.

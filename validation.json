@@ -1,325 +1,525 @@
 {
   "version": "v26",
-  "offline": true,
-  "pageCount": 13,
-  "errors": [],
-  "networkRequests": [],
-  "controls": {
-    "selector": true,
-    "previous": true,
-    "next": true,
-    "guides": true,
-    "hash": true
-  },
-  "closingPage": {
-    "pages": 1,
-    "visiblePage": "13"
-  },
-  "printFallback": {
-    "currentSource": "office-locations-print-4x-52214d4291.png",
-    "naturalWidth": 2124,
-    "naturalHeight": 488
-  },
-  "narrowViewport": {
-    "scrollWidth": 360,
-    "width": 360
-  },
-  "sourceRetention": {
-    "noteCount": 9,
-    "links": 37,
-    "pageOrder": [
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
-      10,
-      11,
-      12,
-      13
-    ],
-    "icons": 57,
-    "fontsLoaded": [
-      true,
-      true,
-      true
-    ],
-    "noteTextChecks": [
-      {
-        "page": 6,
-        "exact_text_preserved": true
-      },
-      {
-        "page": 7,
-        "exact_text_preserved": true
-      },
-      {
-        "page": 8,
-        "exact_text_preserved": true
-      },
-      {
-        "page": 9,
-        "exact_text_preserved": true
-      },
-      {
-        "page": 10,
-        "exact_text_preserved": true
-      },
-      {
-        "page": 11,
-        "exact_text_preserved": true
-      },
-      {
-        "page": 13,
-        "exact_text_preserved": true
-      },
-      {
-        "page": 12,
-        "exact_text_preserved": true
-      },
-      {
-        "page": 5,
-        "exact_text_preserved": true
-      }
-    ]
-  },
-  "pages": [
-    {
-      "page": 1,
-      "visiblePages": [
-        1
-      ],
-      "size": [
-        595,
-        842
-      ],
-      "brokenImages": []
-    },
-    {
-      "page": 2,
-      "visiblePages": [
-        2
-      ],
-      "size": [
-        595,
-        842
-      ],
-      "brokenImages": []
-    },
-    {
-      "page": 3,
-      "visiblePages": [
-        3
-      ],
-      "size": [
-        595,
-        842
-      ],
-      "brokenImages": []
-    },
-    {
-      "page": 4,
-      "visiblePages": [
-        4
-      ],
-      "size": [
-        595,
-        842
-      ],
-      "brokenImages": []
-    },
-    {
-      "page": 5,
-      "visiblePages": [
-        5
-      ],
-      "size": [
-        595,
-        842
-      ],
-      "brokenImages": []
-    },
-    {
-      "page": 6,
-      "visiblePages": [
-        6
-      ],
-      "size": [
-        595,
-        842
-      ],
-      "brokenImages": []
-    },
-    {
-      "page": 7,
-      "visiblePages": [
-        7
-      ],
-      "size": [
-        595,
-        842
-      ],
-      "brokenImages": []
-    },
-    {
-      "page": 8,
-      "visiblePages": [
-        8
-      ],
-      "size": [
-        595,
-        842
-      ],
-      "brokenImages": []
-    },
-    {
-      "page": 9,
-      "visiblePages": [
-        9
-      ],
-      "size": [
-        595,
-        842
-      ],
-      "brokenImages": []
-    },
-    {
-      "page": 10,
-      "visiblePages": [
-        10
-      ],
-      "size": [
-        595,
-        842
-      ],
-      "brokenImages": []
-    },
-    {
-      "page": 11,
-      "visiblePages": [
-        11
-      ],
-      "size": [
-        595,
-        842
-      ],
-      "brokenImages": []
-    },
-    {
-      "page": 12,
-      "visiblePages": [
-        12
-      ],
-      "size": [
-        595,
-        842
-      ],
-      "brokenImages": []
-    },
-    {
-      "page": 13,
-      "visiblePages": [
+  "revision": "page-5-wallet-growth-alignment",
+  "validated_at": "2026-09-06T16:04:39.645175+00:00",
+  "source_sha256": "a048f30a023a007e84f9341b12546e0063693cb04b418eac44e0c438557568cd",
+  "current_validation": {
+    "method": "Static source comparison, native SVG/PDF render inspection, and Node viewer simulation. No fresh browser run for this revision.",
+    "static": {
+      "pageCount": 13,
+      "otherPageMarkupPreserved": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
         13
       ],
-      "size": [
-        595,
-        842
+      "localAssetIntegrity": true,
+      "standaloneTextMatchesIndex": true,
+      "page5MatchesLatestReview": true,
+      "flagCount": 9,
+      "walletLogos": 0
+    },
+    "page5_layout": {
+      "text_labels": 115,
+      "issues": [],
+      "reviewed": true
+    },
+    "viewer_tests": {
+      "command": "node --test tests/app-resize.test.cjs",
+      "passed": 4,
+      "failed": 0,
+      "scope": [
+        "frame coalescing and observer feedback",
+        "zero and non-finite widths",
+        "detached and reopened viewers",
+        "navigation, hash, controls, notes and guides"
+      ]
+    },
+    "single_file_viewer_script_matches_app_js": true,
+    "pdf": {
+      "source_sha256": "b256a121727ad11bc7467a06c066a8b4b4a15d7bdf3f0501c62f811eeba3bd5b",
+      "output": "docs/simpaisa-network-playbook.pdf",
+      "pages": 13,
+      "unchanged_pages": 12,
+      "page5_text_nodes_verified": 115,
+      "page5_fonts": [
+        [
+          2,
+          "n/a",
+          "Type1",
+          "Helvetica",
+          "F1",
+          "WinAnsiEncoding",
+          0
+        ],
+        [
+          16,
+          "ttf",
+          "TrueType",
+          "AAAAAA+Poppins-SemiBold",
+          "F2+0",
+          "",
+          0
+        ],
+        [
+          20,
+          "ttf",
+          "TrueType",
+          "AAAAAA+Inter-Regular",
+          "F3+0",
+          "",
+          0
+        ],
+        [
+          24,
+          "ttf",
+          "TrueType",
+          "AAAAAA+Inter-SemiBold",
+          "F4+0",
+          "",
+          0
+        ]
       ],
-      "brokenImages": []
+      "page5_images": [
+        {
+          "width": 36,
+          "height": 27
+        },
+        {
+          "width": 36,
+          "height": 27
+        },
+        {
+          "width": 36,
+          "height": 27
+        },
+        {
+          "width": 36,
+          "height": 27
+        },
+        {
+          "width": 36,
+          "height": 27
+        },
+        {
+          "width": 36,
+          "height": 27
+        },
+        {
+          "width": 36,
+          "height": 27
+        }
+      ],
+      "page_checks": [
+        {
+          "page": 1,
+          "render_identical": true,
+          "render_sha256": "3dd0609d1942e8a294d1f88e3f1af698cc1ce805d05d8e5957cbcb6d60416313"
+        },
+        {
+          "page": 2,
+          "render_identical": true,
+          "render_sha256": "53c91084210eccdcf1aff0ba8dd9bbe5fcd2cdb8fe6b0d5977971cd667044e36"
+        },
+        {
+          "page": 3,
+          "render_identical": true,
+          "render_sha256": "a01387e464c4adeef1e3faceaf09fd3b79d3c5250ce1a4e5bd5b153e23d9aac1"
+        },
+        {
+          "page": 4,
+          "render_identical": true,
+          "render_sha256": "c11b6aa0f8caae3b6d99e538d4b241e43b354238747899a4388bbc8f2bb50576"
+        },
+        {
+          "page": 5,
+          "render_identical": false,
+          "render_sha256": "ee2391a0d7d59f382b8a3948c6353a6daad298fc1e0839661a05de000b39771e"
+        },
+        {
+          "page": 6,
+          "render_identical": true,
+          "render_sha256": "1ef00ebb81004716abbf58ceefdd08f27bb29bcad882db67ef2d762c6a71f540"
+        },
+        {
+          "page": 7,
+          "render_identical": true,
+          "render_sha256": "82bffbeed1acd752f87943bee195b8bfc63fbdf7d6f23451f6ca96ea4241e28a"
+        },
+        {
+          "page": 8,
+          "render_identical": true,
+          "render_sha256": "6f722f0037041d248a6b9374cb8ec0a31a8aba4f4f9a5e932f84a3fbf4cb59fe"
+        },
+        {
+          "page": 9,
+          "render_identical": true,
+          "render_sha256": "df22315e8c63ba789857fddc33dcc1878ef0efb03c4626be4f2b1247eaa94866"
+        },
+        {
+          "page": 10,
+          "render_identical": true,
+          "render_sha256": "1e83827d5189620b178335a3baa51b347355693d0e906b7507f37ad44005ff16"
+        },
+        {
+          "page": 11,
+          "render_identical": true,
+          "render_sha256": "e9bfbd481d135a5601678fd9580a67ff88922807c1d2bc19aae4e3e8cbe93dba"
+        },
+        {
+          "page": 12,
+          "render_identical": true,
+          "render_sha256": "55bbbb7f439c3191559cc6518436b1d28c16865154ba8aef27db39f41782fa13"
+        },
+        {
+          "page": 13,
+          "render_identical": true,
+          "render_sha256": "c2db1a6f9ac9689580b983889b443f32d603434642e4583ec5c856826a64623c"
+        }
+      ],
+      "page5_size": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "note": "SVG scaled from 595 \u00d7 842 to the original PDF A4 page box. Vector text, paths and gradient retained; only country flags are raster images.",
+      "sha256": "3f1daae6f471d2a3a892e09a9349a65aa180a831098c3e7de075cd03b505514e"
     }
-  ],
-  "renderComparison": {
-    "reference": "Current v26 hydrated browser review; paper coordinates aligned to the pixel grid for comparison.",
-    "result": "No visible layout or content differences; small rasterization and gradient differences remain.",
-    "pages": [
-      {
-        "page": 1,
-        "width": 595,
-        "height": 842,
-        "mean_rgb_difference_0_255": 0.000473
-      },
-      {
-        "page": 2,
-        "width": 595,
-        "height": 842,
-        "mean_rgb_difference_0_255": 0.013931
-      },
-      {
-        "page": 3,
-        "width": 595,
-        "height": 842,
-        "mean_rgb_difference_0_255": 0.01357
-      },
-      {
-        "page": 4,
-        "width": 595,
-        "height": 842,
-        "mean_rgb_difference_0_255": 0.012799
-      },
-      {
-        "page": 5,
-        "width": 595,
-        "height": 842,
-        "mean_rgb_difference_0_255": 0.000395
-      },
-      {
-        "page": 6,
-        "width": 595,
-        "height": 842,
-        "mean_rgb_difference_0_255": 0.007838
-      },
-      {
-        "page": 7,
-        "width": 595,
-        "height": 842,
-        "mean_rgb_difference_0_255": 0.006386
-      },
-      {
-        "page": 8,
-        "width": 595,
-        "height": 842,
-        "mean_rgb_difference_0_255": 0.006163
-      },
-      {
-        "page": 9,
-        "width": 595,
-        "height": 842,
-        "mean_rgb_difference_0_255": 0.006025
-      },
-      {
-        "page": 10,
-        "width": 595,
-        "height": 842,
-        "mean_rgb_difference_0_255": 0.006063
-      },
-      {
-        "page": 11,
-        "width": 595,
-        "height": 842,
-        "mean_rgb_difference_0_255": 0.005974
-      },
-      {
-        "page": 12,
-        "width": 595,
-        "height": 842,
-        "mean_rgb_difference_0_255": 0.006127
-      },
-      {
-        "page": 13,
-        "width": 595,
-        "height": 842,
-        "mean_rgb_difference_0_255": 0.049444
-      }
-    ],
-    "max_mean_rgb_difference_0_255": 0.049444
   },
-  "portablePaths": {
-    "absolute_local_paths": false,
-    "runtime_host_apis": false,
-    "iframes": false
+  "historical_browser_validation": {
+    "base_commit": "49ba6d51e0b8853c11543e01ba2b05ea5f7631cf",
+    "scope": "Original export; these browser checks were not rerun for the present revision.",
+    "results": {
+      "version": "v26",
+      "offline": true,
+      "pageCount": 13,
+      "errors": [],
+      "networkRequests": [],
+      "controls": {
+        "selector": true,
+        "previous": true,
+        "next": true,
+        "guides": true,
+        "hash": true
+      },
+      "closingPage": {
+        "pages": 1,
+        "visiblePage": "13"
+      },
+      "printFallback": {
+        "currentSource": "office-locations-print-4x-52214d4291.png",
+        "naturalWidth": 2124,
+        "naturalHeight": 488
+      },
+      "narrowViewport": {
+        "scrollWidth": 360,
+        "width": 360
+      },
+      "sourceRetention": {
+        "noteCount": 9,
+        "links": 37,
+        "pageOrder": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "icons": 57,
+        "fontsLoaded": [
+          true,
+          true,
+          true
+        ],
+        "noteTextChecks": [
+          {
+            "page": 6,
+            "exact_text_preserved": true
+          },
+          {
+            "page": 7,
+            "exact_text_preserved": true
+          },
+          {
+            "page": 8,
+            "exact_text_preserved": true
+          },
+          {
+            "page": 9,
+            "exact_text_preserved": true
+          },
+          {
+            "page": 10,
+            "exact_text_preserved": true
+          },
+          {
+            "page": 11,
+            "exact_text_preserved": true
+          },
+          {
+            "page": 13,
+            "exact_text_preserved": true
+          },
+          {
+            "page": 12,
+            "exact_text_preserved": true
+          },
+          {
+            "page": 5,
+            "exact_text_preserved": true
+          }
+        ]
+      },
+      "pages": [
+        {
+          "page": 1,
+          "visiblePages": [
+            1
+          ],
+          "size": [
+            595,
+            842
+          ],
+          "brokenImages": []
+        },
+        {
+          "page": 2,
+          "visiblePages": [
+            2
+          ],
+          "size": [
+            595,
+            842
+          ],
+          "brokenImages": []
+        },
+        {
+          "page": 3,
+          "visiblePages": [
+            3
+          ],
+          "size": [
+            595,
+            842
+          ],
+          "brokenImages": []
+        },
+        {
+          "page": 4,
+          "visiblePages": [
+            4
+          ],
+          "size": [
+            595,
+            842
+          ],
+          "brokenImages": []
+        },
+        {
+          "page": 5,
+          "visiblePages": [
+            5
+          ],
+          "size": [
+            595,
+            842
+          ],
+          "brokenImages": []
+        },
+        {
+          "page": 6,
+          "visiblePages": [
+            6
+          ],
+          "size": [
+            595,
+            842
+          ],
+          "brokenImages": []
+        },
+        {
+          "page": 7,
+          "visiblePages": [
+            7
+          ],
+          "size": [
+            595,
+            842
+          ],
+          "brokenImages": []
+        },
+        {
+          "page": 8,
+          "visiblePages": [
+            8
+          ],
+          "size": [
+            595,
+            842
+          ],
+          "brokenImages": []
+        },
+        {
+          "page": 9,
+          "visiblePages": [
+            9
+          ],
+          "size": [
+            595,
+            842
+          ],
+          "brokenImages": []
+        },
+        {
+          "page": 10,
+          "visiblePages": [
+            10
+          ],
+          "size": [
+            595,
+            842
+          ],
+          "brokenImages": []
+        },
+        {
+          "page": 11,
+          "visiblePages": [
+            11
+          ],
+          "size": [
+            595,
+            842
+          ],
+          "brokenImages": []
+        },
+        {
+          "page": 12,
+          "visiblePages": [
+            12
+          ],
+          "size": [
+            595,
+            842
+          ],
+          "brokenImages": []
+        },
+        {
+          "page": 13,
+          "visiblePages": [
+            13
+          ],
+          "size": [
+            595,
+            842
+          ],
+          "brokenImages": []
+        }
+      ],
+      "renderComparison": {
+        "reference": "Current v26 hydrated browser review; paper coordinates aligned to the pixel grid for comparison.",
+        "result": "No visible layout or content differences; small rasterization and gradient differences remain.",
+        "pages": [
+          {
+            "page": 1,
+            "width": 595,
+            "height": 842,
+            "mean_rgb_difference_0_255": 0.000473
+          },
+          {
+            "page": 2,
+            "width": 595,
+            "height": 842,
+            "mean_rgb_difference_0_255": 0.013931
+          },
+          {
+            "page": 3,
+            "width": 595,
+            "height": 842,
+            "mean_rgb_difference_0_255": 0.01357
+          },
+          {
+            "page": 4,
+            "width": 595,
+            "height": 842,
+            "mean_rgb_difference_0_255": 0.012799
+          },
+          {
+            "page": 5,
+            "width": 595,
+            "height": 842,
+            "mean_rgb_difference_0_255": 0.000395
+          },
+          {
+            "page": 6,
+            "width": 595,
+            "height": 842,
+            "mean_rgb_difference_0_255": 0.007838
+          },
+          {
+            "page": 7,
+            "width": 595,
+            "height": 842,
+            "mean_rgb_difference_0_255": 0.006386
+          },
+          {
+            "page": 8,
+            "width": 595,
+            "height": 842,
+            "mean_rgb_difference_0_255": 0.006163
+          },
+          {
+            "page": 9,
+            "width": 595,
+            "height": 842,
+            "mean_rgb_difference_0_255": 0.006025
+          },
+          {
+            "page": 10,
+            "width": 595,
+            "height": 842,
+            "mean_rgb_difference_0_255": 0.006063
+          },
+          {
+            "page": 11,
+            "width": 595,
+            "height": 842,
+            "mean_rgb_difference_0_255": 0.005974
+          },
+          {
+            "page": 12,
+            "width": 595,
+            "height": 842,
+            "mean_rgb_difference_0_255": 0.006127
+          },
+          {
+            "page": 13,
+            "width": 595,
+            "height": 842,
+            "mean_rgb_difference_0_255": 0.049444
+          }
+        ],
+        "max_mean_rgb_difference_0_255": 0.049444
+      },
+      "portablePaths": {
+        "absolute_local_paths": false,
+        "runtime_host_apis": false,
+        "iframes": false
+      }
+    }
   }
 }

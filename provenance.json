@@ -1,8 +1,8 @@
 {
   "version": "v26",
   "source_filename": "simpaisa-pages-review-v26.html",
-  "source_sha256": "1c84fa9b60e826c775b8a4b29b42944b2836ff0146f460d9ca3d62b5293500c4",
-  "export_method": "Hydrated v26 in Chrome, resolved all images/fonts/icons, extracted assets and retained exact page markup/style, then replaced viewer controls with local JavaScript.",
+  "source_sha256": "a048f30a023a007e84f9341b12546e0063693cb04b418eac44e0c438557568cd",
+  "export_method": "Original hydrated offline export; page 5 and its source notes synchronized from the current approved review. Other page markup and assets preserved.",
   "page_order": [
     1,
     2,
@@ -18,16 +18,96 @@
     12,
     13
   ],
-  "content_status": "Existing user draft. The export preserves supplied figures and prior source notes; it is not a fresh factual verification.",
+  "content_status": "Page 5 uses the approved opening copy and the source-backed market figures retained in its notes. Other pages remain the existing user draft; their content was not reverified in this repository update.",
   "print_fallback": "The office-strip SVG remains the screen/source asset. Print media selects a transparent 2124 x 488 PNG captured from the current SVG to avoid Chrome PDF pattern flattening.",
   "source_links": [
     {
-      "text": "SBP",
+      "text": "SBP 2023",
+      "href": "https://www.sbp.org.pk/acd/branchless/Stats/BBSQtr-Apr-Jun-2023.pdf"
+    },
+    {
+      "text": "SBP 2024",
+      "href": "https://www.sbp.org.pk/acd/branchless/Stats/Branchless%20Banking%20Statistics%20for%20Apr%20-%20Jun%202024.pdf"
+    },
+    {
+      "text": "SBP 2025",
+      "href": "https://www.sbp.org.pk/acd/branchless/Stats/Branchless%20Banking%20Statistics%20for%20Apr%20-%20Jun%202025.pdf"
+    },
+    {
+      "text": "Bangladesh Bank FSR 2024, Appendix XXXVII",
+      "href": "https://www.bb.org.bd/pub/annual/fsr/financial%20stability%20report%202024.pdf"
+    },
+    {
+      "text": "Payment Systems Report 2025, pp22 and76",
+      "href": "https://www.bb.org.bd/pub/annual/psdreport/paymentreport_dec2025.pdf"
+    },
+    {
+      "text": "State Bank of Pakistan",
       "href": "https://www.sbp.org.pk/press/2026/Pr-25-Jun-2026.pdf"
     },
     {
-      "text": "SAMA",
-      "href": "https://sama.gov.sa/en-US/MediaCenter/News/Pages/news-1139.aspx"
+      "text": "1LINK-reported",
+      "href": "https://www.linkedin.com/posts/activity-7477008206934962176-VWgF"
+    },
+    {
+      "text": "Bangladesh Bank Payment Systems Report2025",
+      "href": "https://www.bb.org.bd/pub/annual/psdreport/paymentreport_dec2025.pdf"
+    },
+    {
+      "text": "Nepal Rastra Bank",
+      "href": "https://www.nrb.org.np/psd/payment-systems-oversight-report-2081-82-2024-2025/"
+    },
+    {
+      "text": "Nepal Clearing House announcement",
+      "href": "https://nchl.com.np/nepal-clearing-house-ltd-announces-global-acceptance-for-nepalpay-national-card-scheme-in-collaboration-with-discover-network/"
+    },
+    {
+      "text": "CBI Q2 2025 report, final table",
+      "href": "https://cbi.iq/static/uploads/up/file-17707110877882.pdf"
+    },
+    {
+      "text": "CBI announcement",
+      "href": "https://cbi.iq/news/view/2972"
+    },
+    {
+      "text": "CBI payments report",
+      "href": "https://cbi.iq/news/view/3087"
+    },
+    {
+      "text": "Central Bank of Egypt",
+      "href": "https://www.cbe.org.eg/ar/news-publications/news/2025/11/17/12/40/hassan-abdalla-pafix-2025"
+    },
+    {
+      "text": "Al Rajhi Bank annual report",
+      "href": "https://www.alrajhibank.com.sa/ir25/overview/managing_director_and_chief_executive_officer_s_review.html"
+    },
+    {
+      "text": "Saudi Central Bank, Tables27b and30c",
+      "href": "https://www.sama.gov.sa/en-US/EconomicReports/MonthlyStatistics/Monthly_Bulletin_Dec_2025.pdf"
+    },
+    {
+      "text": "OPay",
+      "href": "https://www.linkedin.com/posts/opay_psv2028-opaybeyondbanking-cbn-activity-7478058729813401600-CKUs"
+    },
+    {
+      "text": "NIBSS",
+      "href": "https://nibss-plc.com.ng/case-study-regulation-is-becoming-nigerias-fintech-advantage/"
+    },
+    {
+      "text": "Interswitch",
+      "href": "https://interswitchgroup.com/news/verve-hits-100-million-cards-issued-reinforcing-leadership-in-africas-card/"
+    },
+    {
+      "text": "AfriGOpay",
+      "href": "https://afrigopay.com.ng/nigerias-debit-card-afrigo-has-now-processed-over-n70bn-in-transactions-in-2025/"
+    },
+    {
+      "text": "SBP March2026 information compendium",
+      "href": "https://www.sbp.org.pk/m_policy/2026/MPIC_March%202026.pdf"
+    },
+    {
+      "text": "CBI October2025 rate sheet",
+      "href": "https://cbi.iq/static/uploads/up/file-17598214801462.pdf"
     },
     {
       "text": "SBP release of 25 June 2026",
@@ -94,6 +174,14 @@
       "href": "https://www.mastercard.com/news/eemea/en/newsroom/press-releases/en/2025-1/december/mastercard-gateway-attained-sama-certificate-for-the-new-e-commerce-payments-interface/"
     },
     {
+      "text": "NIBSS",
+      "href": "https://nibss-plc.com.ng/case-study-regulation-is-becoming-nigerias-fintech-advantage/"
+    },
+    {
+      "text": "Mastercard",
+      "href": "https://newsroom.mastercard.com/news/eemea/en/newsroom/press-releases/en/2024/april/mono-collaborates-with-mastercard-to-power-innovative-payment-solutions-for-digital-commerce-in-africa/"
+    },
+    {
       "text": "www.simpaisa.com",
       "href": "https://www.simpaisa.com/"
     },
@@ -108,66 +196,6 @@
     {
       "text": "D3 geographic projections",
       "href": "https://d3js.org/d3-geo/projection"
-    },
-    {
-      "text": "NIBSS",
-      "href": "https://nibss-plc.com.ng/case-study-regulation-is-becoming-nigerias-fintech-advantage/"
-    },
-    {
-      "text": "Mastercard",
-      "href": "https://newsroom.mastercard.com/news/eemea/en/newsroom/press-releases/en/2024/april/mono-collaborates-with-mastercard-to-power-innovative-payment-solutions-for-digital-commerce-in-africa/"
-    },
-    {
-      "text": "SBP release of 25 June 2026",
-      "href": "https://www.sbp.org.pk/press/2026/Pr-25-Jun-2026.pdf"
-    },
-    {
-      "text": "MFS statement",
-      "href": "https://www.bb.org.bd/fnansys/paymentsys/mfstrend_latest.pdf"
-    },
-    {
-      "text": "March 2025 card data",
-      "href": "https://www.bb.org.bd/pub/monthly/creditcard/march%2C%202025.pdf"
-    },
-    {
-      "text": "Payment Systems Report",
-      "href": "https://www.bb.org.bd/pub/annual/psdreport/paymentreport_dec2025.pdf"
-    },
-    {
-      "text": "NRB report",
-      "href": "https://www.nrb.org.np/psd/payment-systems-oversight-report-2081-82-2024-2025/"
-    },
-    {
-      "text": "CBI Q3 release",
-      "href": "https://cbi.iq/news/view/3087"
-    },
-    {
-      "text": "confirmed 3 September 2025 interoperability launch",
-      "href": "https://cbi.iq/news/view/2972"
-    },
-    {
-      "text": "CBE indicators",
-      "href": "https://www.cbe.org.eg/-/media/project/cbe/page-content/rich-text/financial-inclusion/financial-inclusion-and-payment-systems--services-indicators.pdf"
-    },
-    {
-      "text": "CBE PAFIX speech",
-      "href": "https://www.cbe.org.eg/ar/news-publications/news/2025/11/17/12/40/hassan-abdalla-pafix-2025"
-    },
-    {
-      "text": "SAMA release",
-      "href": "https://sama.gov.sa/en-US/MediaCenter/News/Pages/news-1139.aspx"
-    },
-    {
-      "text": "Mastercard article",
-      "href": "https://www.mastercard.com/news/eemea/en/newsroom/press-releases/en/2025-1/december/mastercard-gateway-attained-sama-certificate-for-the-new-e-commerce-payments-interface/"
-    },
-    {
-      "text": "NIBSS",
-      "href": "https://nibss-plc.com.ng/case-study-regulation-is-becoming-nigerias-fintech-advantage/"
-    },
-    {
-      "text": "Mastercard",
-      "href": "https://newsroom.mastercard.com/news/eemea/en/newsroom/press-releases/en/2024/april/mono-collaborates-with-mastercard-to-power-innovative-payment-solutions-for-digital-commerce-in-africa/"
     }
   ],
   "map_sources": [
@@ -600,6 +628,49 @@
       "bytes": 5408,
       "mime": "font/woff2",
       "label": "poppins-semibold"
+    },
+    "assets/page5-pk-c8272b5d55.png": {
+      "sha256": "c8272b5d55cd7e99793508a0cacf8f818b7cd6c518e0fe76fefa4ae0f4e8a48f",
+      "bytes": 419,
+      "mime": "image/png",
+      "label": "Pakistan flag"
+    },
+    "assets/page5-bd-ac92c605ff.png": {
+      "sha256": "ac92c605fff6453521ab96dfb4d45a228368c946b5d45114fca0a12e1f7097a6",
+      "bytes": 408,
+      "mime": "image/png",
+      "label": "Bangladesh flag"
+    },
+    "assets/page5-np-ab6cc5da1d.png": {
+      "sha256": "ab6cc5da1df2414c3b47bdb1ec43f655941242722dc8583c7a0bdda529c70845",
+      "bytes": 935,
+      "mime": "image/png",
+      "label": "Nepal flag"
+    },
+    "assets/page5-iq-6bccd911d2.png": {
+      "sha256": "6bccd911d28cd54b4348f3747c1f551fd4076c7ff5a533ee9d37066df2a5daa7",
+      "bytes": 362,
+      "mime": "image/png",
+      "label": "Iraq flag"
+    },
+    "assets/page5-eg-e2368f7468.png": {
+      "sha256": "e2368f746857505e81ecb3d08812b226ef60b8f6e6a5ba2a02c852d71b1039c5",
+      "bytes": 343,
+      "mime": "image/png",
+      "label": "Egypt flag"
+    },
+    "assets/page5-sa-c7cc42ff62.png": {
+      "sha256": "c7cc42ff6242d2fe15a1e113f1e4bab64c1dba3b759313019379be225a97d97c",
+      "bytes": 755,
+      "mime": "image/png",
+      "label": "Saudi Arabia flag"
+    },
+    "assets/page5-ng-6aa18aa975.png": {
+      "sha256": "6aa18aa97562fca9bfa0a94ab225bf00efae3351fff7466836f6318dd8d8e818",
+      "bytes": 131,
+      "mime": "image/png",
+      "label": "Nigeria flag"
     }
-  }
+  },
+  "revision": "page-5-wallet-growth-alignment"
 }
