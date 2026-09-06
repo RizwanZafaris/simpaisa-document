@@ -1,5 +1,28 @@
 # Simpaisa Network Playbook 2026
 
+## Current approved edition: 19 pages
+
+[Download the approved playbook](docs/Simpaisa_Network_Playbook_2026_Final.pdf).
+
+The current edition is produced from the supplied 19-page PDF with the Python editing source in `production/`. Its text, tables and vector elements remain in PDF form. The later regional chart refresh was cancelled and is not included.
+
+### Rebuild
+
+```sh
+python3 -m venv production/.venv
+production/.venv/bin/pip install -r production/requirements.txt
+production/.venv/bin/python production/revise_pdf.py
+```
+
+The builder reads `production/input/Simpaisa_Network_Playbook_2026_V2_4.pdf` and writes `production/build/Simpaisa_Network_Playbook_2026_Final.pdf`. Optional positional arguments select input and output paths. The approved PDF in `docs/` is not overwritten by a build. Review a rebuilt file before replacing that approved artifact. Fonts and their existing licenses are included.
+
+This is a PDF editing pipeline, not a native PowerPoint source or a 19-page HTML conversion. `production/validation.json` records the source and output checks for this delivery. Those checks establish reproduction and preservation, not independent verification of business claims.
+
+## Earlier HTML edition: 13 pages
+
+The root HTML viewer, standalone HTML and lower-case PDF filenames below belong to the earlier 13-page edition. They have not been updated to the current 19-page document.
+
+
 Editable offline export of the 13-page v26 review, including the latest page 5 wallet-growth charts and aligned market table, the centered closing page and five dotted office maps.
 
 ## Open
