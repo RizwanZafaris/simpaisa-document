@@ -1,0 +1,335 @@
+{
+  "Pakistan": {
+    "page": 9,
+    "panels": [
+      {
+        "title": "Wallet share",
+        "unit": "% of digital transactions",
+        "labels": [
+          "FY2024",
+          "FY2025"
+        ],
+        "values": [
+          53.31170586645039,
+          55.17617144932802
+        ],
+        "source": "https://www.sbp.org.pk/PS/PDF/Annual-Payment-Systems-Review-FY25.pdf"
+      },
+      {
+        "title": "Card-payment share",
+        "unit": "% of digital transactions",
+        "labels": [
+          "FY2024",
+          "FY2025"
+        ],
+        "values": [
+          5.610525367216365,
+          5.379711161491539
+        ],
+        "source": "https://www.sbp.org.pk/PS/PDF/Annual-Payment-Systems-Review-FY25.pdf"
+      },
+      {
+        "title": "Raast activity",
+        "unit": "Transactions, millions",
+        "labels": [
+          "FY2024",
+          "FY2025"
+        ],
+        "values": [
+          496.1,
+          1276.0
+        ],
+        "source": "https://www.sbp.org.pk/PS/PDF/Annual-Payment-Systems-Review-FY25.pdf"
+      }
+    ],
+    "note": "Sources: State Bank of Pakistan (SBP), including Raast statistics."
+  },
+  "Nepal": {
+    "page": 11,
+    "panels": [
+      {
+        "title": "Wallet activity",
+        "unit": "Transactions, millions",
+        "labels": [
+          "FY2025",
+          "FY2026"
+        ],
+        "values": [
+          400.929083,
+          529.13501
+        ],
+        "source": "https://www.nrb.org.np/contents/uploads/2026/08/Historical-Data-Compilation.xlsx"
+      },
+      {
+        "title": "Card purchases",
+        "unit": "POS + online, millions",
+        "labels": [
+          "FY2025",
+          "FY2026"
+        ],
+        "values": [
+          14.602767,
+          11.96504
+        ],
+        "source": "https://www.nrb.org.np/contents/uploads/2026/08/Historical-Data-Compilation.xlsx"
+      },
+      {
+        "title": "QR activity",
+        "unit": "Transactions, millions",
+        "labels": [
+          "FY2025",
+          "FY2026"
+        ],
+        "values": [
+          325.97437742,
+          587.736939
+        ],
+        "source": "https://www.nrb.org.np/contents/uploads/2026/08/Historical-Data-Compilation.xlsx"
+      }
+    ],
+    "note": "Source: Nepal Rastra Bank (NRB)."
+  },
+  "Saudi Arabia": {
+    "page": 14,
+    "panels": [
+      {
+        "title": "Mobile wallet payments",
+        "unit": "Card-based NFC at POS, millions",
+        "labels": [
+          "2024",
+          "2025"
+        ],
+        "values": [
+          5384.440627,
+          6268.893524
+        ],
+        "source": "https://sama.gov.sa/en-US/Statistics/MonthlyStatistics/Monthly_Statistical_Bulletin_for_Apr2026.pdf"
+      },
+      {
+        "title": "Physical NFC cards",
+        "unit": "POS transactions, millions",
+        "labels": [
+          "2024",
+          "2025"
+        ],
+        "values": [
+          4556.095965,
+          4808.972761
+        ],
+        "source": "https://sama.gov.sa/en-US/Statistics/MonthlyStatistics/Monthly_Statistical_Bulletin_for_Apr2026.pdf"
+      },
+      {
+        "title": "sarie instant transfers",
+        "unit": "Transactions, millions",
+        "labels": [
+          "2024",
+          "2025"
+        ],
+        "values": [
+          592.675704,
+          783.932333
+        ],
+        "source": "https://sama.gov.sa/en-US/Statistics/MonthlyStatistics/Monthly_Statistical_Bulletin_for_Apr2026.pdf"
+      }
+    ],
+    "note": "Source: Saudi Central Bank (SAMA)."
+  },
+  "Bangladesh": {
+    "page": 10,
+    "panels": [
+      {
+        "title": "Wallet / MFS activity",
+        "unit": "Transactions, millions",
+        "labels": [
+          "2024",
+          "2025"
+        ],
+        "values": [
+          7291,
+          9577
+        ],
+        "source": "https://www.bb.org.bd/pub/annual/psdreport/paymentreport_dec2025.pdf",
+        "prior_source": "https://www.bb.org.bd/pub/annual/psdreport/paymentreport_dec2024.pdf"
+      },
+      {
+        "title": "NPSB POS activity",
+        "unit": "Transactions, millions",
+        "labels": [
+          "2024",
+          "2025"
+        ],
+        "values": [
+          14.836,
+          21.05
+        ],
+        "source": "https://www.bb.org.bd/pub/annual/psdreport/paymentreport_dec2025.pdf",
+        "prior_source": null
+      },
+      {
+        "title": "NPSB QR activity",
+        "unit": "Transactions, millions",
+        "labels": [
+          "2024",
+          "2025"
+        ],
+        "values": [
+          4.459,
+          6.57
+        ],
+        "source": "https://www.bb.org.bd/pub/annual/psdreport/paymentreport_dec2025.pdf",
+        "prior_source": null
+      }
+    ],
+    "note": "Source: Bangladesh Bank (MFS and NPSB statistics)."
+  },
+  "Iraq": {
+    "page": 12,
+    "panels": [
+      {
+        "title": "Reported bank accounts",
+        "unit": "Accounts, millions",
+        "labels": [
+          "2022",
+          "Jul 2025"
+        ],
+        "values": [
+          8,
+          20
+        ],
+        "source": "https://observeriraq.net/\u0645\u0635\u062f\u0631-\u062d\u0643\u0648\u0645\u064a-\u0646\u0645\u0648-\u0642\u064a\u0627\u0633\u064a-\u0641\u064a-\u0627\u0644\u062a\u062d\u0648\u0644-\u0627\u0644\u0631\u0642\u0645\u064a-\u0648/",
+        "prior_source": null
+      },
+      {
+        "title": "Wallet transfer value",
+        "unit": "IQD trillions",
+        "labels": [
+          "Q2 2024",
+          "Q2 2025"
+        ],
+        "values": [
+          1.3633711,
+          1.15051456
+        ],
+        "source": "https://cbi.iq/static/uploads/up/file-17707110877882.pdf",
+        "prior_source": null
+      },
+      {
+        "title": "Wallet-provider mix",
+        "unit": "Q2 2025 | share of value",
+        "kind": "pie",
+        "names": [
+          "ZainCash",
+          "Other"
+        ],
+        "values": [
+          1111506.16,
+          39008.40000000014
+        ],
+        "source": "https://cbi.iq/static/uploads/up/file-17707110877882.pdf"
+      }
+    ],
+    "note": "Sources: Central Bank of Iraq (CBI); Iraq Observer, citing a government source."
+  },
+  "Egypt": {
+    "page": 13,
+    "panels": [
+      {
+        "title": "Telecom-wallet activity",
+        "unit": "Transactions, millions",
+        "labels": [
+          "Q2 2024",
+          "Q2 2025"
+        ],
+        "values": [
+          397.7,
+          718
+        ],
+        "source": "https://www.tra.gov.eg/en/ntra-issues-q2-2025-report-on-the-usage-indicators-of-mobile-wallets-operated-by-telecom-companies/",
+        "prior_source": null
+      },
+      {
+        "title": "IPN instant transfers",
+        "unit": "Transactions, millions",
+        "labels": [
+          "2023",
+          "2024"
+        ],
+        "values": [
+          424,
+          1561
+        ],
+        "source": "https://www.africanenda.org/uploads/files/siips2025/SIIPS2025-mainreport_en.pdf",
+        "prior_source": null
+      },
+      {
+        "title": "Wallet transaction mix",
+        "unit": "Q2 2025 | share of count",
+        "kind": "pie",
+        "names": [
+          "Transfers",
+          "Top-ups",
+          "Deposits",
+          "Cash-out",
+          "Other"
+        ],
+        "values": [
+          54,
+          20,
+          19,
+          5,
+          2
+        ],
+        "source": "https://www.tra.gov.eg/en/ntra-issues-q2-2025-report-on-the-usage-indicators-of-mobile-wallets-operated-by-telecom-companies/"
+      }
+    ],
+    "note": "Sources: NTRA Egypt; AfricaNenda, SIIPS 2025."
+  },
+  "Nigeria": {
+    "page": 15,
+    "panels": [
+      {
+        "title": "Mobile-money activity",
+        "unit": "Transactions, billions",
+        "labels": [
+          "2024",
+          "2025"
+        ],
+        "values": [
+          17.33797,
+          28.74183
+        ],
+        "source": "https://punchng.com/mobile-money-transactions-surge-81-to-n372tn-cbn-report/",
+        "prior_source": null
+      },
+      {
+        "title": "POS channel activity",
+        "unit": "Transactions, billions",
+        "labels": [
+          "2024",
+          "2025"
+        ],
+        "values": [
+          13.08,
+          15.66
+        ],
+        "source": "https://www.vanguardngr.com/2026/07/atm-transactions-rise-208-to-n89trn/amp/",
+        "prior_source": "https://punchng.com/atm-usage-drops-as-pos-agents-handle-n223tn/"
+      },
+      {
+        "title": "NIP transfers",
+        "unit": "Transactions, billions",
+        "labels": [
+          "2023",
+          "2024"
+        ],
+        "values": [
+          9.7,
+          11.2
+        ],
+        "source": "https://nibss-plc.com.ng/recapitalisation-nibss-digital-infrastructure-to-anchor-banks-new-growth-phase/",
+        "prior_source": null
+      }
+    ],
+    "note": "Sources: CBN, reported by Punch and Vanguard; NIBSS."
+  }
+}

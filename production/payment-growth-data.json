@@ -1,0 +1,99 @@
+{
+  "checked": "2026-09-07",
+  "comparability": "Selected indicators; periods and definitions differ. No ranking. Bars start at zero with scales varying by row. Growth calculated from reported levels.",
+  "rows": [
+    {
+      "country": "Pakistan",
+      "before": 5500000000.0,
+      "after": 8000000000.0,
+      "labels": [
+        "5.5bn",
+        "8.0bn"
+      ],
+      "caption": "Digital transactions | FY24 to FY25 | World Bank",
+      "source": "https://documents1.worldbank.org/curated/en/099012826183079796/pdf/BOSIB-00d8977d-d67a-4e8a-bfab-4e38a7daaac9.pdf",
+      "note": "World Bank ICR page 17 / results annex page 38. SBP PDF was inaccessible; World Bank reported levels used. Rounded inputs.",
+      "growth": 45.45454545454546
+    },
+    {
+      "country": "Bangladesh",
+      "before": 4827000000.0,
+      "after": 5463000000.0,
+      "labels": [
+        "4.83bn",
+        "5.46bn"
+      ],
+      "caption": "Digital transactions | 2024 to 2025 | Bangladesh Bank",
+      "source": "https://www.bb.org.bd/pub/annual/psdreport/paymentreport_dec2025.pdf",
+      "note": "Table 1, printed page 35. Digital category, not all MFS cash-in/cash-out. Calculated growth 13.176%; source rounds to 13%.",
+      "growth": 13.175885643256692
+    },
+    {
+      "country": "Nepal",
+      "before": 75597000,
+      "after": 112359000,
+      "labels": [
+        "75.6m",
+        "112.4m"
+      ],
+      "caption": "RPS/connectIPS presented | FY24 to FY25 | NRB",
+      "source": "https://www.nrb.org.np/psd/payment-systems-oversight-report-2081-82-2024-2025/",
+      "note": "Table 13, printed pages 20-21. Presented transactions, not net successful transactions. FY24=2023/24 and FY25=2024/25. Annex 6 not used because its notes have a partial-year qualification.",
+      "growth": 48.62891384578754
+    },
+    {
+      "country": "Iraq",
+      "before": 17350642,
+      "after": 20498413,
+      "labels": [
+        "17.4m",
+        "20.5m"
+      ],
+      "caption": "C-ACH IQD transfers | 2023 to 2024 | CBI",
+      "source": "https://cbi.iq/static/uploads/up/file-177269103623349.pdf",
+      "note": "Annual Economic Report 2024, printed page 56 / Table 29. IQD electronic credit transfer orders only, excludes USD and checks.",
+      "growth": 18.142101024273337
+    },
+    {
+      "country": "Egypt",
+      "before": 397700000,
+      "after": 718000000,
+      "labels": [
+        "397.7m",
+        "718.0m"
+      ],
+      "caption": "Telecom-wallet transactions | Q2 2024 to Q2 2025 | NTRA",
+      "source": "https://www.tra.gov.eg/en/ntra-issues-q2-2025-report-on-the-usage-indicators-of-mobile-wallets-operated-by-telecom-companies/",
+      "note": "Same quarter year-on-year. Includes financial transactions through telecom wallets, including cash-in/out. Growth computed from published rounded levels; NTRA rounds to 80%.",
+      "growth": 80.53809404073422
+    },
+    {
+      "country": "Saudi Arabia",
+      "before": 36,
+      "after": 79,
+      "labels": [
+        "36%",
+        "79%"
+      ],
+      "caption": "Retail payment share | 2019 to 2024 | SAMA",
+      "source": "https://sama.gov.sa/en-US/MediaCenter/News/Pages/news-1083.aspx",
+      "baseline_source": "https://www.sama.gov.sa/en-us/mediacenter/news/pages/news-772.aspx",
+      "kind": "share",
+      "note": "Electronic share of retail payment transaction count. Change is 43 percentage points over five years, not a transaction growth percentage.",
+      "growth": 43
+    },
+    {
+      "country": "Nigeria",
+      "before": 9700000000.0,
+      "after": 11200000000.0,
+      "labels": [
+        "9.7bn",
+        "11.2bn"
+      ],
+      "caption": "NIP transactions | 2023 to 2024 | NIBSS",
+      "source": "https://nibss-plc.com.ng/recapitalisation-nibss-digital-infrastructure-to-anchor-banks-new-growth-phase/",
+      "note": "NIBSS operator article indexed text; rounded transaction levels. Operator reports 15.5% growth.",
+      "growth": 15.463917525773185
+    }
+  ]
+}

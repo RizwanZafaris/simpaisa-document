@@ -1,0 +1,10 @@
+{
+  "scope": "Only country market evidence on pages9-15 plus requested page2 award removal. Rest preserved.",
+  "Pakistan": "SBP A4 FY24R/FY25P: denom5548.5/7983.7m. WalletsBB+EMI2958/4405.1m. CardsPOS+CNP311.3/429.5m. DenominatorincludesATM. Raast496.1/1276moverlaps. Sourceindexedprimary verified by researchagent.",
+  "Bangladesh": "MFS totals calculated from rounded monthly tables including cashin/out.2024monthly counts7291m2025 9577m. NPSBPOS2024 14.836m2025published21.05m;2025sum21.04rounding. QR2024 4.459m2025NPSBAppendix9 6.57m. Appendix16exactBanglaQRtotal6.473115mconflicts. Do notderivewallet/cardshares.",
+  "Nepal": "NRB Historical Data Compilation localworkbook DataPSD FY25 totalcolumnBN(66), FY26CA(79): wallets400929083/529135010;POS12539512/9293098;online2063255/2671942;QR325974377.42/587736939. POS+onlinecalculated excludesATM; globaldenominatoroverlapnotassumed.",
+  "Iraq": "CBIQ22025Table22 totalwalletvalue1363371.1/1150514.56 IQDmillions. Q22025Zain1111506.16 others39008.4. Bank8m2022\u2192~20mJuly2025IraqObserverunnamedgovernmentsource, notCBIverified. Retainedexplicitusercomparison withattribution.",
+  "Egypt": "NTRA Q224397.7m/Q225718m financialwallettransactions. Pie54/20/19/5/2completewalletcountmix. IPN424m2023/1561m2024 AfricaNendaSIIPS2025p150 operator/centralbankresearch. No nationalcardtwoyearactualpairavailable; forecastnotused.",
+  "Saudi Arabia": "SAMAindexedofficialTables30c/27b: mobileNFC5384440627/6268893524;physicalNFC4556095965/4808972761;IPS592675704/783932333. WalletmobileNFCnotewallet; noaggregateshares.",
+  "Nigeria": "Secondaryreports of CBN17.33797bn\u219228.74183bn MMO2024/25;POS13.08bn\u219215.66bn2024/25. Official2025PDFinaccessible; provenanceexplicit. NIBSSNIP9.7bn\u219211.2bn2023/24. Notcomparablemutuallyexclusiveshares."
+}

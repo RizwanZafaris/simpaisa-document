@@ -1,0 +1,102 @@
+{
+  "rows": [
+    [
+      "150.8m\nBranchless accounts | Dec 2025",
+      "742.1m\nRaast | Jan-Mar 2026",
+      "PayPak\nDomestic scheme",
+      "Raast / IBFT\nBank transfers"
+    ],
+    [
+      "257.0m\nMFS accounts | Jun 2026",
+      "93.9m\nNPSB IBFT transactions | 2025",
+      "TakaPay\n17 issuing banks | 2025",
+      "NPSB / BEFTN\nBank transfers"
+    ],
+    [
+      "27.7m\nWallet users | Jul 2026",
+      "1.60m\nconnectIPS users | Jul 2026",
+      "NEPALPAY Card\nDomestic scheme",
+      "connectIPS / IPS\nBank transfers"
+    ],
+    [
+      "4.9m+ opened\nE-money accounts over five years",
+      "20.5m\nC-ACH IQD transfers | 2024",
+      "No live domestic\ncard scheme",
+      "Cross-provider\nWallet transfers | Sep 2025"
+    ],
+    [
+      "46.3m\nActive telecom wallets | Q2 2025",
+      "~1.5bn\nIPN transactions | 2024",
+      "Meeza\nDomestic card scheme",
+      "IPN\nBanks, wallets and Meeza cards"
+    ],
+    [
+      "21m+\nE-wallets | May 2024",
+      "784m\nIPS transactions | 2025",
+      "mada\n1.77bn online payments | 2025",
+      "sarie\nBank-account transfers"
+    ],
+    [
+      "67.9m\nRegistered mobile money accounts | 2024",
+      "~11bn\nNIP transfers | 2024",
+      "AfriGO / Verve\nNational / licensed card schemes",
+      "NIP\nBank transfers"
+    ]
+  ],
+  "sources": [
+    "https://www.sbp.org.pk/press/2026/Pr-25-Jun-2026.pdf",
+    "https://www.bb.org.bd/pub/annual/psdreport/paymentreport_dec2025.pdf",
+    "https://www.nrb.org.np/contents/uploads/2025/08/2082_03_PS-Updated-Format-3.pdf",
+    "https://cbi.iq/news/view/2972",
+    "https://www.tra.gov.eg/en/ntra-issues-q2-2025-report-on-the-usage-indicators-of-mobile-wallets-operated-by-telecom-companies/",
+    "https://sama.gov.sa/en-US/MediaCenter/News/pages/news-1023.aspx",
+    "https://www.cbn.gov.ng/Out/2026/CCD/CBN_FINTECH_REPORT_.pdf"
+  ],
+  "notes": {
+    "Nigeria wallet total": "IMF Financial Access Survey, distributed by FRED: 67,874,563 registered mobile money accounts in 2024, rounded to 67.9m. Accounts, not unique individuals or active users. Series updated January 22, 2026.",
+    "Nigeria wallet source": "https://fred.stlouisfed.org/series/NGAFCMARNUM",
+    "Saudi payout source": "https://www.sama.gov.sa/en-US/payment/pages/sarie.aspx",
+    "coverage": "Egypt and Saudi Arabia disbursements and displayed service figures are user-confirmed. They are not central-bank service-performance statistics.",
+    "Iraq wallet base": "CBI NFIS 2025-29 cites 4.9m+ e-money accounts opened over the preceding five years (2024 diagnostic); not a count of active users.",
+    "Qi Card": "CBI NFIS 2025-29 reports7.4m cards in circulation. Qi is Iraqi issuer/acquirer network; CBI does not designate it a national scheme. No precise stock date supplied.",
+    "Removed counts": "PayPak16.1m user-supplied unverified. Iraq1.2m active-wallet count unverified. Verve100m Africa-wide notNigeria.",
+    "Egypt USD conversion": "Illustrative equivalent uses EGP 50 per USD: EGP 943.4bn is approximately USD 18.9bn; not a quoted exchange rate.",
+    "Egypt NTRA comparison": "Q2 2024 value 547.6bn follows the linked NTRA Q2 2025 web article. The attached report has a differing 548.6bn figure; the chart consistently follows the article.",
+    "2026 refresh": {
+      "checked": "2026-09-07",
+      "Pakistan": "150,752 thousand accounts at Dec 2025, SBP FSR2025 Table8.3. A newer quarter was listed but its data could not be retrieved.",
+      "Bangladesh": "256,966,517 MFS accounts at June2026. Nagad resumed reporting March2026; no growth calculated across missing-reporting interval.",
+      "Nepal": "NRB workbook DataPSD BU8=27,698,918 wallet users; BU17=1,596,490 connectIPS users, Asar2083/midJuly2026.",
+      "Retained": "Saudi May2024 wallet count, Nigeria2024 accounts/NIP, and EgyptQ22025 telecom-wallet figures retained with actual dates because newer comparable official figures were not verified. Annual2025 figures retained when no verified2026 replacement obtained.",
+      "Iraq scheme": "User-confirmed wording: No live domestic card scheme. Removed Qi issuer/acquirer count from domestic-scheme comparison; not attributed to central bank as a verified absence claim."
+    },
+    "Iraq bank transfers": "CBI Annual Economic Report 2024, printed page 56 and Table 29: 20,498,413 C-ACH IQD credit transfers in 2024, rounded to 20.5m. Excludes USD C-ACH and RTGS. Verified 2026-09-07.",
+    "Egypt bank transfers": "CBE release 30 December 2024: nearly 1.5 billion IPN transactions worth approximately EGP 2.9 trillion in 2024. Indexed primary-source text verified 2026-09-07. Displayed ~1.5bn; actual reporting year retained."
+  },
+  "cell_sources": {
+    "0,0": "https://www.sbp.org.pk/FSR/2025/Complete%20FSR%202025.pdf",
+    "0,1": "https://www.sbp.org.pk/psd/pdf/PS-Review-Q3FY26.pdf",
+    "0,2": "https://1link.net.pk/products-services/paypak",
+    "1,0": "https://www.bb.org.bd/econdata/fin_digitalfstat/tab8.pdf",
+    "1,1": "https://www.bb.org.bd/pub/annual/psdreport/paymentreport_dec2025.pdf",
+    "1,2": "https://www.bb.org.bd/pub/annual/psdreport/paymentreport_dec2025.pdf",
+    "2,0": "https://www.nrb.org.np/contents/uploads/2026/08/Historical-Data-Compilation.xlsx",
+    "2,1": "https://www.nrb.org.np/contents/uploads/2026/08/Historical-Data-Compilation.xlsx",
+    "2,2": "https://nchl.com.np/nepal-clearing-house-ltd-announces-global-acceptance-for-nepalpay-national-card-scheme-in-collaboration-with-discover-network/",
+    "3,0": "https://cbi.iq/static/uploads/up/file-175032973296039.pdf",
+    "3,1": "https://cbi.iq/static/uploads/up/file-177269103623349.pdf",
+    "3,3": "https://cbi.iq/news/view/2972",
+    "4,0": "https://www.tra.gov.eg/en/ntra-issues-q2-2025-report-on-the-usage-indicators-of-mobile-wallets-operated-by-telecom-companies/",
+    "4,1": "https://www.cbe.org.eg/en/news-publications/news/2024/12/30/12/31/cbe-extending-the-exemption-of-individuals-from-instapay-for-a-renewable-period-of-3-months",
+    "4,2": "https://www.cbe.org.eg/en/payment-systems-and-services/instant-payment-network",
+    "4,3": "https://www.cbe.org.eg/en/payment-systems-and-services/instant-payment-network",
+    "5,0": "https://sama.gov.sa/en-US/MediaCenter/News/pages/news-1023.aspx",
+    "5,1": "https://www.sama.gov.sa/en-US/EconomicReports/MonthlyStatistics/Monthly_Bulletin_Feb_2026.pdf",
+    "5,2": "https://www.sama.gov.sa/en-US/EconomicReports/MonthlyStatistics/Monthly_Bulletin_Feb_2026.pdf",
+    "5,3": "https://www.sama.gov.sa/en-US/payment/pages/sarie.aspx",
+    "6,0": "https://fred.stlouisfed.org/series/NGAFCMARNUM",
+    "6,1": "https://www.cbn.gov.ng/Out/2026/CCD/CBN_FINTECH_REPORT_.pdf",
+    "6,2": "https://www.cbn.gov.ng/PaymentsSystem/PSPs.html",
+    "6,3": "https://nibss-plc.com.ng/nibss-instant-payment/"
+  }
+}

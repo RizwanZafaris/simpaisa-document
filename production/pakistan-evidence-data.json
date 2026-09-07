@@ -1,0 +1,29 @@
+{
+  "checked": "2026-09-07",
+  "rows": [
+    {
+      "title": "Wallet reach",
+      "value": "59m",
+      "label": "easypaisa registered users",
+      "period": "2025 | easypaisa digital bank",
+      "url": "https://www.linkedin.com/posts/easypaisa-digital-bank_easypaisadigitalbank-annualreport2025-activity-7478433431169978368-lfDx",
+      "note": "Operator statement for 2025. Registered users of one provider, not all wallets or unique Pakistani users."
+    },
+    {
+      "title": "PayPak reach",
+      "value": "16.1m",
+      "label": "PayPak cards in force",
+      "period": "Reported by 1LINK",
+      "url": "https://www.linkedin.com/posts/activity-7477008206934962176-VWgF",
+      "note": "1LINK official public post verified 2026-09-07. Snapshot date not specified in post. Replaces unsupported usage-share comparison."
+    },
+    {
+      "title": "Raast activity",
+      "value": "742.1m",
+      "label": "Transactions in one quarter",
+      "period": "Jan-Mar 2026 | SBP",
+      "url": "https://www.sbp.org.pk/psd/pdf/PS-Review-Q3FY26.pdf",
+      "note": "Retained existing approved statistic. SBP report inaccessible this turn; independently corroborated by June 2026 reporting. Not Simpaisa volume."
+    }
+  ]
+}

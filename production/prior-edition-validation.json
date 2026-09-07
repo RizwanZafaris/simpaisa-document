@@ -1,0 +1,12 @@
+{
+  "approved_pdf": "docs/Simpaisa_Network_Playbook_2026_Final.pdf",
+  "approved_sha256": "26565fd8c9bb4a3b95afa82ef655f0218fba4d5c8dcf0e9b0c823d3a1c54dfc7",
+  "input_sha256": "bcecfae4eb9bdeca78eccc2ef9bdcd032e8792f26cd85101a8496661c28bbe24",
+  "builder_sha256": "b691192fde56cd51a7549fe879f94450bf3f8393d61510cce3768c610caaf3ac",
+  "pages": 19,
+  "rebuild_pixel_identical_pages": 19,
+  "cancelled_refresh_included": false,
+  "checked_at": "2026-09-07",
+  "pymupdf_version": "1.26.7",
+  "legacy_viewer_tests_passed": 4
+}

@@ -4,7 +4,7 @@
 
 [Download the approved playbook](docs/Simpaisa_Network_Playbook_2026_Final.pdf).
 
-The current edition is produced from the supplied 19-page PDF with the Python editing source in `production/`. Its text, tables and vector elements remain in PDF form. The later regional chart refresh was cancelled and is not included.
+The current edition is produced from the supplied 19-page PDF with the Python editing source in `production/`. Its text, tables and vector elements remain in PDF form. The current revision includes the requested network-positioning copy, coverage updates and a consistent three-panel market-evidence layout on the seven country pages, preserving the surrounding design. The requested Best B2B Payments Initiative award tile has been removed and the remaining four cards rebalanced.
 
 ### Rebuild
 
@@ -12,11 +12,26 @@ The current edition is produced from the supplied 19-page PDF with the Python ed
 python3 -m venv production/.venv
 production/.venv/bin/pip install -r production/requirements.txt
 production/.venv/bin/python production/revise_pdf.py
+production/.venv/bin/python production/update_network.py
+production/.venv/bin/python production/complete_payouts.py
+production/.venv/bin/python production/restructure_spread.py
 ```
 
-The builder reads `production/input/Simpaisa_Network_Playbook_2026_V2_4.pdf` and writes `production/build/Simpaisa_Network_Playbook_2026_Final.pdf`. Optional positional arguments select input and output paths. The approved PDF in `docs/` is not overwritten by a build. Review a rebuilt file before replacing that approved artifact. Fonts and their existing licenses are included.
+The first builder reads `production/input/Simpaisa_Network_Playbook_2026_V2_4.pdf` and reproduces the prior edition at `production/build/Simpaisa_Network_Playbook_2026_Final.pdf`. The second applies the requested network wording, Egypt/Saudi disbursement coverage and national market-table updates, producing `production/build/Simpaisa_Network_Playbook_2026_Network_Update.pdf`. The third completes Egypt and Saudi disbursement tables, adds Fawry collections and its logo, and corrects the sourced market indicators, producing `production/build/Simpaisa_Network_Playbook_2026_Complete.pdf`. The final `restructure_spread.py` step moves the complete payment-context table to portrait page 7 and creates a portrait digital-market comparison and seven sourced payment-growth indicators on page 8, producing `production/build/Simpaisa_Network_Playbook_2026_Spread.pdf`. Page 8 uses `production/digital-market-data.json` for population and connectivity and `production/payment-growth-data.json` for seven payment-growth indicators, with source links, actual reporting periods and definitions. Growth indicators differ by market; Saudi Arabia shows percentage-point change in payment share. Earlier builders accept optional positional input and output paths. The approved PDF in `docs/` is not overwritten by a build. Review a rebuilt file before replacing that approved artifact. Fonts and their existing licenses are included.
 
 This is a PDF editing pipeline, not a native PowerPoint source or a 19-page HTML conversion. `production/validation.json` records the source and output checks for this delivery. Those checks establish reproduction and preservation, not independent verification of business claims.
+
+### Latest spacing revision
+
+All seven regional evidence panels now share 12-point inner padding, matching heights, aligned chart columns and concise source lines naming the actual organisations. Detailed definitions and reporting limitations remain in `production/regional-evidence-notes.json`. Saudi Arabia uses the heading “Mobile wallet payments” with the qualifying unit “Card-based NFC at POS, millions”; the figures are not e-money-wallet totals. The requested Saudi onboarding paragraph is removed and the service section moved up to close the gap. Other page content is preserved.
+
+### Regional evidence revision
+
+`production/regional_evidence.py` is called by the final builder. `regional-evidence-data.json` stores the plotted values and linked sources; `regional-evidence-notes.json` records definitions, calculations and source limitations. Comparable two-year shares are used where supported; otherwise the charts show labelled activity, value or access indicators. Wallet-only pies do not represent all digital payments. Egypt has no verified comparable two-year card-share series in this revision. Iraq account estimates and Nigeria CBN figures retain their secondary-source attribution.
+
+The export was checked through geometry checks and rendered inspection. The final release was rebuilt in an isolated directory from the included source; all 19 pages match the delivered PDF in both text and pixels. Per-edit preservation results remain in `production/validation.json`. These checks do not constitute a fresh factual audit of unchanged content.
+
+The final edits also remove Egypt account-validation rows, update its OTC collection wording, remove the Iraq interoperability paragraph, compact the four award cards and centre the closing headline. Chart zero labels are removed while the zero baselines and original values remain unchanged.
 
 ## Earlier HTML edition: 13 pages
 

@@ -1,12 +1,302 @@
 {
-  "approved_pdf": "docs/Simpaisa_Network_Playbook_2026_Final.pdf",
-  "approved_sha256": "26565fd8c9bb4a3b95afa82ef655f0218fba4d5c8dcf0e9b0c823d3a1c54dfc7",
-  "input_sha256": "bcecfae4eb9bdeca78eccc2ef9bdcd032e8792f26cd85101a8496661c28bbe24",
-  "builder_sha256": "b691192fde56cd51a7549fe879f94450bf3f8393d61510cce3768c610caaf3ac",
   "pages": 19,
-  "rebuild_pixel_identical_pages": 19,
-  "cancelled_refresh_included": false,
+  "changed_pages_from_network_update": [
+    7,
+    8,
+    13,
+    14,
+    16,
+    18
+  ],
+  "unchanged_pages_pixel_and_text_match": true,
+  "three_stage_rebuild_pixel_and_text_identical_pages": 19,
+  "page_dimensions_preserved": true,
+  "coverage": {
+    "acceptance": 7,
+    "disbursements": 6,
+    "remittance": 5,
+    "all_three": 5
+  },
+  "service_figures": "Egypt and Saudi disbursement figures user-confirmed; not inferred from market statistics.",
+  "market_sources": "network-market-data.json includes per-cell primary-source links and definition notes.",
+  "sha256": "19dac7f4bfb7a17424beec6c8013007a79c547cf0866c2e32abe05d46d97999d",
+  "approved_pdf": "docs/Simpaisa_Network_Playbook_2026_Final.pdf",
   "checked_at": "2026-09-07",
-  "pymupdf_version": "1.26.7",
-  "legacy_viewer_tests_passed": 4
+  "builders": {
+    "revise_pdf.py": "b691192fde56cd51a7549fe879f94450bf3f8393d61510cce3768c610caaf3ac",
+    "update_network.py": "e6cae20a322412b6c2f7c6580969cf58af9c55c76d89a958648bcb6b3946d861",
+    "complete_payouts.py": "1a1eb722c213a437abf613bb60324a32f72a29bfcf98de240c02a732f8a0da6c",
+    "restructure_spread.py": "d4b93fb7b56c912b3b4871ccfb92a47bc8d1077570eff986da5e049e3c0f2dfb"
+  },
+  "visual_review": "All six changed pages rendered and inspected. Table headers, values, flags, service rows and logos checked. No clipping found. Independent content review completed.",
+  "egypt_logos": 9,
+  "saudi_logos": 9,
+  "cover_revision": {
+    "heading_single_line": true,
+    "remaining_18_pages_pixel_and_text_unchanged": true,
+    "visually_reviewed": true
+  },
+  "nigeria_wallet_revision": {
+    "value": 67874563,
+    "period": 2024,
+    "definition": "Registered mobile money accounts",
+    "source": "IMF Financial Access Survey via FRED NGAFCMARNUM",
+    "only_page_8_changed": true,
+    "rendered_and_checked": true
+  },
+  "heatmap_undo": "Restored exact pre-heatmap PDF; Nigeria 67.9m and single-line cover retained.",
+  "market_refresh": {
+    "changed_pages": [
+      7,
+      8
+    ],
+    "remaining_17_pages_pixel_and_text_identical": true,
+    "actual_reporting_dates_retained": true,
+    "visual_review": "Pages 7 and 8 rendered and inspected",
+    "Iraq_scheme": "User-confirmed no live domestic card scheme; Qi removed from scheme comparison",
+    "repeated_market_table_entries_synchronized": true
+  },
+  "spread_revision": {
+    "pages_changed": [
+      7,
+      8
+    ],
+    "page7": "Portrait payment methods and Simpaisa service coverage; all 28 original market cells preserved.",
+    "page8": "Portrait digital-market comparison and sourced Saudi payment-share growth chart",
+    "page8_dimensions_points": [
+      595,
+      842
+    ],
+    "unchanged_pages": 17,
+    "unchanged_pages_pixel_and_text_identical": true,
+    "countries_per_table": 7,
+    "payment_coverage_counts": {
+      "acceptance": 7,
+      "disbursements": 6,
+      "remittance": 5
+    },
+    "data_periods": {
+      "population": 2025,
+      "connectivity": 2024
+    },
+    "data_source": "digital-market-data.json; World Bank API retrieved 2026-09-07",
+    "superseded_content": "Old page7 duplicated provider-specific market table and wallet growth charts removed per user requested different data sets. Prior PDF retained outside repository.",
+    "independent_review": "No blockers: source values, periods, all seven countries, coverage states and preserved pages checked.",
+    "final_visual_review": "Final renders inspected after larger key figures, aligned coverage cards and proportional bars added.",
+    "chart_domains": {
+      "population_millions": 300,
+      "internet_percent": 100,
+      "mobile_subscriptions_per100": 200,
+      "fixed_broadband_subscriptions_per100": 50
+    }
+  },
+  "alignment_icon_revision": {
+    "all_19_pages_copy_preserved": true,
+    "other_17_pages_pixel_identical": true,
+    "page7_primary_baselines_verified": 28,
+    "page8_native_vector_icons": [
+      "population",
+      "internet",
+      "mobile",
+      "fixed broadband"
+    ],
+    "final_render_review": "Pages7and8 inspected, no clipping or overlap found."
+  },
+  "portrait_growth_revision": {
+    "all_pages_portrait": true,
+    "page7_copy_and_values_preserved": true,
+    "other_17_pages_pixel_and_text_identical": true,
+    "growth_calculation": "79-36=43 percentage points, 2019 to2024; 2025 share85% shown separately",
+    "render_review": "Final pages7and8 inspected; no overlap or clipping."
+  },
+  "coverage_cards_alignment": {
+    "glyph_centers_aligned": true,
+    "text_unchanged": true,
+    "other_18_pages_unchanged": true,
+    "render_inspected": true
+  },
+  "page7_uniform_panel_revision": {
+    "changed_pages": [
+      7
+    ],
+    "other_18_pages_text_and_pixels_identical": true,
+    "coverage_counts_preserved": [
+      7,
+      6,
+      5
+    ],
+    "new_bank_transfer_figures": {
+      "Iraq": "20.5m C-ACH IQD transfers, 2024",
+      "Egypt": "~1.5bn IPN transactions, 2024"
+    },
+    "sources": "Linked CBI annual report and CBE press release; definition notes in network-market-data.json",
+    "visual_review": "Full page and final gradient panel rendered and inspected; common card size, centered values and labels, no clipping."
+  },
+  "page7_header_alignment": {
+    "centered_in_both_axes": true,
+    "all_page_copy_preserved": true,
+    "outside_header_pixels_unchanged": true,
+    "render_inspected": true
+  },
+  "page7_padding_and_note": {
+    "other_18_pages_unchanged": true,
+    "all_table_words_values_preserved": true,
+    "date_separators_replaced_by_line_breaks": true,
+    "horizontal_cell_padding_points": 8,
+    "combined_note_exact_match": true,
+    "render_review": "Full page inspected; dates stay together, centred headers and coverage badges, no clipping."
+  },
+  "full_growth_integration": {
+    "pages": 19,
+    "changed_pages": [
+      8
+    ],
+    "other_18_pages_pixel_and_text_identical": true,
+    "page8_matches_reviewed_sample": true,
+    "growth_indicators": 7,
+    "source_file": "payment-growth-data.json",
+    "no_placeholder_growth_rows": true
+  },
+  "pakistan_evidence_revision": {
+    "changed_page": 9,
+    "other_18_pages_unchanged": true,
+    "outside_evidence_pixels_preserved": true,
+    "statistics": [
+      "easypaisa 59m registered users, 2025",
+      "PayPak 16.1m cards in force, reported by 1LINK",
+      "Raast 742.1m transactions, Jan-Mar 2026"
+    ],
+    "source_links_verified_in_export": 3,
+    "render_inspected": true
+  },
+  "bangladesh_card_first": {
+    "changed_page": 10,
+    "other_18_pages_unchanged": true,
+    "existing_statistics_retained": true,
+    "first_chart": "Credit-card value share, March 2025, selected schemes",
+    "render_reviewed": true
+  },
+  "regional_evidence_uniformity_and_award_removal": {
+    "pages": 19,
+    "changed_pages": [
+      2,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "other_11_pages_text_and_pixels_identical": true,
+    "outside_changed_sections_pixels_identical": true,
+    "removed_award_absent": true,
+    "remaining_awards": 4,
+    "regions": 7,
+    "evidence_panels": 21,
+    "all_text_within_page": true,
+    "layout_checks": [
+      "Equal chart columns and shared title, unit, year and value baselines",
+      "No chart-label overlap or text outside column/page bounds",
+      "Full-page visual review of page 2 and all seven regional pages",
+      "Four equal-width award cards with aligned icons, titles and source blocks"
+    ],
+    "data_notes": "regional-evidence-notes.json",
+    "source_data": "regional-evidence-data.json",
+    "limitations": [
+      "Shares used only with a valid denominator; other panels are labelled activity comparisons.",
+      "Egypt has no verified comparable two-year card-share series in this revision.",
+      "Iraq account estimates and Nigeria CBN figures retain their secondary-source attribution."
+    ],
+    "sha256": "333621ce664dd53ae05c9792669914a05a71b2d9567005a62ffd556dff27405a"
+  },
+  "regional_padding_and_saudi_copy": {
+    "pages": 19,
+    "unchanged_pages": 12,
+    "regional_service_text_preserved": true,
+    "headings_footers_logos_preserved": true,
+    "chart_overlap_check": true,
+    "source_line_count": 7,
+    "inner_padding_pt": 12,
+    "evidence_bottom_pt": 296,
+    "next_section_top_pt": 308,
+    "visual_review": "All 19 pages reviewed as contact sheet; all seven changed regional pages inspected at full-page scale after geometry and preservation checks.",
+    "sha256": "89bfcbe6ef1522119d3c4e5ebad0e7e0277b234ba8520c32836efcae7a779d67"
+  },
+  "egypt_otc_copy": {
+    "page": 13,
+    "other_18_pages_pixel_identical": true,
+    "render_inspected": true,
+    "label": "OTC collection",
+    "text": "OTC payment network spans over 300,000 POS terminals across Egypt",
+    "source": "https://www.fawry.com/2022/11/23/fawry-partners-with-taqa-gas-to-provide-prepaid-recharge-for-gas-meters/",
+    "source_date": "2022-11-23",
+    "note": "Provider reported more than 300,000 POS terminals; retained as the requested lower-bound claim, not a newly measured 2026 total.",
+    "sha256": "8ef5a1c6b1ad597a9c6d41549fff2c45956b242feb13528a27d76726243897be"
+  },
+  "named_sources_no_zero_labels": {
+    "removed_zero_labels": 19,
+    "other_12_pages_identical": true,
+    "chart_values_and_service_content_unchanged": true,
+    "source_lines_not_clipped": true
+  },
+  "iraq_paragraph_removal": {
+    "page": 12,
+    "paragraph_removed": true,
+    "service_section_moved_up": true,
+    "service_copy_preserved": true,
+    "other_18_pages_identical": true,
+    "render_reviewed": true
+  },
+  "closing_center_alignment": {
+    "page": 19,
+    "horizontal_visible_ink_center_tolerance_pt": 0.3,
+    "vertical_heading_block_center_tolerance_pt": 0.3,
+    "other_18_pages_identical": true,
+    "render_reviewed": true
+  },
+  "egypt_account_validation_removed": {
+    "page": 13,
+    "removed_rows": 2,
+    "other_text_preserved": true,
+    "other_18_pages_identical": true,
+    "render_reviewed": true
+  },
+  "award_spacing_reduced": {
+    "page": 2,
+    "card_height_pt": 89,
+    "previous_card_height_pt": 130,
+    "all_text_preserved": true,
+    "other_18_pages_identical": true,
+    "render_reviewed": true
+  },
+  "uniform_regional_bottom_spacing": {
+    "pages": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "panel_bottom_pt": 288,
+    "source_text_top_pt": 272,
+    "following_section_top_pt": 300,
+    "all_copy_preserved": true,
+    "other_12_pages_identical": true,
+    "all_seven_panels_render_reviewed": true
+  },
+  "final_release": {
+    "clean_rebuild_all_19_pages_text_and_pixels_match": true,
+    "pdf_sha256": "cb311c567eb8c0e81b34e5df89b222098cedd52da33f8402426dc2e2ae48a540",
+    "build_steps": [
+      "revise_pdf.py",
+      "update_network.py",
+      "complete_payouts.py",
+      "restructure_spread.py"
+    ],
+    "runtime_dependency_added": "Pillow",
+    "legacy_html": "Earlier 13-page edition; not the current PDF source"
+  }
 }

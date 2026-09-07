@@ -1,0 +1,182 @@
+{
+  "checked": "2026-09-07",
+  "sources": {
+    "SP.POP.TOTL": "https://data.worldbank.org/indicator/SP.POP.TOTL",
+    "IT.NET.USER.ZS": "https://data.worldbank.org/indicator/IT.NET.USER.ZS",
+    "IT.CEL.SETS.P2": "https://data.worldbank.org/indicator/IT.CEL.SETS.P2",
+    "IT.NET.BBND.P2": "https://data.worldbank.org/indicator/IT.NET.BBND.P2"
+  },
+  "rows": [
+    {
+      "iso3": "PAK",
+      "metrics": {
+        "SP.POP.TOTL": {
+          "value": 255219554,
+          "year": "2025"
+        },
+        "IT.NET.USER.ZS": {
+          "value": 57.253,
+          "year": "2024"
+        },
+        "IT.CEL.SETS.P2": {
+          "value": 76.8544559649986,
+          "year": "2024"
+        },
+        "IT.NET.BBND.P2": {
+          "value": 1.46559368502535,
+          "year": "2024"
+        }
+      }
+    },
+    {
+      "iso3": "BGD",
+      "metrics": {
+        "SP.POP.TOTL": {
+          "value": 175686899,
+          "year": "2025"
+        },
+        "IT.NET.USER.ZS": {
+          "value": 53.42171316,
+          "year": "2024"
+        },
+        "IT.CEL.SETS.P2": {
+          "value": 108.077037369691,
+          "year": "2024"
+        },
+        "IT.NET.BBND.P2": {
+          "value": 8.08931134401926,
+          "year": "2024"
+        }
+      }
+    },
+    {
+      "iso3": "NPL",
+      "metrics": {
+        "SP.POP.TOTL": {
+          "value": 29618118,
+          "year": "2025"
+        },
+        "IT.NET.USER.ZS": {
+          "value": 46.32189941,
+          "year": "2024"
+        },
+        "IT.CEL.SETS.P2": {
+          "value": 99.8471420273964,
+          "year": "2024"
+        },
+        "IT.NET.BBND.P2": {
+          "value": 10.0656152054494,
+          "year": "2024"
+        }
+      }
+    },
+    {
+      "iso3": "IRQ",
+      "metrics": {
+        "SP.POP.TOTL": {
+          "value": 47020774,
+          "year": "2025"
+        },
+        "IT.NET.USER.ZS": {
+          "value": 81.47450256,
+          "year": "2024"
+        },
+        "IT.CEL.SETS.P2": {
+          "value": 100.080276677726,
+          "year": "2024"
+        },
+        "IT.NET.BBND.P2": {
+          "value": 17.6333290365333,
+          "year": "2024"
+        }
+      }
+    },
+    {
+      "iso3": "EGY",
+      "metrics": {
+        "SP.POP.TOTL": {
+          "value": 118365995,
+          "year": "2025"
+        },
+        "IT.NET.USER.ZS": {
+          "value": 74.64839935,
+          "year": "2024"
+        },
+        "IT.CEL.SETS.P2": {
+          "value": 97.1295066037455,
+          "year": "2024"
+        },
+        "IT.NET.BBND.P2": {
+          "value": 11.6871225241757,
+          "year": "2024"
+        }
+      }
+    },
+    {
+      "iso3": "SAU",
+      "metrics": {
+        "SP.POP.TOTL": {
+          "value": 36973555,
+          "year": "2025"
+        },
+        "IT.NET.USER.ZS": {
+          "value": 100,
+          "year": "2024"
+        },
+        "IT.CEL.SETS.P2": {
+          "value": 159.541370566589,
+          "year": "2024"
+        },
+        "IT.NET.BBND.P2": {
+          "value": 44.0705800179885,
+          "year": "2024"
+        }
+      }
+    },
+    {
+      "iso3": "NGA",
+      "metrics": {
+        "SP.POP.TOTL": {
+          "value": 237527782,
+          "year": "2025"
+        },
+        "IT.NET.USER.ZS": {
+          "value": 41.21139908,
+          "year": "2024"
+        },
+        "IT.CEL.SETS.P2": {
+          "value": 70.7619057835431,
+          "year": "2024"
+        },
+        "IT.NET.BBND.P2": {
+          "value": 0.0787379280608494,
+          "year": "2024"
+        }
+      }
+    }
+  ],
+  "definitions": {
+    "population": "World Bank WDI, UN and national statistics. 2025 latest returned.",
+    "internet": "ITU via World Bank: individuals using internet, percentage of population, 2024 latest returned for all seven.",
+    "mobile": "Mobile cellular subscriptions per100people, not mobile broadband or unique users.",
+    "broadband": "Fixed broadband subscriptions per100people. Excludes mobile broadband.",
+    "scope": "Market scale and digital connectivity; no payment volumes or Simpaisa service metrics."
+  },
+  "payment_growth": {
+    "country": "Saudi Arabia",
+    "metric": "Electronic payments as share of retail transaction count",
+    "observations": {
+      "2019": 36,
+      "2024": 79,
+      "2025": 85
+    },
+    "five_year_change_percentage_points": 43,
+    "five_year_period": "2019-2024",
+    "interpretation": "Share/adoption increase, not growth of payment volume. Latest2025 observation shown separately.",
+    "sources": [
+      "https://www.sama.gov.sa/en-us/mediacenter/news/pages/news-772.aspx",
+      "https://sama.gov.sa/en-US/MediaCenter/News/Pages/news-1083.aspx",
+      "https://sama.gov.sa/en-US/MediaCenter/News/pages/news-1139.aspx"
+    ]
+  }
+}
