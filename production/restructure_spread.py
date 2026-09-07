@@ -188,5 +188,7 @@ from regional_evidence import apply as apply_regional_evidence
 apply_regional_evidence(out,H)
 from closing_alignment import apply as align_closing
 align_closing(out,H)
+from cover_flags import apply as make_cover_flags_opaque
+make_cover_flags_opaque(out,H)
 path=H/'build/Simpaisa_Network_Playbook_2026_Spread.pdf';out.save(path,garbage=4,deflate=True)
 (H/'build/spread-layout-log.json').write_text(json.dumps(log,indent=2));print(path)

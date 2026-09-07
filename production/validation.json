@@ -298,5 +298,12 @@
     ],
     "runtime_dependency_added": "Pillow",
     "legacy_html": "Earlier 13-page edition; not the current PDF source"
+  },
+  "cover_flags_opaque": {
+    "page": 1,
+    "flags": 7,
+    "source": "Full-opacity flags retained from the seven country headers",
+    "other_18_pages_pixel_identical": true,
+    "render_reviewed": true
   }
 }
