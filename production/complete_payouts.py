@@ -1,12 +1,13 @@
 """Complete Egypt and Saudi payout tables and add Fawry collection coverage."""
 from pathlib import Path
 import sys,json,fitz
+from palette import BRIGHT_BLUE, DEEP_GRAY, DEEP_NAVY, WHITE
 HERE=Path(__file__).resolve().parent
 SRC=Path(sys.argv[1]) if len(sys.argv)>1 else HERE/'build/Simpaisa_Network_Playbook_2026_Network_Update.pdf'
 OUT=Path(sys.argv[2]) if len(sys.argv)>2 else HERE/'build/Simpaisa_Network_Playbook_2026_Complete.pdf'
 d=fitz.open(SRC)
 F={k:fitz.Font(fontfile=str(HERE/'fonts'/v)) for k,v in [('IR','Inter.ttf'),('IB','InterSemi.ttf'),('PH','Poppins.ttf')]}
-NAVY=(0,.094,.4);BLUE=(.004,.337,.984);BODY=(.20,.27,.39);WHITE=(1,1,1);MUTED=(.32,.39,.50);PALE=(.943,.957,1);LINE=(.79,.84,.93)
+NAVY=DEEP_NAVY;BLUE=BRIGHT_BLUE;BODY=DEEP_GRAY;MUTED=(.32,.39,.50);PALE=(.943,.957,1);LINE=(.79,.84,.93)
 log=[]
 def wrap(t,size,w,font='IR'):
  lines=[];line=''
@@ -30,22 +31,22 @@ egypt=[
 ('Checkout','Wallets: phone number, PIN and OTP in app; InstaPay: IPN PIN or biometric; hosted card page'),
 ('OTC collection','OTC payment network spans over 300,000 POS terminals across Egypt'),
 ('Refunds','Available'),
-('Limits','InstaPay: EGP 70,000/transfer; wallet limits depend on the provider.')],('CONFIRMATION','Real-time','Above 80%')),
+('Limits','InstaPay: EGP 70,000/transfer; wallet limits depend on the provider.')],('CONFIRMATION','Real-time','>80%')),
 ('Disbursements','B2C',[
 ('Coverage','Wallets and bank accounts'),('Payout','Direct to wallet or bank account'),
-('Limits','Receiving account and wallet balance limits apply by provider.')],('SPEED','Real-time payout','Above 96%')),
+('Limits','Receiving account and wallet balance limits apply by provider.')],('SPEED','Real-time payout','>96%')),
 ('Remittance','C2C',[
 ('Coverage','Wallets and bank accounts'),('Funding','USD prefund'),('Payout','Direct to wallet or bank account'),
-('Limits','Receiving account and wallet balance limits apply by provider.')],('SPEED','Real-time payout','Above 98.5%'))]
+('Limits','Receiving account and wallet balance limits apply by provider.')],('SPEED','Real-time payout','>98.5%'))]
 saudi=[
 ('Acceptance','C2B',[
 ('Coverage','Wallets, bank transfers and cards'),
 ('Checkout','mada hosted page with 3-D Secure; sarie transfer in the banking app; wallets: OTP or in-app'),
-('Refunds','Available'),('Limits','sarie: up to SAR 20,000/transfer; other bank and wallet limits depend on provider.')],('CONFIRMATION','Real-time','Above 80%')),
+('Refunds','Available'),('Limits','sarie: up to SAR 20,000/transfer; other bank and wallet limits depend on provider.')],('CONFIRMATION','Real-time','>80%')),
 ('Disbursements','B2C',[
 ('Coverage','Wallets and bank accounts'),('Payout','Direct to supported wallet or bank account'),
 ('Account validation','Bank beneficiary verification; wallet validation depends on provider.'),
-('Limits','sarie: up to SAR 20,000/transfer; other bank and wallet limits depend on provider.')],('SPEED','Real-time payout','Above 96%'))]
+('Limits','sarie: up to SAR 20,000/transfer; other bank and wallet limits depend on provider.')],('SPEED','Real-time payout','>96%'))]
 
 for n,start,services in [(13,325,egypt),(14,380,saudi)]:
  p=d[n-1]
@@ -67,13 +68,13 @@ for n,start,services in [(13,325,egypt),(14,380,saudi)]:
    if label=='Limits':p.insert_link({'kind':fitz.LINK_URI,'from':fitz.Rect(50,yy,545,yy+h),'uri':'https://www.cbe.org.eg/en/payment-systems-and-services/instant-payment-network' if n==13 else 'https://www.sama.gov.sa/en-US/payment/pages/sarie.aspx'})
    yy+=h
   p.draw_line((50,yy),(545,yy),color=LINE,width=.7)
-  for x,label,value in [(50,metrics[0],metrics[1]),(217.7,'SUCCESS RATE',metrics[2]),(385.3,'RELIABILITY','Multi-rail, above 99.9% uptime')]:
+  for x,label,value in [(50,metrics[0],metrics[1]),(217.7,'SUCCESS RATE',metrics[2]),(385.3,'RELIABILITY','Multi-rail, >99.9% uptime')]:
    text(p,(x,yy+3,x+160,yy+13),label,6.8,'IB',MUTED)
    text(p,(x,yy+12,x+160,yy+26),value,8.4,'IB',NAVY)
   y+=height
  assert y+31<701,(n,y)
  p.draw_rect((40,y+6,555,y+31),fill=NAVY,color=None)
- text(p,(50,y+12,350,y+26),'All three flows' if n==13 else 'Acceptance · Disbursements',9,color=WHITE)
+ text(p,(50,y+12,350,y+26),'Full service coverage' if n==13 else 'Acceptance · Disbursements',9,color=WHITE)
  text(p,(433,y+12,550,y+26),'Single API integration',9,color=WHITE)
 # Preserve the six first-row Egypt logos; rebalance the second row and add Fawry.
 p=d[12];bottom=[i for i in p.get_image_info(xrefs=True) if 758<i['bbox'][1]<791];assert len(bottom)==2

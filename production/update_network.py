@@ -1,12 +1,13 @@
 """Apply approved network-positioning and coverage edits to the prior PDF build."""
 from pathlib import Path
 import sys,fitz,json,re
+from palette import BRIGHT_BLUE, DEEP_GRAY, DEEP_NAVY, OFF_WHITE, WHITE
 HERE=Path(__file__).resolve().parent
 SOURCE=Path(sys.argv[1]) if len(sys.argv)>1 else HERE/'build/Simpaisa_Network_Playbook_2026_Final.pdf'
 DEST=Path(sys.argv[2]) if len(sys.argv)>2 else HERE/'build/Simpaisa_Network_Playbook_2026_Network_Update.pdf'
 doc=fitz.open(SOURCE);original=fitz.open(SOURCE)
 F={k:fitz.Font(fontfile=str(HERE/'fonts'/v)) for k,v in [('IR','Inter.ttf'),('IB','InterSemi.ttf'),('PH','Poppins.ttf')]}
-NAVY=(0,.094,.4);BLUE=(.004,.337,.984);BODY=(.20,.27,.39);WHITE=(1,1,1);MUTED=(.32,.39,.50);GREY=(.914,.914,.914);PALE=(.925,.949,.984)
+NAVY=DEEP_NAVY;BLUE=BRIGHT_BLUE;BODY=DEEP_GRAY;MUTED=(.32,.39,.50);GREY=OFF_WHITE;PALE=(.925,.949,.984)
 ops=[];logs=[]
 def add(n,rect,t,size=9.6,font='IR',color=BODY,clear=None,fill=None,leading=None):ops.append(dict(n=n,rect=rect,t=t,size=size,font=font,color=color,clear=clear or rect,fill=fill,leading=leading or size*1.28))
 def findblock(n,needle,t,**kw):
@@ -51,7 +52,7 @@ for n in [2,8,18]:
 for n in [3,18]:
  for r in original[n-1].search_for('Going live across the network'):
   add(n,(r.x0,r.y0,555,r.y1+3),'Connecting a merchant to the network',20 if n==18 else 10,'PH' if n==18 else 'IB',NAVY,clear=r)
-findblock(3,'Wallets, InstaPay and Meeza; acceptance and remittance.','Wallets, InstaPay and Meeza; all three flows.',size=7.5,color=MUTED)
+findblock(3,'Wallets, InstaPay and Meeza; acceptance and remittance.','Wallets, InstaPay and Meeza; full service coverage.',size=7.5,color=MUTED)
 findblock(3,'mada, sarie and wallets; acceptance.','mada, sarie and wallets; acceptance and disbursements.',size=7.5,color=MUTED)
 # Existing country services stay unchanged; new disbursement availability carries no invented metrics.
 add(13,(40,80,555,94),'Acceptance · Disbursements · Remittance',8.2,color=WHITE,clear=(40,79,300,94))
@@ -112,7 +113,7 @@ rp.apply_redactions(images=1,graphics=2,text=0)
 rp.set_cropbox(fitz.Rect(40,449,555,590))
 assert 'Egypt' not in rp.get_text() and 'Acceptance' not in rp.get_text()
 doc[12].show_pdf_page(fitz.Rect(40,494,555,635),remittance,0,keep_proportion=False)
-for n,y,label in [(13,647,'All three flows'),(14,570,'Acceptance · Disbursements')]:
+for n,y,label in [(13,647,'Full service coverage'),(14,570,'Acceptance · Disbursements')]:
  page=doc[n-1];page.draw_rect((40,y,555,y+25),fill=NAVY,color=None)
  drawtext(page,dict(rect=(50,y+6,350,y+21),t=label,font='IR',size=9,color=WHITE,leading=11.5))
  drawtext(page,dict(rect=(433,y+6,550,y+21),t='Single API integration',font='IR',size=9,color=WHITE,leading=11.5))

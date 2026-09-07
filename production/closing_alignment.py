@@ -1,23 +1,52 @@
-"""Center the closing headline by visible letter bounds, preserving the background."""
-import fitz
-from PIL import Image
+"""Left-align the closing brand and headings while preserving the office map."""
+from io import BytesIO
 
-def apply(doc,H):
- p=doc[18];texts=['Let’s connect','more markets.'];size=37
- # Measure glyph ink, rather than the font's unequal side bearings.
- temp=fitz.open();q=temp.new_page(width=p.rect.width,height=p.rect.height)
- q.draw_rect(q.rect,color=None,fill=(0,0,0));q.insert_font(fontname='PH',fontfile=str(H/'fonts/Poppins.ttf'))
- boxes=[]
- for t,y in zip(texts,[410,458]):
-  q.insert_text((150,y),t,fontname='PH',fontsize=size,color=(1,1,1))
-  clip=fitz.Rect(130,y-40,470,y+8);pm=q.get_pixmap(matrix=fitz.Matrix(4,4),clip=clip,alpha=False)
-  im=Image.frombytes('RGB',[pm.width,pm.height],pm.samples).convert('L').point(lambda v:255 if v>230 else 0)
-  x0,y0,x1,y1=im.getbbox();boxes.append(fitz.Rect(clip.x0+x0/4,clip.y0+y0/4,clip.x0+x1/4,clip.y0+y1/4))
- dy=p.rect.height/2-(boxes[0].y0+boxes[1].y1)/2
- for t in texts:
-  for r in p.search_for(t):p.add_redact_annot(r,fill=False,cross_out=False)
- p.apply_redactions(images=0,graphics=0,text=0)
- p.insert_font(fontname='PH',fontfile=str(H/'fonts/Poppins.ttf'))
- for t,y,b in zip(texts,[410,458],boxes):
-  x=150+p.rect.width/2-(b.x0+b.x1)/2
-  p.insert_text((x,y+dy),t,fontname='PH',fontsize=size,color=(1,1,1))
+import fitz
+from PIL import Image, ImageDraw
+from palette import BRIGHT_BLUE, WHITE
+
+
+def _svg_pdf(path):
+    svg = fitz.open(stream=path.read_bytes(), filetype="svg")
+    return fitz.open(stream=svg.convert_to_pdf(), filetype="pdf")
+
+
+def apply(doc, H):
+    source = fitz.open(stream=doc.tobytes(), filetype="pdf")
+    original = source[18]
+    pix = original.get_pixmap(matrix=fitz.Matrix(2, 2), alpha=False)
+    old = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
+    clean = Image.new("RGB", old.size)
+    draw = ImageDraw.Draw(clean)
+    sample_y = min(180, old.height - 1)
+    for x in range(old.width):
+        draw.line((x, 0, x, old.height), fill=old.getpixel((x, sample_y)))
+    stream = BytesIO()
+    clean.save(stream, format="PNG", optimize=True)
+
+    closing_doc = fitz.open()
+    page = closing_doc.new_page(width=595, height=842)
+    page.insert_image(page.rect, stream=stream.getvalue())
+    for name, filename in [("IR", "Inter.ttf"), ("IB", "InterSemi.ttf"), ("PH", "Poppins.ttf")]:
+        page.insert_font(fontname=name, fontfile=str(H / "fonts" / filename))
+
+    logo = _svg_pdf(H.parent / "assets" / "simpaisa-0ddcd8e522.svg")
+    page.show_pdf_page(fitz.Rect(40, 42, 180, 81.14), logo, 0)
+    page.insert_text((40, 402), "Let's connect", fontname="PH", fontsize=37, color=WHITE)
+    page.insert_text((40, 450), "more markets.", fontname="PH", fontsize=37, color=WHITE)
+    page.insert_text((40, 647), "Our office locations", fontname="IR", fontsize=12, color=WHITE)
+    page.insert_image(
+        fitz.Rect(40, 660, 555, 778),
+        filename=str(H.parent / "assets" / "office-locations-print-4x-52214d4291.png"),
+        keep_proportion=True,
+    )
+    page.draw_line((40, 794), (555, 794), color=tuple(channel * 0.62 + 0.38 for channel in BRIGHT_BLUE), width=0.55)
+    website = fitz.Rect(40, 801, 185, 821)
+    page.insert_text((40, 816), "www.simpaisa.com", fontname="PH", fontsize=15, color=WHITE)
+    page.insert_text((552, 816), "19", fontname="IR", fontsize=8, color=WHITE)
+    page.insert_link({"kind": fitz.LINK_URI, "from": website, "uri": "https://www.simpaisa.com/"})
+
+    target = doc[18]
+    target.add_redact_annot(target.rect, fill=False, cross_out=False)
+    target.apply_redactions(images=1, graphics=2, text=0)
+    target.show_pdf_page(target.rect, closing_doc, 0)

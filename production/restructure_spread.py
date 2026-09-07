@@ -1,10 +1,11 @@
 """Page 7 market matrix; page 8 portrait digital-market overview."""
 from pathlib import Path
 import fitz,json
+from palette import BRIGHT_BLUE, DEEP_GRAY, DEEP_NAVY, LIGHT_GRAY, OFF_WHITE, WHITE
 H=Path(__file__).resolve().parent
-src=fitz.open(H/'build/Simpaisa_Network_Playbook_2026_Complete.pdf');out=fitz.open()
+src=fitz.open(H/'build/Simpaisa_Network_Playbook_2026_Complete.pdf');out=fitz.open();replacement=fitz.open()
 F={k:fitz.Font(fontfile=str(H/'fonts'/v)) for k,v in [('IR','Inter.ttf'),('IB','InterSemi.ttf'),('PH','Poppins.ttf')]}
-N=(0,.094,.4);B=(.004,.337,.984);M=(.32,.39,.50);W=(1,1,1);G=(.914,.914,.914);P=(.925,.949,.984);L=(.82,.86,.94)
+N=DEEP_NAVY;B=BRIGHT_BLUE;M=(.32,.39,.50);W=WHITE;G=OFF_WHITE;P=(.925,.949,.984);L=(.82,.86,.94)
 log=[]
 def setup(p):
  for k,v in [('IR','Inter.ttf'),('IB','InterSemi.ttf'),('PH','Poppins.ttf')]:p.insert_font(fontname=k,fontfile=str(H/'fonts'/v))
@@ -43,15 +44,14 @@ def footer(p,n,width,height):
 names=['Pakistan','Bangladesh','Nepal','Iraq','Egypt','Saudi Arabia','Nigeria'];flags=[]
 for i in range(7):flags.append(src[7].get_pixmap(matrix=fitz.Matrix(4,4),clip=fitz.Rect(69,175+i*46,84,187+i*46)).tobytes('png'))
 data=json.loads((H/'network-market-data.json').read_text());cov=[[1,1,1],[1,1,1],[1,1,1],[1,0,0],[1,1,1],[1,1,0],[1,1,1]]
-for idx in range(19):
- if idx not in [6,7]:out.insert_pdf(src,from_page=idx,to_page=idx);continue
+for idx in [6,7]:
  if idx==6:
-  p=out.new_page(width=595,height=842);setup(p);box(p,(0,0,595,842),G)
+  p=replacement.new_page(width=595,height=842);setup(p);box(p,(0,0,595,842),G)
   text(p,'The Gap We Close',40,39,515,20,'PH')
   text(p,'Across these seven markets, customers pay from wallets and bank accounts as well as local cards. When these methods are missing at checkout, businesses risk losing the sale and the customer. Simpaisa connects these local methods through one integration.',40,76,515,9.5,maxh=55)
   text(p,'Market context and service coverage',40,132,300,10.5,'IB')
   text(p,'A: acceptance   D: disbursements   R: remittance',320,135,235,7,color=M)
-  xs=[40,113,211,309,407,505,555];heads=['MARKET','WALLET BASE','BANK TRANSFERS','DOMESTIC CARD SCHEME','PAYOUT RAILS','COVERAGE'];box(p,(40,158,555,182),(0.11,.11,.11))
+  xs=[40,113,211,309,407,505,555];heads=['MARKET','WALLET BASE','BANK TRANSFERS','DOMESTIC CARD SCHEME','PAYOUT RAILS','COVERAGE'];box(p,(40,158,555,182),DEEP_GRAY)
   for j,h in enumerate(heads):
    # Wrap long headings, then centre the complete block in its column.
    width=xs[j+1]-xs[j];sz=6.4
@@ -91,7 +91,7 @@ for idx in range(19):
   stream=BytesIO();canvas=Canvas(stream,pagesize=(515,136))
   clip=canvas.beginPath();clip.roundRect(0,0,515,136,8)
   canvas.clipPath(clip,stroke=0,fill=0)
-  canvas.linearGradient(0,0,515,0,[HexColor('#101d80'),HexColor('#1b3fda')])
+  canvas.linearGradient(0,0,515,0,[HexColor('#001966'),HexColor('#0156FC')])
   canvas.showPage();canvas.save()
   bg=fitz.open(stream=stream.getvalue(),filetype='pdf')
   p.show_pdf_page(fitz.Rect(40,648,555,784),bg,0)
@@ -105,7 +105,7 @@ for idx in range(19):
    center(p,label,x,758,157,7.6,W)
   footer(p,7,595,842)
  else:
-  p=out.new_page(width=595,height=842);setup(p);box(p,(0,0,595,842),G)
+  p=replacement.new_page(width=595,height=842);setup(p);box(p,(0,0,595,842),G)
   text(p,'Seven markets going digital',40,39,515,20,'PH')
   text(p,'Population and digital access show the scale of the opportunity. Payment adoption shows how that reach translates into everyday transactions.',40,76,515,9.5,maxh=42)
   text(p,'Market scale and connectivity',40,121,515,11,'IB')
@@ -123,7 +123,7 @@ for idx in range(19):
     center(p,f'{v:.1f}'+('%' if j==1 else ''),xs[j+1],y+4,xs[j+2]-xs[j+1],11,B)
     w=xs[j+2]-xs[j+1]-20;box(p,(x,y+24,x+w,y+26),(.85,.89,.96));box(p,(x,y+24,x+w*v/[300,100,180][j],y+26),B)
     p.insert_link({'kind':fitz.LINK_URI,'from':fitz.Rect(xs[j+1],y,xs[j+2],y+32),'uri':d['sources'][ind]})
-  text(p,'Source: World Bank / ITU, using the existing playbook dataset. Mobile connections are subscriptions, not unique people. Bar scales differ by column.',40,439,515,7,color=M,maxh=25)
+  text(p,'Sources: World Bank and ITU. Mobile connections are subscriptions, not unique people. Bar scales differ by column.',40,439,515,7,color=M,maxh=25)
   text(p,'Digital payment growth',40,475,515,11,'IB')
   text(p,'Selected payment indicators, with the measure, reporting period and source shown.',40,495,515,8.5,color=M)
   growth=json.loads((H/'payment-growth-data.json').read_text())['rows']
@@ -144,6 +144,13 @@ for idx in range(19):
    if i<6:p.draw_line((49,y+34),(545,y+34),color=L,width=.4)
   text(p,'Bars show later levels; markers show earlier levels. Scales and periods differ by row. Growth uses reported figures; pp means percentage points. Selected indicators, not a ranking.',40,766,515,7,color=M,maxh=24)
   footer(p,8,595,842)
+# Copy the source once so its links remain valid, then replace pages 7 and 8.
+# Copying source pages one by one can leave cross-page annotation references
+# pointing at xrefs that were not copied into the output document.
+out.insert_pdf(src)
+out.delete_page(7)
+out.delete_page(6)
+out.insert_pdf(replacement,start_at=6)
 # Pakistan evidence: one statistic each for wallets, PayPak and Raast.
 p=out[8]
 area=fitz.Rect(46,186,549,287)
@@ -186,9 +193,24 @@ for value in [0,10,20]:text(p,str(value),246+value*4.5,260,22,6.2,color=M)
 p.draw_line((248,258),(338,258),color=L,width=.5)
 from regional_evidence import apply as apply_regional_evidence
 apply_regional_evidence(out,H)
-from closing_alignment import apply as align_closing
-align_closing(out,H)
+from cover_layout import apply as apply_cover_layout
+apply_cover_layout(out,H)
 from cover_flags import apply as make_cover_flags_opaque
 make_cover_flags_opaque(out,H)
-path=H/'build/Simpaisa_Network_Playbook_2026_Spread.pdf';out.save(path,garbage=4,deflate=True)
+from closing_alignment import apply as align_closing
+align_closing(out,H)
+from content_consistency import apply as apply_content_consistency,rebuild_navigation
+apply_content_consistency(out,H)
+from regional_layout import apply as apply_regional_layout
+apply_regional_layout(out,H)
+rebuild_navigation(out)
+path=H/'build/Simpaisa_Network_Playbook_2026_Spread.pdf'
+staging=H/'build/.Simpaisa_Network_Playbook_2026_Spread.staging.pdf'
+# Save once without xref compaction, then reopen and compact the stable file.
+# This avoids MuPDF resolving transient page-edit references during the first
+# write while still producing a compact, independently readable final PDF.
+out.save(staging,garbage=0,deflate=True)
+stable=fitz.open(staging)
+stable.save(path,garbage=4,deflate=True,clean=True)
+stable.close();staging.unlink()
 (H/'build/spread-layout-log.json').write_text(json.dumps(log,indent=2));print(path)

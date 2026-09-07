@@ -289,7 +289,7 @@
   },
   "final_release": {
     "clean_rebuild_all_19_pages_text_and_pixels_match": true,
-    "pdf_sha256": "cb311c567eb8c0e81b34e5df89b222098cedd52da33f8402426dc2e2ae48a540",
+    "pdf_sha256": "1d851807f3d2a01516fec735fefecdd616a4807c452af871155580fd0df952d7",
     "build_steps": [
       "revise_pdf.py",
       "update_network.py",
@@ -305,5 +305,93 @@
     "source": "Full-opacity flags retained from the seven country headers",
     "other_18_pages_pixel_identical": true,
     "render_reviewed": true
+  },
+  "final_palette_and_consistency_release": {
+    "pages": 19,
+    "page_size": "A4 portrait",
+    "palette": {
+      "bright_blue": "#0156FC",
+      "deep_navy": "#001966",
+      "deep_gray": "#1E1E1E",
+      "light_gray": "#DDDDDD",
+      "off_white": "#EAEAEA"
+    },
+    "cover_logo_and_title_left_aligned": true,
+    "cover_flags_opaque": true,
+    "closing_logo_and_heading_left_aligned": true,
+    "contents_internal_links": 16,
+    "bookmarks": 19,
+    "population_series_consistent": true,
+    "service_threshold_notation": ">",
+    "growth_and_lower_bound_notation": "+",
+    "egypt_and_saudi_disbursement_coverage_present": true,
+    "regional_key_payment_methods": "Option 3: two category lanes with fixed label column and centred method names on pages 9-15",
+    "sadapay_and_nayapay": "Removed from Pakistan as requested",
+    "egypt_account_validation_claim_absent": true,
+    "iraq_domestic_scheme_copy": "Iraq has no live domestic card scheme today",
+    "fawry_otc_copy_present": true,
+    "forbidden_dash_characters_absent": true,
+    "all_text_within_page": true,
+    "all_19_pages_render_reviewed": true,
+    "pdf_sha256": "1d851807f3d2a01516fec735fefecdd616a4807c452af871155580fd0df952d7",
+    "regional_method_gap_pt": 9,
+    "regional_renderer_stability": "Native PDF text, charts and rules; complete service bands in Splash, Cairo and MuPDF",
+    "saudi_american_express": "Removed as requested",
+    "file_size_bytes": 3184187,
+    "bangladesh_takapay": "Removed from the payment-method list as requested"
+  },
+  "option_3_release": {
+    "pdf_sha256": "1d851807f3d2a01516fec735fefecdd616a4807c452af871155580fd0df952d7",
+    "file_size_bytes": 3184187,
+    "pages": 19,
+    "method_entries": 60,
+    "category_label_x_pt": 40,
+    "method_cells_start_x_pt": 157,
+    "method_row_height_pt": 30,
+    "service_band_height_pt": 20,
+    "service_body_font_pt": 8,
+    "method_font_pt": 7.6,
+    "service_tables_rebuilt_as_native_pdf": true,
+    "full_page_rasterisation": false,
+    "removals": {
+      "Pakistan": [
+        "SadaPay",
+        "NayaPay"
+      ],
+      "Bangladesh": [
+        "TakaPay"
+      ],
+      "Saudi Arabia": [
+        "American Express"
+      ]
+    },
+    "all_other_regional_words_preserved": true,
+    "unchanged_pages_pixel_and_text_identical": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      16,
+      17,
+      18,
+      19
+    ],
+    "isolated_rebuild_all_19_pages_match": true,
+    "regional_text_overlap_check": "pass",
+    "regional_page_boundary_check": "pass",
+    "source_links": 21,
+    "regional_website_links": 7,
+    "table_of_contents_links": 16,
+    "bookmarks": 19,
+    "three_renderer_review": "Splash, Cairo and MuPDF; native country pages render consistently",
+    "independent_red_team": {
+      "Sol_visual": "PASS: all 19 pages reviewed in three renderers; final Bangladesh change rechecked",
+      "Terra_preservation": "PASS: all remaining copy and data preserved; all four method removals verified"
+    },
+    "reviewed_date": "2026-09-07"
   }
 }

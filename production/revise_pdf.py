@@ -2,6 +2,7 @@
 from pathlib import Path
 import json, re, sys, hashlib
 import fitz
+from palette import BRIGHT_BLUE, DEEP_GRAY, DEEP_NAVY, WHITE
 
 HERE=Path(__file__).resolve().parent
 ROOT=HERE.parent
@@ -11,7 +12,7 @@ DEST.parent.mkdir(parents=True,exist_ok=True)
 doc=fitz.open(SOURCE)
 assert len(doc)==19
 FONTS={'IR':fitz.Font(fontfile=str(HERE/'fonts/Inter.ttf')),'IB':fitz.Font(fontfile=str(HERE/'fonts/InterSemi.ttf')),'PH':fitz.Font(fontfile=str(HERE/'fonts/Poppins.ttf'))}
-NAVY=(0.0,0.094,0.40); BLUE=(0.004,0.337,0.984); BODY=(0.20,0.27,0.39); MUTED=(0.32,0.39,0.50); WHITE=(1,1,1)
+NAVY=DEEP_NAVY; BLUE=BRIGHT_BLUE; BODY=DEEP_GRAY; MUTED=(0.32,0.39,0.50)
 ops=[[] for _ in doc]; logs=[]; originals=[]
 for page in doc:
  originals.append(page.get_text('dict'))
@@ -94,7 +95,7 @@ for s in spans(7):
 
 # Same page 8 matrix, with unranked indicators and the original blue palette.
 block(8,'The seven markets compared','Selected wallet, bank-transfer and card indicators, alongside Simpaisa service coverage. Each figure retains its own definition and reporting period; the table does not rank market maturity.',size=9.6,w=515)
-region(8,(40,121,345,135),'Market context and service coverage',8.3,color=MUTED,fill=(0.914,0.914,0.914))
+region(8,(40,121,345,135),'Market context and service coverage',8.3,color=MUTED,fill=(234/255,234/255,234/255))
 region(8,(118,149,210,162),'WALLET BASE',7.2,'IB',WHITE)
 region(8,(217,149,309,162),'BANK TRANSFERS',7.2,'IB',WHITE)
 data8=[
@@ -131,7 +132,7 @@ headers={
 9:'Pakistan has 241m people and 161m broadband subscriptions. In Jan-Mar 2026, digital channels accounted for 92% of retail payments. Local wallets and Raast give customers payment options through accounts they already use.',
 10:'Bangladesh has 179m people and 136m internet subscriptions. MFS providers held 250.2m registered accounts at December 2025 and processed BDT 18.7tn (about USD 152bn) during 2025. bKash and Nagad provide established wallet checkout options.',
 11:'Nepal has 29m people and 31m broadband subscriptions. At July 2025, it had 26.8m wallet users and 27.7m mobile-banking users. QR payment value reached NPR 958bn (about USD 7bn) in FY2024/25, up from NPR 500bn a year earlier.',
-12:'Iraq has 47m people and 84% internet penetration. Bank accounts rose from 8m in 2022 to 20m by mid-2025. Retail card payments reached IQD 8.5tn (about USD 6.5bn) in Q3 2025, alongside the development of interoperable wallet payments.',
+12:'Iraq has 47m people and 84% internet penetration. Bank accounts rose from 8m in 2022 to 20m by mid-2025. Retail card payments reached IQD 8.5tn (about USD 6.5bn) in Q3 2025. Iraq has no live domestic card scheme today.',
 13:'Egypt has 109m people and 94m active mobile-internet subscriptions. Mobile wallets reached 55.5m by June 2025. Wallet transaction value rose to about EGP 4tn (USD 80bn) in 2025. Meeza provides domestic card payments in Egyptian pounds.',
 14:'Saudi Arabia has 35m people. In 2025, electronic payments accounted for 85% of retail payments. mada is the domestic card scheme and sarie supports instant bank transfers. Simpaisa supports mada, sarie, stc bank and urpay.',
 15:'Nigeria has 242m people and 157m internet subscriptions. NIP processed 11.2bn transfers worth NGN 1,070tn (about USD 725bn) in 2024. Simpaisa connects businesses to local wallets, bank transfers and cards, with domestic settlement in naira.'}
@@ -142,7 +143,7 @@ limit_copy={
 12:['Consumer and merchant wallet tiers have different transfer and balance limits.'],
 13:['InstaPay: EGP 70,000/transfer; wallet limits depend on the provider.','Receiving account and wallet balance limits apply by provider.'],
 14:['sarie: up to SAR 20,000/transfer; wallet limits vary by licence and account.'],
-15:['Daily wallet limits depend on the KYC tier and provider.','NIP: up to NGN 25m for individuals, subject to bank security and account limits.','Naira payout; above USD 200 equivalent must be credited to the beneficiary account.']}
+15:['Daily wallet limits depend on the KYC tier and provider.','NIP: up to NGN 25m for individuals, subject to bank security and account limits.','Naira payout; amounts over USD 200 equivalent must be credited to the beneficiary account.']}
 for n,t in headers.items():
  region(n,(40,106,555,143),t,9.0,color=WHITE,leading=11.8)
  block(n,'Product offering','Simpaisa services',w=350)
@@ -190,7 +191,7 @@ checkout=[
 for i,t in enumerate(checkout):
  y=144+[0,50,100,150,201,251,301][i]
  region(16,(237,y,349,y+43),t,8.3,leading=10.5)
- region(16,(359,y,450,y+43),'Real-time\nAbove 80%',8.8,leading=12)
+ region(16,(359,y,450,y+43),'Real-time\n>80%',8.8,leading=12)
  region(16,(461,y,549,y+43),'Refunds available'+ ('\nWallet tokenisation' if i==0 else '\nSelected wallets tokenised' if i==1 else ''),8.3,leading=10.5)
 region(16,(180.59,538,244,561),'Customer\nauthorises',8.6,'IB',NAVY,leading=11)
 for x,t in [(52,'Customer selects an available local method at checkout.'),(152.59,'Customer approves in the app, by redirect, QR or hosted page.'),(253.19,'Simpaisa sends payment confirmation by webhook.'),(353.8,'The licensed partner holds funds; Simpaisa routes and reconciles.'),(454.39,'Settlement follows the agreed currency and schedule.')]:

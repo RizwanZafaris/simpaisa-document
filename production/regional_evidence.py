@@ -3,10 +3,11 @@ import fitz,json,math
 from io import BytesIO
 from reportlab.pdfgen.canvas import Canvas
 from reportlab.lib.colors import HexColor
+from palette import BRIGHT_BLUE, DEEP_GRAY, DEEP_NAVY, LIGHT_GRAY, OFF_WHITE, WHITE
 
 def apply(doc,H):
  F={k:fitz.Font(fontfile=str(H/'fonts'/v)) for k,v in [('IR','Inter.ttf'),('IB','InterSemi.ttf'),('PH','Poppins.ttf')]}
- N=(0,.094,.4);B=(.004,.337,.984);M=(.32,.39,.50);P=(.943,.957,1);W=(1,1,1);L=(.79,.84,.93)
+ N=DEEP_NAVY;B=BRIGHT_BLUE;M=(.32,.39,.50);P=(.943,.957,1);W=WHITE;L=(.79,.84,.93)
  def fonts(p):
   for k,v in [('IR','Inter.ttf'),('IB','InterSemi.ttf'),('PH','Poppins.ttf')]:p.insert_font(fontname=k,fontfile=str(H/'fonts'/v))
  def text(p,t,x,y,w,size=8,font='IR',col=N,maxlines=2,align=False):
@@ -67,9 +68,52 @@ def apply(doc,H):
     p.draw_line((x+44,260),(x+108,260),color=L,width=.5)
    p.insert_link({'kind':fitz.LINK_URI,'from':fitz.Rect(x,188,x+151,272),'uri':a['source']})
   text(p,item['note'],52,272,491,7,col=M,maxlines=1)
+ method_names={
+  'Pakistan':['JazzCash','easypaisa','Alfa','ZINDIGI','HBL Konnect','Raast','1LINK IBFT','PayPak','Visa','Mastercard'],
+  'Bangladesh':['bKash','Nagad','Rocket','Upay','Bangla QR','NPSB','Visa','Mastercard','American Express'],
+  'Nepal':['eSewa','Khalti','IME Pay','connectIPS','NEPALPAY QR','NEPALPAY Card','Visa','Mastercard'],
+  'Iraq':['ZainCash','AsiaHawala','FastPay','NassPay','IRPSI','Visa','Mastercard'],
+  'Egypt':['Vodafone Cash','e& Cash','Orange Cash','WE Pay','InstaPay','Meeza','Fawry OTC','Visa','Mastercard'],
+  'Saudi Arabia':['urpay','stc bank','Mobily Pay','Alinma Pay','sarie','mada','Visa','Mastercard'],
+  'Nigeria':['OPay','PalmPay','Paga','NIBSS NIP','NQR','Verve','AfriGO','Visa','Mastercard'],
+ }
+ # Replace the dense logo strips with the same two-row text directory on every
+ # regional page. The heading sits nine points below the service bar.
+ for country,item in data.items():
+  p=doc[item['page']-1];old=snapshot[item['page']-1]
+  bar=max(p.search_for('Single API integration'),key=lambda r:r.y1)
+  title_top=bar.y1+9;grid_top=title_top+23
+  method_area=fitz.Rect(39,bar.y1+4,556,790)
+  for link in p.get_links():
+   if fitz.Rect(link['from']).intersects(method_area):p.delete_link(link)
+  p.add_redact_annot(method_area,fill=W,cross_out=False)
+  p.apply_redactions(images=1,graphics=2,text=0);fonts(p)
+  text(p,'Key payment methods',40,title_top,220,10,'IB',maxlines=1)
+  names=method_names[country];split=(len(names)+1)//2;rows=[names[:split],names[split:]]
+  for row_index,row in enumerate(rows):
+   y=grid_top+row_index*29;cell_w=491/len(row)
+   p.draw_line((52,y+23),(543,y+23),color=LIGHT_GRAY,width=.55)
+   for name_index,name in enumerate(row):
+    x=52+name_index*cell_w
+    if name_index:p.draw_line((x,y+4),(x,y+19),color=LIGHT_GRAY,width=.45)
+    size=7.8
+    while F['IB'].text_length(name,fontsize=size)>cell_w-12 and size>6.2:size-=.2
+    text(p,name,x,y+6,cell_w,size,'IB',N,maxlines=1,align=True)
+ # Restore Saudi's repeated regional-page labels above the reflowed content.
+ # These elements were present in the source but were hidden by its page stack.
+ p=doc[13];fonts(p)
+ box(p,fitz.Rect(36,12,168,44),(4/255,20/255,82/255))
+ logo_svg=fitz.open(stream=(H.parent/'assets'/'simpaisa-0ddcd8e522.svg').read_bytes(),filetype='svg')
+ logo_pdf=fitz.open(stream=logo_svg.convert_to_pdf(),filetype='pdf')
+ p.show_pdf_page(fitz.Rect(40,16,124,39.5),logo_pdf,0)
+ subtitle=fitz.Rect(39,76,190,94)
+ p.add_redact_annot(subtitle,fill=False,cross_out=False);p.apply_redactions(images=0,graphics=0,text=0);fonts(p)
+ p.insert_text((40,89),'Acceptance · Disbursements',fontname='IR',fontsize=8.5,color=W)
+ clear(p,fitz.Rect(39,296,205,323),W)
+ text(p,'Simpaisa services',40,301,160,10,'IB',maxlines=1)
  # Remove one recognition tile and rebalance the remaining four.
- p=doc[1];clear(p,fitz.Rect(40,562,555,775),(.914,.914,.914))
- stream=BytesIO();c=Canvas(stream,pagesize=(515,172));clip=c.beginPath();clip.roundRect(0,0,515,172,8);c.clipPath(clip,stroke=0,fill=0);c.linearGradient(0,0,515,0,[HexColor('#101d80'),HexColor('#1b3fda')]);c.showPage();c.save()
+ p=doc[1];clear(p,fitz.Rect(40,562,555,775),OFF_WHITE)
+ stream=BytesIO();c=Canvas(stream,pagesize=(515,172));clip=c.beginPath();clip.roundRect(0,0,515,172,8);c.clipPath(clip,stroke=0,fill=0);c.linearGradient(0,0,515,0,[HexColor('#001966'),HexColor('#0156FC')]);c.showPage();c.save()
  bg=fitz.open(stream=stream.getvalue(),filetype='pdf');p.show_pdf_page(fitz.Rect(40,562,555,734),bg,0)
  text(p,'RECOGNITION',52,574,491,6.5,'IB',(.73,.81,1))
  text(p,'Industry recognition',52,588,491,12,'PH',W)
